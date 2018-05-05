@@ -29,6 +29,7 @@
 		B85FA14A209DCC04002ED3AA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FA149209DCC04002ED3AA /* MenuViewController.swift */; };
 		B85FA14C209DCC3F002ED3AA /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */; };
 		B85FA14E209DD40C002ED3AA /* SanamDeklen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85FA14D209DD40B002ED3AA /* SanamDeklen.ttf */; };
+		B85FA150209DE2ED002ED3AA /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		B85FA149209DCC04002ED3AA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		B85FA14D209DD40B002ED3AA /* SanamDeklen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SanamDeklen.ttf; sourceTree = "<group>"; };
+		B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				B85FA12B209DC616002ED3AA /* Datas.swift */,
 				B85FA149209DCC04002ED3AA /* MenuViewController.swift */,
 				B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */,
+				B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */,
 			);
 			path = Rizzo;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85FA150209DE2ED002ED3AA /* SettingTableViewController.swift in Sources */,
 				B85FA140209DC84A002ED3AA /* UIVisualEffectViewX.swift in Sources */,
 				B85FA139209DC84A002ED3AA /* UITextFieldX.swift in Sources */,
 				B85FA12A209DC5BA002ED3AA /* imageQuestion.swift in Sources */,

@@ -13,6 +13,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBOutlet weak var menuCollectionView: UICollectionView!
     var audioPlayer = AVAudioPlayer()
+    var buttonPlayer = AVAudioPlayer()
     let menus = ["ทายเสียง", "ทายรูปภาพ", "วาดภาพ", "ตั้งค่า"]
     
     override func viewDidLoad() {
@@ -24,6 +25,12 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
             audioPlayer.prepareToPlay()
             audioPlayer.numberOfLoops = -1
             audioPlayer.play()
+        }catch{
+            print(error)
+        }
+        do {
+            buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
         }catch{
             print(error)
         }
@@ -39,10 +46,30 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width / 2) - 140 , height: (view.frame.height / 2) - 150)
+        return CGSize(width: (view.frame.width / 2) - 100 , height: (view.frame.height / 2) - 100)
+    }
+    
+    func playButton() {
+        self.buttonPlayer.stop()
+        self.buttonPlayer.currentTime = 0
+        self.buttonPlayer.play()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        playButton()
+        if self.menus[indexPath.row] == "ตั้งค่า" {
+            performSegue(withIdentifier: "ToSetting", sender: self)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToSetting" {
+            let destination = segue.destination as! SettingTableViewController
+            destination.audioPlayer = self.audioPlayer
+            destination.buttonPlayer = self.buttonPlayer
+        }
+    }
+    @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
         
     }
+    
 }
