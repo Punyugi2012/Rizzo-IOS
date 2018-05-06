@@ -11,14 +11,14 @@ import AVFoundation
 
 class SettingTableViewController: UITableViewController {
 
-    var audioPlayer = AVAudioPlayer()
+    var getAudioPlayer = AVAudioPlayer()
     var buttonPlayer = AVAudioPlayer()
     @IBOutlet weak var playSoundButton: UIButton!
     @IBOutlet weak var stopSoundButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if self.audioPlayer.isPlaying {
+        if self.getAudioPlayer.isPlaying {
             self.playSoundButton.backgroundColor = UIColor.green
             self.stopSoundButton.backgroundColor = UIColor.white
         }
@@ -26,12 +26,12 @@ class SettingTableViewController: UITableViewController {
             self.playSoundButton.backgroundColor = UIColor.white
             self.stopSoundButton.backgroundColor = UIColor.green
         }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        do {
+            buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
+            buttonPlayer.prepareToPlay()
+        }catch{
+            print(error)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,16 +59,16 @@ class SettingTableViewController: UITableViewController {
     
     @IBAction func onPlaySound(_ sender: UIButton) {
         playButton()
-        if !self.audioPlayer.isPlaying {
-            self.audioPlayer.play()
+        if !self.getAudioPlayer.isPlaying {
+            self.getAudioPlayer.play()
             self.playSoundButton.backgroundColor = UIColor.green
             self.stopSoundButton.backgroundColor = UIColor.white
         }
     }
     @IBAction func onStopSound(_ sender: UIButton) {
         playButton()
-        if self.audioPlayer.isPlaying {
-            self.audioPlayer.stop()
+        if self.getAudioPlayer.isPlaying {
+            self.getAudioPlayer.stop()
             self.playSoundButton.backgroundColor = UIColor.white
             self.stopSoundButton.backgroundColor = UIColor.green
         }

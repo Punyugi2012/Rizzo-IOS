@@ -30,7 +30,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
         do {
             buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
-            audioPlayer.prepareToPlay()
+            buttonPlayer.prepareToPlay()
         }catch{
             print(error)
         }
@@ -64,8 +64,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToSetting" {
             let destination = segue.destination as! SettingTableViewController
-            destination.audioPlayer = self.audioPlayer
-            destination.buttonPlayer = self.buttonPlayer
+            destination.getAudioPlayer = self.audioPlayer
         }
     }
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {

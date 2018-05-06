@@ -115,8 +115,8 @@
 				B85FA129209DC5BA002ED3AA /* imageQuestion.swift */,
 				B85FA12B209DC616002ED3AA /* Datas.swift */,
 				B85FA149209DCC04002ED3AA /* MenuViewController.swift */,
-				B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */,
 				B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */,
+				B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */,
 			);
 			path = Rizzo;
 			sourceTree = "<group>";
