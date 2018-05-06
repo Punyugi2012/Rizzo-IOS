@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B85E00F6209EE0F40098482A /* WRTishSmile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F5209EE0F40098482A /* WRTishSmile.ttf */; };
 		B85E00FA209EE2A60098482A /* rtemehua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F9209EE2A60098482A /* rtemehua.ttf */; };
+		B85E00FC209EF87A0098482A /* PrepareImgQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */; };
 		B85FA118209DC3D7002ED3AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FA117209DC3D7002ED3AA /* AppDelegate.swift */; };
 		B85FA11D209DC3D7002ED3AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85FA11B209DC3D7002ED3AA /* Main.storyboard */; };
 		B85FA11F209DC3DA002ED3AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B85FA11E209DC3DA002ED3AA /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		B85E00F5209EE0F40098482A /* WRTishSmile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WRTishSmile.ttf; sourceTree = "<group>"; };
 		B85E00F9209EE2A60098482A /* rtemehua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rtemehua.ttf; sourceTree = "<group>"; };
+		B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareImgQuestionTableViewController.swift; sourceTree = "<group>"; };
 		B85FA114209DC3D7002ED3AA /* Rizzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rizzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85FA117209DC3D7002ED3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B85FA11C209DC3D7002ED3AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				B85FA149209DCC04002ED3AA /* MenuViewController.swift */,
 				B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */,
 				B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */,
+				B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */,
 			);
 			path = Rizzo;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				B85FA13B209DC84A002ED3AA /* UILabelX.swift in Sources */,
 				B85FA13E209DC84A002ED3AA /* UIImageViewX.swift in Sources */,
 				B85FA14C209DCC3F002ED3AA /* MenuCollectionViewCell.swift in Sources */,
+				B85E00FC209EF87A0098482A /* PrepareImgQuestionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

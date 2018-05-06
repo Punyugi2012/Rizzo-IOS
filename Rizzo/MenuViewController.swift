@@ -35,6 +35,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
             print(error)
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.menus.count
     }
@@ -60,15 +61,24 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         if self.menus[indexPath.row] == "ตั้งค่า" {
             performSegue(withIdentifier: "ToSetting", sender: self)
         }
+        if self.menus[indexPath.row] == "ทายรูปภาพ" {
+            performSegue(withIdentifier: "ToPrePareImgQuestion", sender: self)
+        }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToSetting" {
             let destination = segue.destination as! SettingTableViewController
             destination.getAudioPlayer = self.audioPlayer
         }
     }
+    
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
         
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
 }

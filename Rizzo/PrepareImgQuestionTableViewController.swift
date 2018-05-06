@@ -1,32 +1,20 @@
 //
-//  SettingTableViewController.swift
+//  PrepareImgQuestionTableViewController.swift
 //  Rizzo
 //
-//  Created by punyawee  on 5/5/61.
+//  Created by punyawee  on 6/5/61.
 //  Copyright © พ.ศ. 2561 punyawee . All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class SettingTableViewController: UITableViewController {
+class PrepareImgQuestionTableViewController: UITableViewController {
 
-    var getAudioPlayer = AVAudioPlayer()
     var buttonPlayer = AVAudioPlayer()
-    @IBOutlet weak var playSoundButton: UIButton!
-    @IBOutlet weak var stopSoundButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.isScrollEnabled = false
-        if self.getAudioPlayer.isPlaying {
-            self.playSoundButton.backgroundColor = UIColor.green
-            self.stopSoundButton.backgroundColor = UIColor.white
-        }
-        else {
-            self.playSoundButton.backgroundColor = UIColor.white
-            self.stopSoundButton.backgroundColor = UIColor.green
-        }
         do {
             buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
             buttonPlayer.prepareToPlay()
@@ -34,22 +22,13 @@ class SettingTableViewController: UITableViewController {
             print(error)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 4
     }
     
     func playButton() {
@@ -57,35 +36,14 @@ class SettingTableViewController: UITableViewController {
         self.buttonPlayer.currentTime = 0
         self.buttonPlayer.play()
     }
-    
-    @IBAction func onPlaySound(_ sender: UIButton) {
+    @IBAction func onPlay(_ sender: UIButton) {
         playButton()
-        if !self.getAudioPlayer.isPlaying {
-            self.getAudioPlayer.play()
-            self.playSoundButton.backgroundColor = UIColor.green
-            self.stopSoundButton.backgroundColor = UIColor.white
-        }
     }
-    @IBAction func onStopSound(_ sender: UIButton) {
+    @IBAction func onClose(_ sender: UIButton) {
         playButton()
-        if self.getAudioPlayer.isPlaying {
-            self.getAudioPlayer.stop()
-            self.playSoundButton.backgroundColor = UIColor.white
-            self.stopSoundButton.backgroundColor = UIColor.green
-        }
-    }
-    @IBAction func onBack(_ sender: UIButton) {
-        playButton()
-        self.buttonPlayer.stop()
-        self.buttonPlayer.currentTime = 0
-        self.buttonPlayer.play()
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
-    
+
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
