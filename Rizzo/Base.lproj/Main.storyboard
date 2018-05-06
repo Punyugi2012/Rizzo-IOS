@@ -103,9 +103,8 @@
                                                     <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
                                                     <state key="normal" title="ออก"/>
                                                     <connections>
-                                                        <action selector="onBack:" destination="5P5-GA-KzU" eventType="touchUpInside" id="0bm-QI-QfX"/>
                                                         <action selector="onClose:" destination="zDW-J2-6QL" eventType="touchUpInside" id="pPq-hb-ucL"/>
-                                                        <segue destination="5iR-fm-dFi" kind="unwind" unwindAction="unwindSegue:" id="WBs-eK-oAY"/>
+                                                        <segue destination="5iR-fm-dFi" kind="unwind" identifier="" unwindAction="unwindSegue:" id="d0D-i2-WJO"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -204,7 +203,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="onPlay:" destination="zDW-J2-6QL" eventType="touchUpInside" id="ChT-JK-pmZ"/>
-                                                        <segue destination="PZX-wn-psz" kind="presentation" identifier="ToImgQuestion" modalTransitionStyle="crossDissolve" id="whm-Wl-bE5"/>
+                                                        <segue destination="PZX-wn-psz" kind="show" id="jV3-wE-bfb"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -249,9 +248,8 @@
                                         <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
                                         <state key="normal" title="ออก"/>
                                         <connections>
-                                            <action selector="onBack:" destination="5P5-GA-KzU" eventType="touchUpInside" id="hOz-LJ-tgh"/>
-                                            <action selector="onClose:" destination="zDW-J2-6QL" eventType="touchUpInside" id="O2P-Qo-sXT"/>
-                                            <segue destination="O7R-E3-NN0" kind="unwind" unwindAction="unwindSegue:" id="H6N-2l-VUX"/>
+                                            <action selector="onClose:" destination="PZX-wn-psz" eventType="touchUpInside" id="NCT-U2-N8K"/>
+                                            <segue destination="O7R-E3-NN0" kind="unwind" identifier="" unwindAction="unwindSegue:" id="flX-tL-hEQ"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6hQ-hJ-B3P">
@@ -287,6 +285,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="touchedAnswer:" destination="PZX-wn-psz" eventType="touchUpInside" id="pLO-j0-fp2"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yq-9L-yEi" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="92" width="924" height="72"/>
@@ -300,6 +301,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="touchedAnswer:" destination="PZX-wn-psz" eventType="touchUpInside" id="5bG-d9-T9h"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q31-XF-r3I" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="184" width="924" height="72"/>
@@ -313,6 +317,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="touchedAnswer:" destination="PZX-wn-psz" eventType="touchUpInside" id="RJg-PV-eU1"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD2-iD-IAX" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="276" width="924" height="72"/>
@@ -326,6 +333,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="touchedAnswer:" destination="PZX-wn-psz" eventType="touchUpInside" id="fZe-Lq-Fpb"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -358,6 +368,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zyo-PA-QAe"/>
                     </view>
+                    <connections>
+                        <outlet property="myView" destination="0i6-y4-Ns9" id="OR0-Pw-uMD"/>
+                        <outlet property="questionImage" destination="6Le-Zx-Io9" id="hrk-iT-nx2"/>
+                        <outletCollection property="myButtons" destination="TEm-mm-8bs" collectionClass="NSMutableArray" id="2L6-ZA-LKn"/>
+                        <outletCollection property="myButtons" destination="0yq-9L-yEi" collectionClass="NSMutableArray" id="eO1-U1-caH"/>
+                        <outletCollection property="myButtons" destination="q31-XF-r3I" collectionClass="NSMutableArray" id="xDu-0p-PjJ"/>
+                        <outletCollection property="myButtons" destination="fD2-iD-IAX" collectionClass="NSMutableArray" id="xb0-We-hhj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwv-W1-Pbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="t4Z-Az-qa7">
@@ -532,7 +550,6 @@
                                                     <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
                                                     <state key="normal" title="ออก"/>
                                                     <connections>
-                                                        <action selector="onBack:" destination="5P5-GA-KzU" eventType="touchUpInside" id="WAZ-s6-Yl5"/>
                                                         <segue destination="ycQ-fh-IJd" kind="unwind" unwindAction="unwindSegue:" id="uEv-Wh-ol5"/>
                                                     </connections>
                                                 </button>
@@ -668,7 +685,6 @@
                                                     <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
                                                     <state key="normal" title="ออก"/>
                                                     <connections>
-                                                        <action selector="onBack:" destination="5P5-GA-KzU" eventType="touchUpInside" id="YPU-ns-JwZ"/>
                                                         <segue destination="cJq-mF-Cft" kind="unwind" unwindAction="unwindSegue:" id="n0D-gR-Clg"/>
                                                     </connections>
                                                 </button>

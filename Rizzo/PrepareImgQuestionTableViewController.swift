@@ -15,6 +15,7 @@ class PrepareImgQuestionTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.isScrollEnabled = false
         do {
             buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
             buttonPlayer.prepareToPlay()
@@ -42,7 +43,9 @@ class PrepareImgQuestionTableViewController: UITableViewController {
     @IBAction func onClose(_ sender: UIButton) {
         playButton()
     }
-    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
