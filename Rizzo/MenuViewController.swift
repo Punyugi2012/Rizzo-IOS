@@ -24,7 +24,19 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "soundtrack", ofType: "mp3")!))
             audioPlayer.prepareToPlay()
             audioPlayer.numberOfLoops = -1
-            audioPlayer.play()
+            if let data = UserDefaults.standard.value(forKey: "checkSound") as? String
+            {
+                if data == "turnOn" {
+                    audioPlayer.play()
+                }
+                else {
+                    audioPlayer.stop()
+                    audioPlayer.currentTime = 0
+                }
+            }
+            else {
+                audioPlayer.play()
+            }
         }catch{
             print(error)
         }

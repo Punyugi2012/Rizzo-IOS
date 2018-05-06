@@ -64,6 +64,7 @@ class SettingTableViewController: UITableViewController {
             self.getAudioPlayer.play()
             self.playSoundButton.backgroundColor = UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
             self.stopSoundButton.backgroundColor = UIColor.white
+            UserDefaults.standard.set("turnOn", forKey: "checkSound")
         }
     }
     @IBAction func onStopSound(_ sender: UIButton) {
@@ -72,6 +73,7 @@ class SettingTableViewController: UITableViewController {
             self.getAudioPlayer.stop()
             self.playSoundButton.backgroundColor = UIColor.white
             self.stopSoundButton.backgroundColor = UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
+            UserDefaults.standard.set("turnOff", forKey: "checkSound")
         }
     }
     @IBAction func onBack(_ sender: UIButton) {
