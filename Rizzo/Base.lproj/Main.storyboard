@@ -11,8 +11,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SanamDeklen.ttf">
-            <string>SanamDeklenchaya</string>
+        <array key="rtemehua.ttf">
+            <string>rtE-Mehua-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -24,91 +24,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0pp-di-mNl">
-                                <rect key="frame" x="0.0" y="20" width="834" height="1092"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MwL-Qb-aJw">
-                                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                                        <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UX8-4N-nT3">
-                                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
-                                                <color key="backgroundColor" red="0.89803921568627454" green="0.54117647058823526" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="0.0" id="gcO-n2-JYZ">
-                                                    <size key="itemSize" width="120" height="120"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="20" minY="30" maxX="20" maxY="30"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="TUx-6y-KhO" customClass="MenuCollectionViewCell" customModule="Rizzo" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="30" width="250" height="250"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="ตั้งค่า" translatesAutoresizingMaskIntoConstraints="NO" id="BRS-tB-3N3">
-                                                                    <rect key="frame" x="0.0" y="5" width="250" height="155"/>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตั้งค่า" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ii2-vU-I9M">
-                                                                    <rect key="frame" x="25" y="165" width="200" height="85"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="85" id="d8e-94-LDg"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="SanamDeklenchaya" family="SanamDeklenchaya" pointSize="50"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </view>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="Ii2-vU-I9M" secondAttribute="trailing" constant="25" id="4R6-Wo-Nd6"/>
-                                                            <constraint firstAttribute="trailing" secondItem="BRS-tB-3N3" secondAttribute="trailing" id="8JC-0m-tmp"/>
-                                                            <constraint firstItem="BRS-tB-3N3" firstAttribute="top" secondItem="TUx-6y-KhO" secondAttribute="top" constant="5" id="M1T-48-Gz3"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Ii2-vU-I9M" secondAttribute="bottom" id="Wy3-rG-oHX"/>
-                                                            <constraint firstItem="BRS-tB-3N3" firstAttribute="leading" secondItem="TUx-6y-KhO" secondAttribute="leading" id="dy4-9w-RbO"/>
-                                                            <constraint firstItem="Ii2-vU-I9M" firstAttribute="leading" secondItem="TUx-6y-KhO" secondAttribute="leading" constant="25" id="gEX-ty-OQr"/>
-                                                            <constraint firstItem="Ii2-vU-I9M" firstAttribute="top" secondItem="BRS-tB-3N3" secondAttribute="bottom" constant="5" id="hRu-oM-6Pi"/>
-                                                        </constraints>
-                                                        <size key="customSize" width="250" height="250"/>
-                                                        <connections>
-                                                            <outlet property="menuImage" destination="BRS-tB-3N3" id="d0r-e0-SZG"/>
-                                                            <outlet property="menuName" destination="Ii2-vU-I9M" id="b4E-og-bfO"/>
-                                                        </connections>
-                                                    </collectionViewCell>
-                                                </cells>
-                                            </collectionView>
-                                        </subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UX8-4N-nT3">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="0.0" id="gcO-n2-JYZ">
+                                    <size key="itemSize" width="120" height="120"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="30" maxX="20" maxY="30"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MenuCell" id="TUx-6y-KhO" customClass="MenuCollectionViewCell" customModule="Rizzo" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="30" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="วาดภาพ" translatesAutoresizingMaskIntoConstraints="NO" id="BRS-tB-3N3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="UX8-4N-nT3" secondAttribute="trailing" id="XmE-hr-iLI"/>
-                                            <constraint firstItem="UX8-4N-nT3" firstAttribute="top" secondItem="MwL-Qb-aJw" secondAttribute="top" id="YRy-hs-uiA"/>
-                                            <constraint firstAttribute="bottom" secondItem="UX8-4N-nT3" secondAttribute="bottom" id="g05-1V-g7o"/>
-                                            <constraint firstItem="UX8-4N-nT3" firstAttribute="leading" secondItem="MwL-Qb-aJw" secondAttribute="leading" id="hP8-j6-wuD"/>
+                                            <constraint firstAttribute="trailing" secondItem="BRS-tB-3N3" secondAttribute="trailing" id="Pvw-8D-da6"/>
+                                            <constraint firstItem="BRS-tB-3N3" firstAttribute="top" secondItem="TUx-6y-KhO" secondAttribute="top" id="esn-rp-kgh"/>
+                                            <constraint firstAttribute="bottom" secondItem="BRS-tB-3N3" secondAttribute="bottom" id="qJs-tv-xlj"/>
+                                            <constraint firstItem="BRS-tB-3N3" firstAttribute="leading" secondItem="TUx-6y-KhO" secondAttribute="leading" id="z9f-29-QLL"/>
                                         </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="MwL-Qb-aJw" secondAttribute="trailing" id="0VR-Rf-YeA"/>
-                                    <constraint firstItem="MwL-Qb-aJw" firstAttribute="leading" secondItem="0pp-di-mNl" secondAttribute="leading" id="JXg-RB-Pw1"/>
-                                    <constraint firstAttribute="bottom" secondItem="MwL-Qb-aJw" secondAttribute="bottom" id="ZK2-6o-iqf"/>
-                                    <constraint firstItem="MwL-Qb-aJw" firstAttribute="top" secondItem="0pp-di-mNl" secondAttribute="top" id="rnw-Ip-GEA"/>
-                                </constraints>
-                            </scrollView>
+                                        <size key="customSize" width="250" height="250"/>
+                                        <connections>
+                                            <outlet property="menuImage" destination="BRS-tB-3N3" id="d0r-e0-SZG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="0pp-di-mNl" firstAttribute="bottom" secondItem="0fj-jP-Qlz" secondAttribute="bottom" id="5L6-DC-btJ"/>
-                            <constraint firstItem="0pp-di-mNl" firstAttribute="top" secondItem="0fj-jP-Qlz" secondAttribute="top" id="8Dw-Le-nKf"/>
-                            <constraint firstItem="MwL-Qb-aJw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="9Gf-AA-77h"/>
-                            <constraint firstItem="0pp-di-mNl" firstAttribute="leading" secondItem="0fj-jP-Qlz" secondAttribute="leading" id="Ie0-uJ-aEw"/>
-                            <constraint firstItem="0pp-di-mNl" firstAttribute="trailing" secondItem="0fj-jP-Qlz" secondAttribute="trailing" id="Vzg-P3-8uu"/>
-                            <constraint firstItem="MwL-Qb-aJw" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="imn-xZ-MCs"/>
-                        </constraints>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0fj-jP-Qlz"/>
                     </view>
                     <connections>
@@ -139,9 +93,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGq-YY-cD8">
-                                                    <rect key="frame" x="20" y="0.0" width="81" height="97"/>
+                                                    <rect key="frame" x="28" y="10" width="71" height="82"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="SanamDeklenchaya" family="SanamDeklenchaya" pointSize="50"/>
+                                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
                                                     <state key="normal" title="ออก"/>
                                                     <connections>
                                                         <action selector="onBack:" destination="5P5-GA-KzU" eventType="touchUpInside" id="e4i-0k-tBA"/>
@@ -162,7 +116,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตั้งค่า" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnx-r1-44n">
                                                     <rect key="frame" x="20" y="11" width="794" height="216"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="SanamDeklenchaya" family="SanamDeklenchaya" pointSize="80"/>
+                                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="80"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -194,7 +148,7 @@
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Lo8-GQ-I30"/>
                                                                 <constraint firstAttribute="height" constant="130" id="eKJ-PR-d2A"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="SanamDeklenchaya" family="SanamDeklenchaya" pointSize="60"/>
+                                                            <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
                                                             <state key="normal" title="เปิด"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -212,7 +166,7 @@
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Q23-oO-vEd"/>
                                                                 <constraint firstAttribute="height" constant="130" id="lcw-6Z-uhr"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="SanamDeklenchaya" family="SanamDeklenchaya" pointSize="60"/>
+                                                            <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
                                                             <state key="normal" title="ปิด"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -226,9 +180,9 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="เสียง" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eg-c3-moz">
-                                                    <rect key="frame" x="20" y="28" width="105.5" height="102"/>
+                                                    <rect key="frame" x="35" y="28" width="80" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="SanamDeklenchaya" family="SanamDeklenchaya" pointSize="60"/>
+                                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -260,6 +214,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ตั้งค่า" width="512" height="512"/>
+        <image name="วาดภาพ" width="819" height="737"/>
     </resources>
 </document>

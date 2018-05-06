@@ -41,7 +41,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as! MenuCollectionViewCell
-        cell.setUp(UIImage(named: self.menus[indexPath.row])!, self.menus[indexPath.row])
+        cell.setUp(UIImage(named: self.menus[indexPath.row])!)
         return cell
     }
     

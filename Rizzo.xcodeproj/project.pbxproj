@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B85E00F6209EE0F40098482A /* WRTishSmile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F5209EE0F40098482A /* WRTishSmile.ttf */; };
+		B85E00FA209EE2A60098482A /* rtemehua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F9209EE2A60098482A /* rtemehua.ttf */; };
 		B85FA118209DC3D7002ED3AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FA117209DC3D7002ED3AA /* AppDelegate.swift */; };
 		B85FA11D209DC3D7002ED3AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85FA11B209DC3D7002ED3AA /* Main.storyboard */; };
 		B85FA11F209DC3DA002ED3AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B85FA11E209DC3DA002ED3AA /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B85E00F5209EE0F40098482A /* WRTishSmile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WRTishSmile.ttf; sourceTree = "<group>"; };
+		B85E00F9209EE2A60098482A /* rtemehua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rtemehua.ttf; sourceTree = "<group>"; };
 		B85FA114209DC3D7002ED3AA /* Rizzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rizzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85FA117209DC3D7002ED3AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B85FA11C209DC3D7002ED3AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +75,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B85E00F4209EE0DF0098482A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B85FA14D209DD40B002ED3AA /* SanamDeklen.ttf */,
+				B85E00F5209EE0F40098482A /* WRTishSmile.ttf */,
+				B85E00F9209EE2A60098482A /* rtemehua.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		B85FA10B209DC3D7002ED3AA = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +104,7 @@
 		B85FA116209DC3D7002ED3AA /* Rizzo */ = {
 			isa = PBXGroup;
 			children = (
-				B85FA14D209DD40B002ED3AA /* SanamDeklen.ttf */,
+				B85E00F4209EE0DF0098482A /* Font */,
 				B85FA142209DC89D002ED3AA /* Sounds */,
 				B85FA12D209DC84A002ED3AA /* DesignableX */,
 				B85FA117209DC3D7002ED3AA /* AppDelegate.swift */,
@@ -192,11 +206,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85E00F6209EE0F40098482A /* WRTishSmile.ttf in Resources */,
 				B85FA144209DC8BD002ED3AA /* touch.mp3 in Resources */,
 				B85FA122209DC3DA002ED3AA /* LaunchScreen.storyboard in Resources */,
 				B85FA148209DC8E2002ED3AA /* soundtrack.mp3 in Resources */,
 				B85FA146209DC8CE002ED3AA /* popup.mp3 in Resources */,
 				B85FA11F209DC3DA002ED3AA /* Assets.xcassets in Resources */,
+				B85E00FA209EE2A60098482A /* rtemehua.ttf in Resources */,
 				B85FA11D209DC3D7002ED3AA /* Main.storyboard in Resources */,
 				B85FA14E209DD40C002ED3AA /* SanamDeklen.ttf in Resources */,
 			);

@@ -41,6 +41,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>SanamDeklen.ttf</string>
+		<string>WRTishSmile.ttf</string>
+		<string>rtemehua.ttf</string>
 	</array>
 </dict>
 </plist>
