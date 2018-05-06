@@ -47,7 +47,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width / 2) - 100 , height: (view.frame.height / 2) - 100)
+        return CGSize(width: (view.frame.width / 2) - 100 , height: (view.frame.height / 2) - 80)
     }
     
     func playButton() {

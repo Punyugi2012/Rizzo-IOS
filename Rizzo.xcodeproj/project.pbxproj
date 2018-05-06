@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81308C8209F0CE7001DEB0B /* ImageQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */; };
 		B85E00F6209EE0F40098482A /* WRTishSmile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F5209EE0F40098482A /* WRTishSmile.ttf */; };
 		B85E00FA209EE2A60098482A /* rtemehua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F9209EE2A60098482A /* rtemehua.ttf */; };
 		B85E00FC209EF87A0098482A /* PrepareImgQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuestionViewController.swift; sourceTree = "<group>"; };
 		B85E00F5209EE0F40098482A /* WRTishSmile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WRTishSmile.ttf; sourceTree = "<group>"; };
 		B85E00F9209EE2A60098482A /* rtemehua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rtemehua.ttf; sourceTree = "<group>"; };
 		B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareImgQuestionTableViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */,
 				B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */,
 				B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */,
+				B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */,
 			);
 			path = Rizzo;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				B85FA13A209DC84A002ED3AA /* UIButtonX.swift in Sources */,
 				B85FA13F209DC84A002ED3AA /* UIViewX.swift in Sources */,
 				B85FA13D209DC84A002ED3AA /* UIViewControllerX.swift in Sources */,
+				B81308C8209F0CE7001DEB0B /* ImageQuestionViewController.swift in Sources */,
 				B85FA118209DC3D7002ED3AA /* AppDelegate.swift in Sources */,
 				B85FA138209DC84A002ED3AA /* UIViewXRadialGradient.swift in Sources */,
 				B85FA12C209DC616002ED3AA /* Datas.swift in Sources */,

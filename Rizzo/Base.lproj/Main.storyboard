@@ -204,6 +204,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="onPlay:" destination="zDW-J2-6QL" eventType="touchUpInside" id="ChT-JK-pmZ"/>
+                                                        <segue destination="PZX-wn-psz" kind="presentation" identifier="ToImgQuestion" modalTransitionStyle="crossDissolve" id="whm-Wl-bE5"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -227,6 +228,147 @@
                 <exit id="5iR-fm-dFi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="824" y="48"/>
+        </scene>
+        <!--Image Question View Controller-->
+        <scene sceneID="wjn-5P-JmE">
+            <objects>
+                <viewController id="PZX-wn-psz" customClass="ImageQuestionViewController" customModule="Rizzo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cL0-Tu-psl">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-y4-Ns9">
+                                <rect key="frame" x="0.0" y="10" width="1024" height="1366"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUl-Kb-Ca2">
+                                        <rect key="frame" x="20" y="18" width="71" height="82"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="Kci-Hn-XAk"/>
+                                            <constraint firstAttribute="height" constant="82" id="YvX-0p-lnY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                        <state key="normal" title="ออก"/>
+                                        <connections>
+                                            <action selector="onBack:" destination="5P5-GA-KzU" eventType="touchUpInside" id="hOz-LJ-tgh"/>
+                                            <action selector="onClose:" destination="zDW-J2-6QL" eventType="touchUpInside" id="O2P-Qo-sXT"/>
+                                            <segue destination="O7R-E3-NN0" kind="unwind" unwindAction="unwindSegue:" id="H6N-2l-VUX"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6hQ-hJ-B3P">
+                                        <rect key="frame" x="0.0" y="100" width="1024" height="908"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รูปนี้คือรูปอะไรเอ่ย?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XM9-nb-ZBV">
+                                                <rect key="frame" x="345" y="0.0" width="334" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="DWU-Uh-cgB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ทายรูปภาพ" translatesAutoresizingMaskIntoConstraints="NO" id="6Le-Zx-Io9">
+                                                <rect key="frame" x="0.0" y="100" width="1024" height="440"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="440" id="zJ4-fg-BgL"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mzk-tH-8h8">
+                                                <rect key="frame" x="50" y="560" width="924" height="348"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-mm-8bs" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="924" height="72"/>
+                                                        <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                                        <state key="normal" title="ทดสอบ">
+                                                            <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yq-9L-yEi" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="92" width="924" height="72"/>
+                                                        <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                                        <state key="normal" title="ทดสอบ">
+                                                            <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q31-XF-r3I" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="184" width="924" height="72"/>
+                                                        <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                                        <state key="normal" title="ทดสอบ">
+                                                            <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD2-iD-IAX" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="276" width="924" height="72"/>
+                                                        <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                                        <state key="normal" title="ทดสอบ">
+                                                            <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="mzk-tH-8h8" firstAttribute="leading" secondItem="6hQ-hJ-B3P" secondAttribute="leading" constant="50" id="PUP-OH-BI8"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Le-Zx-Io9" secondAttribute="trailing" id="YRR-XJ-rbV"/>
+                                            <constraint firstAttribute="trailing" secondItem="mzk-tH-8h8" secondAttribute="trailing" constant="50" id="mtZ-jq-TQ8"/>
+                                            <constraint firstItem="6Le-Zx-Io9" firstAttribute="leading" secondItem="6hQ-hJ-B3P" secondAttribute="leading" id="zTk-fr-8ag"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xUl-Kb-Ca2" firstAttribute="top" secondItem="0i6-y4-Ns9" secondAttribute="top" constant="18" id="JGx-Oc-uM3"/>
+                                    <constraint firstAttribute="trailing" secondItem="6hQ-hJ-B3P" secondAttribute="trailing" id="SR6-rR-jmr"/>
+                                    <constraint firstItem="6hQ-hJ-B3P" firstAttribute="leading" secondItem="0i6-y4-Ns9" secondAttribute="leading" id="XFI-Lx-aL4"/>
+                                    <constraint firstItem="xUl-Kb-Ca2" firstAttribute="leading" secondItem="0i6-y4-Ns9" secondAttribute="leading" constant="20" id="aIS-Tl-CJI"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xUl-Kb-Ca2" secondAttribute="trailing" constant="20" symbolic="YES" id="gNN-QW-8EX"/>
+                                    <constraint firstItem="6hQ-hJ-B3P" firstAttribute="top" secondItem="xUl-Kb-Ca2" secondAttribute="bottom" id="oja-QY-G7S"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0i6-y4-Ns9" firstAttribute="centerY" secondItem="Zyo-PA-QAe" secondAttribute="centerY" id="CE5-TA-WTK"/>
+                            <constraint firstItem="0i6-y4-Ns9" firstAttribute="width" secondItem="cL0-Tu-psl" secondAttribute="width" id="HV7-DO-1o9"/>
+                            <constraint firstItem="0i6-y4-Ns9" firstAttribute="height" secondItem="cL0-Tu-psl" secondAttribute="height" id="kux-xl-3ha"/>
+                            <constraint firstItem="0i6-y4-Ns9" firstAttribute="centerX" secondItem="Zyo-PA-QAe" secondAttribute="centerX" id="mMS-Wo-ITm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zyo-PA-QAe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwv-W1-Pbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="t4Z-Az-qa7">
+                    <rect key="frame" x="0.0" y="0.0" width="609" height="463"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="tOI-jT-U2H"/>
+                </view>
+                <exit id="O7R-E3-NN0" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1622.4609375" y="47.87701317715959"/>
         </scene>
         <!--Setting Table View Controller-->
         <scene sceneID="Ngz-kt-a9M">
