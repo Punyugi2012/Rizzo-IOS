@@ -347,15 +347,27 @@
                                             <constraint firstItem="6Le-Zx-Io9" firstAttribute="leading" secondItem="6hQ-hJ-B3P" secondAttribute="leading" id="zTk-fr-8ag"/>
                                         </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ข้อที่ 1 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOz-Ew-qOg">
+                                        <rect key="frame" x="712" y="18" width="304" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="304" id="HZM-Pk-YYv"/>
+                                            <constraint firstAttribute="height" constant="75" id="X9g-gZ-e1M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="xUl-Kb-Ca2" firstAttribute="top" secondItem="0i6-y4-Ns9" secondAttribute="top" constant="18" id="JGx-Oc-uM3"/>
                                     <constraint firstAttribute="trailing" secondItem="6hQ-hJ-B3P" secondAttribute="trailing" id="SR6-rR-jmr"/>
+                                    <constraint firstAttribute="trailing" secondItem="dOz-Ew-qOg" secondAttribute="trailing" constant="8" id="V4q-1v-3pH"/>
                                     <constraint firstItem="6hQ-hJ-B3P" firstAttribute="leading" secondItem="0i6-y4-Ns9" secondAttribute="leading" id="XFI-Lx-aL4"/>
                                     <constraint firstItem="xUl-Kb-Ca2" firstAttribute="leading" secondItem="0i6-y4-Ns9" secondAttribute="leading" constant="20" id="aIS-Tl-CJI"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xUl-Kb-Ca2" secondAttribute="trailing" constant="20" symbolic="YES" id="gNN-QW-8EX"/>
                                     <constraint firstItem="6hQ-hJ-B3P" firstAttribute="top" secondItem="xUl-Kb-Ca2" secondAttribute="bottom" id="oja-QY-G7S"/>
+                                    <constraint firstItem="dOz-Ew-qOg" firstAttribute="top" secondItem="0i6-y4-Ns9" secondAttribute="top" constant="18" id="pl7-eD-zYz"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -369,6 +381,7 @@
                         <viewLayoutGuide key="safeArea" id="Zyo-PA-QAe"/>
                     </view>
                     <connections>
+                        <outlet property="currentQuestion" destination="dOz-Ew-qOg" id="0Q3-Cv-VDX"/>
                         <outlet property="myView" destination="0i6-y4-Ns9" id="OR0-Pw-uMD"/>
                         <outlet property="questionImage" destination="6Le-Zx-Io9" id="hrk-iT-nx2"/>
                         <outletCollection property="myButtons" destination="TEm-mm-8bs" collectionClass="NSMutableArray" id="2L6-ZA-LKn"/>
