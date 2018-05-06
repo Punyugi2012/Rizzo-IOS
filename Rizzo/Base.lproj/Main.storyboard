@@ -382,7 +382,11 @@
                     </view>
                     <connections>
                         <outlet property="currentQuestion" destination="dOz-Ew-qOg" id="0Q3-Cv-VDX"/>
+                        <outlet property="myPopup" destination="t4Z-Az-qa7" id="2V5-uO-b5j"/>
                         <outlet property="myView" destination="0i6-y4-Ns9" id="OR0-Pw-uMD"/>
+                        <outlet property="popupAnswer" destination="YfS-Tg-bp7" id="BR1-hb-MUi"/>
+                        <outlet property="popupLabel" destination="7yd-2t-8aL" id="lM8-hL-ska"/>
+                        <outlet property="popupReply" destination="hJW-Af-lPT" id="8TZ-6z-zYF"/>
                         <outlet property="questionImage" destination="6Le-Zx-Io9" id="hrk-iT-nx2"/>
                         <outletCollection property="myButtons" destination="TEm-mm-8bs" collectionClass="NSMutableArray" id="2L6-ZA-LKn"/>
                         <outletCollection property="myButtons" destination="0yq-9L-yEi" collectionClass="NSMutableArray" id="eO1-U1-caH"/>
@@ -391,11 +395,80 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwv-W1-Pbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="t4Z-Az-qa7">
-                    <rect key="frame" x="0.0" y="0.0" width="609" height="463"/>
+                <view contentMode="scaleToFill" id="t4Z-Az-qa7" customClass="UIViewX" customModule="Rizzo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="862" height="587"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rr2-y5-6iA">
+                            <rect key="frame" x="20" y="60" width="822" height="290"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่ถูกต้องนะครับ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yd-2t-8aL">
+                                    <rect key="frame" x="0.0" y="0.0" width="822" height="90"/>
+                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="90"/>
+                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ช่างตัดผม" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJW-Af-lPT">
+                                    <rect key="frame" x="0.0" y="100" width="822" height="90"/>
+                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="คำตอบคือ ช่างประปา" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfS-Tg-bp7">
+                                    <rect key="frame" x="0.0" y="200" width="822" height="90"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                    <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="YfS-Tg-bp7" firstAttribute="leading" secondItem="Rr2-y5-6iA" secondAttribute="leading" id="4Bb-IL-O1m"/>
+                                <constraint firstItem="7yd-2t-8aL" firstAttribute="leading" secondItem="Rr2-y5-6iA" secondAttribute="leading" id="Bah-a3-7yT"/>
+                                <constraint firstAttribute="trailing" secondItem="7yd-2t-8aL" secondAttribute="trailing" id="CAz-Lo-ykZ"/>
+                                <constraint firstAttribute="trailing" secondItem="hJW-Af-lPT" secondAttribute="trailing" id="qnP-Bc-npj"/>
+                                <constraint firstItem="hJW-Af-lPT" firstAttribute="leading" secondItem="Rr2-y5-6iA" secondAttribute="leading" id="vOB-bl-WwO"/>
+                                <constraint firstAttribute="trailing" secondItem="YfS-Tg-bp7" secondAttribute="trailing" id="zef-1K-DpC"/>
+                            </constraints>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vr-lm-M4U" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="356" y="501" width="150" height="66"/>
+                            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="GYe-lo-zed"/>
+                                <constraint firstAttribute="width" constant="150" id="c8m-hp-6Dc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                            <state key="normal" title="ต่อไป">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onNext:" destination="PZX-wn-psz" eventType="touchUpInside" id="m8K-Qe-kOm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Rr2-y5-6iA" firstAttribute="leading" secondItem="tOI-jT-U2H" secondAttribute="leading" constant="20" id="Lx0-o2-J6u"/>
+                        <constraint firstItem="Rr2-y5-6iA" firstAttribute="top" secondItem="tOI-jT-U2H" secondAttribute="top" constant="40" id="T2a-4l-8th"/>
+                        <constraint firstItem="tOI-jT-U2H" firstAttribute="bottom" secondItem="5Vr-lm-M4U" secondAttribute="bottom" constant="20" id="nsf-dD-5Ef"/>
+                        <constraint firstItem="tOI-jT-U2H" firstAttribute="trailing" secondItem="Rr2-y5-6iA" secondAttribute="trailing" constant="20" id="sZ8-hx-9I2"/>
+                        <constraint firstItem="5Vr-lm-M4U" firstAttribute="centerX" secondItem="t4Z-Az-qa7" secondAttribute="centerX" id="z0P-hm-79A"/>
+                    </constraints>
                     <viewLayoutGuide key="safeArea" id="tOI-jT-U2H"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <exit id="O7R-E3-NN0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>

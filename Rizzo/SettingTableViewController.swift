@@ -20,12 +20,12 @@ class SettingTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.isScrollEnabled = false
         if self.getAudioPlayer.isPlaying {
-            self.playSoundButton.backgroundColor = UIColor.green
+            self.playSoundButton.backgroundColor = UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
             self.stopSoundButton.backgroundColor = UIColor.white
         }
         else {
             self.playSoundButton.backgroundColor = UIColor.white
-            self.stopSoundButton.backgroundColor = UIColor.green
+            self.stopSoundButton.backgroundColor = UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
         }
         do {
             buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
@@ -62,7 +62,7 @@ class SettingTableViewController: UITableViewController {
         playButton()
         if !self.getAudioPlayer.isPlaying {
             self.getAudioPlayer.play()
-            self.playSoundButton.backgroundColor = UIColor.green
+            self.playSoundButton.backgroundColor = UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
             self.stopSoundButton.backgroundColor = UIColor.white
         }
     }
@@ -71,7 +71,7 @@ class SettingTableViewController: UITableViewController {
         if self.getAudioPlayer.isPlaying {
             self.getAudioPlayer.stop()
             self.playSoundButton.backgroundColor = UIColor.white
-            self.stopSoundButton.backgroundColor = UIColor.green
+            self.stopSoundButton.backgroundColor = UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
         }
     }
     @IBAction func onBack(_ sender: UIButton) {
