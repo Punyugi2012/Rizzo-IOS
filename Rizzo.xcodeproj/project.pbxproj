@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B81308C8209F0CE7001DEB0B /* ImageQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */; };
+		B81F70F720A044A80076A033 /* KaniGa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B81F70F620A044A80076A033 /* KaniGa.ttf */; };
+		B81F70FB20A04C290076A033 /* FinishGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F70FA20A04C290076A033 /* FinishGameTableViewController.swift */; };
 		B85E00F6209EE0F40098482A /* WRTishSmile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F5209EE0F40098482A /* WRTishSmile.ttf */; };
 		B85E00FA209EE2A60098482A /* rtemehua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F9209EE2A60098482A /* rtemehua.ttf */; };
 		B85E00FC209EF87A0098482A /* PrepareImgQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuestionViewController.swift; sourceTree = "<group>"; };
+		B81F70F620A044A80076A033 /* KaniGa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KaniGa.ttf; sourceTree = "<group>"; };
+		B81F70FA20A04C290076A033 /* FinishGameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGameTableViewController.swift; sourceTree = "<group>"; };
 		B85E00F5209EE0F40098482A /* WRTishSmile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WRTishSmile.ttf; sourceTree = "<group>"; };
 		B85E00F9209EE2A60098482A /* rtemehua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rtemehua.ttf; sourceTree = "<group>"; };
 		B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareImgQuestionTableViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		B85E00F4209EE0DF0098482A /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				B81F70F620A044A80076A033 /* KaniGa.ttf */,
 				B85FA14D209DD40B002ED3AA /* SanamDeklen.ttf */,
 				B85E00F5209EE0F40098482A /* WRTishSmile.ttf */,
 				B85E00F9209EE2A60098482A /* rtemehua.ttf */,
@@ -123,6 +128,7 @@
 				B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */,
 				B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */,
 				B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */,
+				B81F70FA20A04C290076A033 /* FinishGameTableViewController.swift */,
 			);
 			path = Rizzo;
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 				B85FA122209DC3DA002ED3AA /* LaunchScreen.storyboard in Resources */,
 				B85FA148209DC8E2002ED3AA /* soundtrack.mp3 in Resources */,
 				B85FA146209DC8CE002ED3AA /* popup.mp3 in Resources */,
+				B81F70F720A044A80076A033 /* KaniGa.ttf in Resources */,
 				B85FA11F209DC3DA002ED3AA /* Assets.xcassets in Resources */,
 				B85E00FA209EE2A60098482A /* rtemehua.ttf in Resources */,
 				B85FA11D209DC3D7002ED3AA /* Main.storyboard in Resources */,
@@ -248,6 +255,7 @@
 				B85FA13B209DC84A002ED3AA /* UILabelX.swift in Sources */,
 				B85FA13E209DC84A002ED3AA /* UIImageViewX.swift in Sources */,
 				B85FA14C209DCC3F002ED3AA /* MenuCollectionViewCell.swift in Sources */,
+				B81F70FB20A04C290076A033 /* FinishGameTableViewController.swift in Sources */,
 				B85E00FC209EF87A0098482A /* PrepareImgQuestionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

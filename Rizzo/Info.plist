@@ -40,6 +40,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>KaniGa.ttf</string>
 		<string>SanamDeklen.ttf</string>
 		<string>WRTishSmile.ttf</string>
 		<string>rtemehua.ttf</string>

@@ -173,6 +173,7 @@ class ImageQuestionViewController: UIViewController {
             self.myPopup.removeFromSuperview()
             if self.questions.isEmpty {
                 print(self.correctQuestion)
+                self.performSegue(withIdentifier: "ToFinishQuestion", sender: self)
             }
             else {
                 UIView.transition(with: self.myView, duration: 0.4, options: [.transitionCrossDissolve], animations: {
@@ -187,6 +188,13 @@ class ImageQuestionViewController: UIViewController {
                     })
                 })
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToFinishQuestion" {
+            let destination = segue.destination as! FinishGameTableViewController
+            destination.getCorrectQuestion = self.correctQuestion
         }
     }
     

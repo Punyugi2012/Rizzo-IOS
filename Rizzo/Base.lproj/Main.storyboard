@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="KaniGa.ttf">
+            <string>KaniGa</string>
+        </array>
         <array key="rtemehua.ttf">
             <string>rtE-Mehua-Regular</string>
         </array>
@@ -98,9 +101,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRc-v3-hJN">
-                                                    <rect key="frame" x="20" y="0.0" width="71" height="82"/>
+                                                    <rect key="frame" x="13" y="0.0" width="86" height="83"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                                     <state key="normal" title="ออก"/>
                                                     <connections>
                                                         <action selector="onClose:" destination="zDW-J2-6QL" eventType="touchUpInside" id="pPq-hb-ucL"/>
@@ -124,14 +127,14 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ทายรูปภาพ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjr-Rw-EZW">
                                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="80"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="80"/>
+                                                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="80"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="มีทั้งหมด 10 ข้อ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqG-U7-pRI">
                                                             <rect key="frame" x="0.0" y="80" width="1024" height="79.5"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -181,7 +184,7 @@
                                                         <constraint firstAttribute="height" constant="150" id="GXt-bm-oa9"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="yHW-Lv-iBE"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                                     <state key="normal" title="เริ่ม"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -240,12 +243,12 @@
                                 <rect key="frame" x="0.0" y="10" width="1024" height="1366"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUl-Kb-Ca2">
-                                        <rect key="frame" x="20" y="18" width="71" height="82"/>
+                                        <rect key="frame" x="20" y="18" width="86" height="82"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="Kci-Hn-XAk"/>
                                             <constraint firstAttribute="height" constant="82" id="YvX-0p-lnY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                        <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                         <state key="normal" title="ออก"/>
                                         <connections>
                                             <action selector="onClose:" destination="PZX-wn-psz" eventType="touchUpInside" id="NCT-U2-N8K"/>
@@ -256,11 +259,11 @@
                                         <rect key="frame" x="0.0" y="100" width="1024" height="908"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รูปนี้คือรูปอะไรเอ่ย?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XM9-nb-ZBV">
-                                                <rect key="frame" x="345" y="0.0" width="334" height="80"/>
+                                                <rect key="frame" x="319" y="0.0" width="386" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="DWU-Uh-cgB"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                                <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -276,7 +279,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-mm-8bs" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="924" height="72"/>
                                                         <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                                        <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
                                                             <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -292,7 +295,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yq-9L-yEi" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="92" width="924" height="72"/>
                                                         <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                                        <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
                                                             <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -308,7 +311,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q31-XF-r3I" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="184" width="924" height="72"/>
                                                         <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                                        <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
                                                             <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -324,7 +327,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD2-iD-IAX" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="276" width="924" height="72"/>
                                                         <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                                        <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
                                                             <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -358,7 +361,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.46274509803921571" green="0.83921568627450982" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="xUl-Kb-Ca2" firstAttribute="top" secondItem="0i6-y4-Ns9" secondAttribute="top" constant="18" id="JGx-Oc-uM3"/>
                                     <constraint firstAttribute="trailing" secondItem="6hQ-hJ-B3P" secondAttribute="trailing" id="SR6-rR-jmr"/>
@@ -392,6 +395,7 @@
                         <outletCollection property="myButtons" destination="0yq-9L-yEi" collectionClass="NSMutableArray" id="eO1-U1-caH"/>
                         <outletCollection property="myButtons" destination="q31-XF-r3I" collectionClass="NSMutableArray" id="xDu-0p-PjJ"/>
                         <outletCollection property="myButtons" destination="fD2-iD-IAX" collectionClass="NSMutableArray" id="xb0-We-hhj"/>
+                        <segue destination="SDI-fN-md0" kind="show" identifier="ToFinishQuestion" id="0PL-ei-8cF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwv-W1-Pbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -404,20 +408,20 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่ถูกต้องนะครับ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yd-2t-8aL">
                                     <rect key="frame" x="0.0" y="0.0" width="822" height="90"/>
-                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="90"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="90"/>
                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ช่างตัดผม" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJW-Af-lPT">
                                     <rect key="frame" x="0.0" y="100" width="822" height="90"/>
-                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="คำตอบคือ ช่างประปา" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfS-Tg-bp7">
                                     <rect key="frame" x="0.0" y="200" width="822" height="90"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                     <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -438,7 +442,7 @@
                                 <constraint firstAttribute="height" constant="66" id="GYe-lo-zed"/>
                                 <constraint firstAttribute="width" constant="150" id="c8m-hp-6Dc"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="60"/>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                             <state key="normal" title="ต่อไป">
                                 <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
@@ -474,6 +478,190 @@
             </objects>
             <point key="canvasLocation" x="1622.4609375" y="47.87701317715959"/>
         </scene>
+        <!--Finish Game Table View Controller-->
+        <scene sceneID="B14-0B-Hcf">
+            <objects>
+                <tableViewController id="SDI-fN-md0" customClass="FinishGameTableViewController" customModule="Rizzo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rhK-X0-jC1">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection id="KQ2-RR-8Xq">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="dbL-BU-Mmd">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dbL-BU-Mmd" id="1FL-kb-fRl">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1F9-bd-wj3">
+                                                    <rect key="frame" x="20" y="8" width="86" height="82"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                                                    <state key="normal" title="ออก"/>
+                                                    <connections>
+                                                        <segue destination="jtI-Gr-mwS" kind="unwind" unwindAction="unwindSegue:" id="Hls-lf-876"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="144" id="2Py-i8-alM">
+                                        <rect key="frame" x="0.0" y="100" width="1024" height="144"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Py-i8-alM" id="f1Y-8S-grl">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="143.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จบเกมส์" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJD-VG-xwx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="143.5"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="80"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mJD-VG-xwx" secondAttribute="trailing" id="6nE-Uz-iJr"/>
+                                                <constraint firstItem="mJD-VG-xwx" firstAttribute="leading" secondItem="f1Y-8S-grl" secondAttribute="leading" id="Wkt-J8-k6W"/>
+                                                <constraint firstItem="mJD-VG-xwx" firstAttribute="top" secondItem="f1Y-8S-grl" secondAttribute="top" id="ppe-O1-0Kq"/>
+                                                <constraint firstAttribute="bottom" secondItem="mJD-VG-xwx" secondAttribute="bottom" id="uA9-fj-gd1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="144" id="6Fb-cp-PXM">
+                                        <rect key="frame" x="0.0" y="244" width="1024" height="144"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Fb-cp-PXM" id="oY4-jQ-k5R">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="143.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bYH-9U-R8s">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="143.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตอบถูก" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbo-RD-eRn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="512" height="143.5"/>
+                                                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 ข้อ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQV-0C-czo">
+                                                            <rect key="frame" x="512" y="0.0" width="512" height="143.5"/>
+                                                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="bYH-9U-R8s" secondAttribute="bottom" id="29h-Y3-Fzd"/>
+                                                <constraint firstItem="bYH-9U-R8s" firstAttribute="leading" secondItem="oY4-jQ-k5R" secondAttribute="leading" id="3Y5-YD-Yea"/>
+                                                <constraint firstItem="bYH-9U-R8s" firstAttribute="top" secondItem="oY4-jQ-k5R" secondAttribute="top" id="8xF-Pw-4Sd"/>
+                                                <constraint firstAttribute="trailing" secondItem="bYH-9U-R8s" secondAttribute="trailing" id="WQg-1u-q2O"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="144" id="X89-ub-zKc">
+                                        <rect key="frame" x="0.0" y="388" width="1024" height="144"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X89-ub-zKc" id="8r7-RP-ah5">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="143.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wzv-7M-CW8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="143.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตอบผิด" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlX-zW-TxH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="512" height="143.5"/>
+                                                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 ข้อ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uB-gx-XeQ">
+                                                            <rect key="frame" x="512" y="0.0" width="512" height="143.5"/>
+                                                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="wzv-7M-CW8" secondAttribute="trailing" id="0rb-Kd-6ia"/>
+                                                <constraint firstAttribute="bottom" secondItem="wzv-7M-CW8" secondAttribute="bottom" id="FBT-aO-Zee"/>
+                                                <constraint firstItem="wzv-7M-CW8" firstAttribute="top" secondItem="8r7-RP-ah5" secondAttribute="top" id="n2n-6a-BVV"/>
+                                                <constraint firstItem="wzv-7M-CW8" firstAttribute="leading" secondItem="8r7-RP-ah5" secondAttribute="leading" id="pbc-tB-zcg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="430" id="LJT-o1-4X4">
+                                        <rect key="frame" x="0.0" y="532" width="1024" height="430"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LJT-o1-4X4" id="dcu-Om-1bt">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="429.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYh-0O-ZAq" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                                                    <rect key="frame" x="387" y="89" width="250" height="250"/>
+                                                    <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="250" id="6Ua-5V-U8D"/>
+                                                        <constraint firstAttribute="height" constant="250" id="dh8-w5-qXI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                                                    <state key="normal" title="เล่นอีกครั้ง"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="popIn" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="popInDelay">
+                                                            <real key="value" value="0.45000000000000001"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="0.0" height="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="125"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="TYh-0O-ZAq" firstAttribute="centerX" secondItem="dcu-Om-1bt" secondAttribute="centerX" id="eis-Zl-lQt"/>
+                                                <constraint firstItem="TYh-0O-ZAq" firstAttribute="centerY" secondItem="dcu-Om-1bt" secondAttribute="centerY" id="mda-M3-1O2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="SDI-fN-md0" id="Cbq-2Z-cZz"/>
+                            <outlet property="delegate" destination="SDI-fN-md0" id="Ou6-r5-Zjr"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="numCorrect" destination="TQV-0C-czo" id="4Bc-9t-kt8"/>
+                        <outlet property="numUncorrect" destination="8uB-gx-XeQ" id="0kz-ST-l8a"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6D-u9-1Ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jtI-Gr-mwS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2441.6015625" y="47.87701317715959"/>
+        </scene>
         <!--Setting Table View Controller-->
         <scene sceneID="Ngz-kt-a9M">
             <objects>
@@ -493,9 +681,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGq-YY-cD8">
-                                                    <rect key="frame" x="28" y="10" width="71" height="82"/>
+                                                    <rect key="frame" x="21" y="10" width="86" height="83"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                                     <state key="normal" title="ออก"/>
                                                     <connections>
                                                         <action selector="onBack:" destination="5P5-GA-KzU" eventType="touchUpInside" id="e4i-0k-tBA"/>
@@ -516,7 +704,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตั้งค่า" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnx-r1-44n">
                                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="238"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="80"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="80"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -548,7 +736,7 @@
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Lo8-GQ-I30"/>
                                                                 <constraint firstAttribute="height" constant="130" id="eKJ-PR-d2A"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                                             <state key="normal" title="เปิด"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -566,7 +754,7 @@
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Q23-oO-vEd"/>
                                                                 <constraint firstAttribute="height" constant="130" id="lcw-6Z-uhr"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                                             <state key="normal" title="ปิด"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -580,9 +768,9 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="เสียง" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eg-c3-moz">
-                                                    <rect key="frame" x="35" y="28" width="80" height="70"/>
+                                                    <rect key="frame" x="28" y="28" width="95" height="71"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="rtE-Mehua-Regular" family="rtE Mehua" pointSize="70"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
