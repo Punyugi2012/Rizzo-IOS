@@ -11,7 +11,8 @@ import AVFoundation
 
 class ImageQuestionViewController: UIViewController {
     
-   
+    @IBOutlet var preview: UIView!
+    @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var popupReply: UILabel!
     @IBOutlet weak var popupAnswer: UILabel!
     @IBOutlet weak var popupLabel: UILabel!
@@ -44,6 +45,8 @@ class ImageQuestionViewController: UIViewController {
         }
         self.myPopup.bounds.size.width = self.view.bounds.width - 200
         self.myPopup.bounds.size.height = self.view.bounds.height / 2
+        self.preview.bounds.size.width = self.view.bounds.width - 20
+        self.preview.bounds.size.height = self.view.bounds.height - 20
         setCurrentQuestion()
         self.bufferQuestions = Datas.getImageQuestion()
 //        for i in self.bufferQuestions {
@@ -129,7 +132,7 @@ class ImageQuestionViewController: UIViewController {
     
     func setupUnCorrectPopup(_ reply: String) {
 //        self.myPopup.backgroundColor = UIColor(red: 255/255.0, green: 68/255.0, blue: 68/255.0, alpha: 1)
-        self.popupLabel.text = "ไม่ถูกต้องนะครับ"
+        self.popupLabel.text = "ไม่ถูกต้อง"
         self.popupLabel.textColor = UIColor.red
         self.popupReply.text = reply
         self.popupReply.textColor = UIColor.red
@@ -190,6 +193,28 @@ class ImageQuestionViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func onPreviewImage(_ sender: UIButton) {
+        playButton()
+        self.imagePreview.image = self.questionImage.image
+        self.preview.alpha = 0.5
+        self.view.addSubview(self.preview)
+        self.preview.center = self.view.center
+        self.preview.transform = CGAffineTransform(scaleX: 0.8, y: 1.2)
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+            self.preview.alpha = 1
+            self.preview.transform = CGAffineTransform.identity
+        })
+    }
+    
+    @IBAction func onClosePreview(_ sender: UIButtonX) {
+        playButton()
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+            self.preview.alpha = 0
+            self.preview.transform = CGAffineTransform(scaleX: 0.5, y: 0.2)
+        })
+    }
+  
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToFinishQuestion" {

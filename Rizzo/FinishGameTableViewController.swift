@@ -16,6 +16,7 @@ class FinishGameTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.isScrollEnabled = false
         self.numCorrect.text = "\(getCorrectQuestion) ข้อ"
         self.numUncorrect.text = "\(10 - getCorrectQuestion) ข้อ"
 
@@ -41,6 +42,9 @@ class FinishGameTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 5
+    }
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
     /*
