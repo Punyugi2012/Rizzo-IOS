@@ -15,6 +15,8 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     var audioPlayer = AVAudioPlayer()
     var buttonPlayer = AVAudioPlayer()
     let menus = ["ทายเสียง", "ทายรูปภาพ", "วาดภาพ", "ตั้งค่า"]
+    let TURNON_BGSOUND = 1
+    let TURNOFF_BGSOUND = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +26,9 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "soundtrack", ofType: "mp3")!))
             audioPlayer.prepareToPlay()
             audioPlayer.numberOfLoops = -1
-            if let data = UserDefaults.standard.value(forKey: "checkSound") as? String
+            if let data = UserDefaults.standard.value(forKey: "bgSoundConfig") as? Int
             {
-                if data == "turnOn" {
+                if data == TURNON_BGSOUND {
                     audioPlayer.play()
                 }
                 else {

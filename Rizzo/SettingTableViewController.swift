@@ -15,6 +15,8 @@ class SettingTableViewController: UITableViewController {
     var buttonPlayer = AVAudioPlayer()
     @IBOutlet weak var playSoundButton: UIButton!
     @IBOutlet weak var stopSoundButton: UIButton!
+    let TURNON_BGSOUND = 1
+    let TURNOFF_BGSOUND = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +66,7 @@ class SettingTableViewController: UITableViewController {
             self.getAudioPlayer.play()
             self.playSoundButton.backgroundColor = UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
             self.stopSoundButton.backgroundColor = UIColor.white
-            UserDefaults.standard.set("turnOn", forKey: "checkSound")
+            UserDefaults.standard.set(TURNON_BGSOUND, forKey: "bgSoundConfig")
         }
     }
     @IBAction func onStopSound(_ sender: UIButton) {
@@ -73,7 +75,7 @@ class SettingTableViewController: UITableViewController {
             self.getAudioPlayer.stop()
             self.playSoundButton.backgroundColor = UIColor.white
             self.stopSoundButton.backgroundColor = UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
-            UserDefaults.standard.set("turnOff", forKey: "checkSound")
+            UserDefaults.standard.set(TURNOFF_BGSOUND, forKey: "bgSoundConfig")
         }
     }
     @IBAction func onBack(_ sender: UIButton) {
