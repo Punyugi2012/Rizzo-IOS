@@ -10,6 +10,31 @@
 		B81308C8209F0CE7001DEB0B /* ImageQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */; };
 		B81F70F720A044A80076A033 /* KaniGa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B81F70F620A044A80076A033 /* KaniGa.ttf */; };
 		B81F70FB20A04C290076A033 /* FinishGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F70FA20A04C290076A033 /* FinishGameTableViewController.swift */; };
+		B81F70FD20A065D80076A033 /* SoundQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F70FC20A065D80076A033 /* SoundQuestion.swift */; };
+		B81F711520A0674D0076A033 /* ปิดประตู.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F70FE20A0674B0076A033 /* ปิดประตู.mp3 */; };
+		B81F711620A0674D0076A033 /* รถ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F70FF20A0674B0076A033 /* รถ.mp3 */; };
+		B81F711720A0674D0076A033 /* เครื่องบิน.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710020A0674B0076A033 /* เครื่องบิน.mp3 */; };
+		B81F711820A0674D0076A033 /* ช้าง.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710120A0674B0076A033 /* ช้าง.mp3 */; };
+		B81F711920A0674D0076A033 /* เป็ด.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710220A0674B0076A033 /* เป็ด.mp3 */; };
+		B81F711A20A0674D0076A033 /* หมู.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710320A0674B0076A033 /* หมู.mp3 */; };
+		B81F711B20A0674D0076A033 /* บาสเก็ตบอล.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710420A0674B0076A033 /* บาสเก็ตบอล.mp3 */; };
+		B81F711C20A0674D0076A033 /* นกฮูก.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710520A0674B0076A033 /* นกฮูก.mp3 */; };
+		B81F711D20A0674D0076A033 /* กบ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710620A0674B0076A033 /* กบ.mp3 */; };
+		B81F711E20A0674D0076A033 /* ตีกลอง.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710720A0674C0076A033 /* ตีกลอง.mp3 */; };
+		B81F711F20A0674D0076A033 /* รถเบรค.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710820A0674C0076A033 /* รถเบรค.mp3 */; };
+		B81F712020A0674D0076A033 /* แซ่.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710920A0674C0076A033 /* แซ่.mp3 */; };
+		B81F712120A0674D0076A033 /* แมว.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710A20A0674C0076A033 /* แมว.mp3 */; };
+		B81F712220A0674D0076A033 /* คลื่น.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710B20A0674C0076A033 /* คลื่น.mp3 */; };
+		B81F712320A0674D0076A033 /* ลิง.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710C20A0674C0076A033 /* ลิง.mp3 */; };
+		B81F712420A0674D0076A033 /* สุนัข.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710D20A0674C0076A033 /* สุนัข.mp3 */; };
+		B81F712520A0674D0076A033 /* แกะ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710E20A0674C0076A033 /* แกะ.mp3 */; };
+		B81F712620A0674D0076A033 /* สนุ๊กเกอร์.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F710F20A0674C0076A033 /* สนุ๊กเกอร์.mp3 */; };
+		B81F712720A0674D0076A033 /* ชักดาบ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F711020A0674C0076A033 /* ชักดาบ.mp3 */; };
+		B81F712820A0674D0076A033 /* ต่อสู้.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F711120A0674D0076A033 /* ต่อสู้.mp3 */; };
+		B81F712920A0674D0076A033 /* ม้า.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F711220A0674D0076A033 /* ม้า.mp3 */; };
+		B81F712A20A0674D0076A033 /* ตีกอล์ฟ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F711320A0674D0076A033 /* ตีกอล์ฟ.mp3 */; };
+		B81F712B20A0674D0076A033 /* วัว.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F711420A0674D0076A033 /* วัว.mp3 */; };
+		B81F713020A068540076A033 /* PrepareSoundQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F712F20A068540076A033 /* PrepareSoundQTableViewController.swift */; };
 		B85E00F6209EE0F40098482A /* WRTishSmile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F5209EE0F40098482A /* WRTishSmile.ttf */; };
 		B85E00FA209EE2A60098482A /* rtemehua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F9209EE2A60098482A /* rtemehua.ttf */; };
 		B85E00FC209EF87A0098482A /* PrepareImgQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */; };
@@ -42,6 +67,31 @@
 		B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuestionViewController.swift; sourceTree = "<group>"; };
 		B81F70F620A044A80076A033 /* KaniGa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KaniGa.ttf; sourceTree = "<group>"; };
 		B81F70FA20A04C290076A033 /* FinishGameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGameTableViewController.swift; sourceTree = "<group>"; };
+		B81F70FC20A065D80076A033 /* SoundQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundQuestion.swift; sourceTree = "<group>"; };
+		B81F70FE20A0674B0076A033 /* ปิดประตู.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ปิดประตู.mp3"; sourceTree = "<group>"; };
+		B81F70FF20A0674B0076A033 /* รถ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "รถ.mp3"; sourceTree = "<group>"; };
+		B81F710020A0674B0076A033 /* เครื่องบิน.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "เครื่องบิน.mp3"; sourceTree = "<group>"; };
+		B81F710120A0674B0076A033 /* ช้าง.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ช้าง.mp3"; sourceTree = "<group>"; };
+		B81F710220A0674B0076A033 /* เป็ด.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "เป็ด.mp3"; sourceTree = "<group>"; };
+		B81F710320A0674B0076A033 /* หมู.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "หมู.mp3"; sourceTree = "<group>"; };
+		B81F710420A0674B0076A033 /* บาสเก็ตบอล.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "บาสเก็ตบอล.mp3"; sourceTree = "<group>"; };
+		B81F710520A0674B0076A033 /* นกฮูก.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "นกฮูก.mp3"; sourceTree = "<group>"; };
+		B81F710620A0674B0076A033 /* กบ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "กบ.mp3"; sourceTree = "<group>"; };
+		B81F710720A0674C0076A033 /* ตีกลอง.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ตีกลอง.mp3"; sourceTree = "<group>"; };
+		B81F710820A0674C0076A033 /* รถเบรค.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "รถเบรค.mp3"; sourceTree = "<group>"; };
+		B81F710920A0674C0076A033 /* แซ่.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "แซ่.mp3"; sourceTree = "<group>"; };
+		B81F710A20A0674C0076A033 /* แมว.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "แมว.mp3"; sourceTree = "<group>"; };
+		B81F710B20A0674C0076A033 /* คลื่น.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "คลื่น.mp3"; sourceTree = "<group>"; };
+		B81F710C20A0674C0076A033 /* ลิง.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ลิง.mp3"; sourceTree = "<group>"; };
+		B81F710D20A0674C0076A033 /* สุนัข.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "สุนัข.mp3"; sourceTree = "<group>"; };
+		B81F710E20A0674C0076A033 /* แกะ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "แกะ.mp3"; sourceTree = "<group>"; };
+		B81F710F20A0674C0076A033 /* สนุ๊กเกอร์.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "สนุ๊กเกอร์.mp3"; sourceTree = "<group>"; };
+		B81F711020A0674C0076A033 /* ชักดาบ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ชักดาบ.mp3"; sourceTree = "<group>"; };
+		B81F711120A0674D0076A033 /* ต่อสู้.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ต่อสู้.mp3"; sourceTree = "<group>"; };
+		B81F711220A0674D0076A033 /* ม้า.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ม้า.mp3"; sourceTree = "<group>"; };
+		B81F711320A0674D0076A033 /* ตีกอล์ฟ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ตีกอล์ฟ.mp3"; sourceTree = "<group>"; };
+		B81F711420A0674D0076A033 /* วัว.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "วัว.mp3"; sourceTree = "<group>"; };
+		B81F712F20A068540076A033 /* PrepareSoundQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareSoundQTableViewController.swift; sourceTree = "<group>"; };
 		B85E00F5209EE0F40098482A /* WRTishSmile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WRTishSmile.ttf; sourceTree = "<group>"; };
 		B85E00F9209EE2A60098482A /* rtemehua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rtemehua.ttf; sourceTree = "<group>"; };
 		B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareImgQuestionTableViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +133,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B81F712C20A0679D0076A033 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B85FA149209DCC04002ED3AA /* MenuViewController.swift */,
+				B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */,
+				B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */,
+				B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */,
+				B81F70FA20A04C290076A033 /* FinishGameTableViewController.swift */,
+				B81F712F20A068540076A033 /* PrepareSoundQTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		B85E00F4209EE0DF0098482A /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +176,7 @@
 		B85FA116209DC3D7002ED3AA /* Rizzo */ = {
 			isa = PBXGroup;
 			children = (
+				B81F712C20A0679D0076A033 /* Controllers */,
 				B85E00F4209EE0DF0098482A /* Font */,
 				B85FA142209DC89D002ED3AA /* Sounds */,
 				B85FA12D209DC84A002ED3AA /* DesignableX */,
@@ -123,12 +187,8 @@
 				B85FA123209DC3DA002ED3AA /* Info.plist */,
 				B85FA129209DC5BA002ED3AA /* imageQuestion.swift */,
 				B85FA12B209DC616002ED3AA /* Datas.swift */,
-				B85FA149209DCC04002ED3AA /* MenuViewController.swift */,
-				B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */,
 				B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */,
-				B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */,
-				B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */,
-				B81F70FA20A04C290076A033 /* FinishGameTableViewController.swift */,
+				B81F70FC20A065D80076A033 /* SoundQuestion.swift */,
 			);
 			path = Rizzo;
 			sourceTree = "<group>";
@@ -153,6 +213,29 @@
 		B85FA142209DC89D002ED3AA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B81F710620A0674B0076A033 /* กบ.mp3 */,
+				B81F710E20A0674C0076A033 /* แกะ.mp3 */,
+				B81F710B20A0674C0076A033 /* คลื่น.mp3 */,
+				B81F710020A0674B0076A033 /* เครื่องบิน.mp3 */,
+				B81F711020A0674C0076A033 /* ชักดาบ.mp3 */,
+				B81F710120A0674B0076A033 /* ช้าง.mp3 */,
+				B81F710920A0674C0076A033 /* แซ่.mp3 */,
+				B81F711120A0674D0076A033 /* ต่อสู้.mp3 */,
+				B81F710720A0674C0076A033 /* ตีกลอง.mp3 */,
+				B81F711320A0674D0076A033 /* ตีกอล์ฟ.mp3 */,
+				B81F710520A0674B0076A033 /* นกฮูก.mp3 */,
+				B81F710420A0674B0076A033 /* บาสเก็ตบอล.mp3 */,
+				B81F70FE20A0674B0076A033 /* ปิดประตู.mp3 */,
+				B81F710220A0674B0076A033 /* เป็ด.mp3 */,
+				B81F711220A0674D0076A033 /* ม้า.mp3 */,
+				B81F710A20A0674C0076A033 /* แมว.mp3 */,
+				B81F70FF20A0674B0076A033 /* รถ.mp3 */,
+				B81F710820A0674C0076A033 /* รถเบรค.mp3 */,
+				B81F710C20A0674C0076A033 /* ลิง.mp3 */,
+				B81F711420A0674D0076A033 /* วัว.mp3 */,
+				B81F710F20A0674C0076A033 /* สนุ๊กเกอร์.mp3 */,
+				B81F710D20A0674C0076A033 /* สุนัข.mp3 */,
+				B81F710320A0674B0076A033 /* หมู.mp3 */,
 				B85FA143209DC8BD002ED3AA /* touch.mp3 */,
 				B85FA145209DC8CE002ED3AA /* popup.mp3 */,
 				B85FA147209DC8E2002ED3AA /* soundtrack.mp3 */,
@@ -219,12 +302,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				B85E00F6209EE0F40098482A /* WRTishSmile.ttf in Resources */,
+				B81F711720A0674D0076A033 /* เครื่องบิน.mp3 in Resources */,
+				B81F711620A0674D0076A033 /* รถ.mp3 in Resources */,
 				B85FA144209DC8BD002ED3AA /* touch.mp3 in Resources */,
+				B81F711820A0674D0076A033 /* ช้าง.mp3 in Resources */,
+				B81F711B20A0674D0076A033 /* บาสเก็ตบอล.mp3 in Resources */,
+				B81F712B20A0674D0076A033 /* วัว.mp3 in Resources */,
+				B81F712320A0674D0076A033 /* ลิง.mp3 in Resources */,
 				B85FA122209DC3DA002ED3AA /* LaunchScreen.storyboard in Resources */,
+				B81F711C20A0674D0076A033 /* นกฮูก.mp3 in Resources */,
+				B81F712120A0674D0076A033 /* แมว.mp3 in Resources */,
+				B81F711520A0674D0076A033 /* ปิดประตู.mp3 in Resources */,
 				B85FA148209DC8E2002ED3AA /* soundtrack.mp3 in Resources */,
+				B81F711D20A0674D0076A033 /* กบ.mp3 in Resources */,
+				B81F711F20A0674D0076A033 /* รถเบรค.mp3 in Resources */,
 				B85FA146209DC8CE002ED3AA /* popup.mp3 in Resources */,
+				B81F712620A0674D0076A033 /* สนุ๊กเกอร์.mp3 in Resources */,
+				B81F711E20A0674D0076A033 /* ตีกลอง.mp3 in Resources */,
+				B81F712A20A0674D0076A033 /* ตีกอล์ฟ.mp3 in Resources */,
 				B81F70F720A044A80076A033 /* KaniGa.ttf in Resources */,
+				B81F712820A0674D0076A033 /* ต่อสู้.mp3 in Resources */,
+				B81F712220A0674D0076A033 /* คลื่น.mp3 in Resources */,
+				B81F711A20A0674D0076A033 /* หมู.mp3 in Resources */,
 				B85FA11F209DC3DA002ED3AA /* Assets.xcassets in Resources */,
+				B81F712920A0674D0076A033 /* ม้า.mp3 in Resources */,
+				B81F712020A0674D0076A033 /* แซ่.mp3 in Resources */,
+				B81F712720A0674D0076A033 /* ชักดาบ.mp3 in Resources */,
+				B81F712520A0674D0076A033 /* แกะ.mp3 in Resources */,
+				B81F712420A0674D0076A033 /* สุนัข.mp3 in Resources */,
+				B81F711920A0674D0076A033 /* เป็ด.mp3 in Resources */,
 				B85E00FA209EE2A60098482A /* rtemehua.ttf in Resources */,
 				B85FA11D209DC3D7002ED3AA /* Main.storyboard in Resources */,
 				B85FA14E209DD40C002ED3AA /* SanamDeklen.ttf in Resources */,
@@ -240,6 +346,7 @@
 			files = (
 				B85FA150209DE2ED002ED3AA /* SettingTableViewController.swift in Sources */,
 				B85FA140209DC84A002ED3AA /* UIVisualEffectViewX.swift in Sources */,
+				B81F713020A068540076A033 /* PrepareSoundQTableViewController.swift in Sources */,
 				B85FA139209DC84A002ED3AA /* UITextFieldX.swift in Sources */,
 				B85FA12A209DC5BA002ED3AA /* imageQuestion.swift in Sources */,
 				B85FA14A209DCC04002ED3AA /* MenuViewController.swift in Sources */,
@@ -253,6 +360,7 @@
 				B85FA138209DC84A002ED3AA /* UIViewXRadialGradient.swift in Sources */,
 				B85FA12C209DC616002ED3AA /* Datas.swift in Sources */,
 				B85FA13B209DC84A002ED3AA /* UILabelX.swift in Sources */,
+				B81F70FD20A065D80076A033 /* SoundQuestion.swift in Sources */,
 				B85FA13E209DC84A002ED3AA /* UIImageViewX.swift in Sources */,
 				B85FA14C209DCC3F002ED3AA /* MenuCollectionViewCell.swift in Sources */,
 				B81F70FB20A04C290076A033 /* FinishGameTableViewController.swift in Sources */,
