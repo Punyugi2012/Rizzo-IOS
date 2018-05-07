@@ -1,33 +1,52 @@
 //
-//  ImageQuestionViewController.swift
+//  SoundQuestionViewController.swift
 //  Rizzo
 //
-//  Created by punyawee  on 6/5/61.
+//  Created by punyawee  on 7/5/61.
 //  Copyright © พ.ศ. 2561 punyawee . All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class ImageQuestionViewController: UIViewController {
-    
-    @IBOutlet var preview: UIView!
-    @IBOutlet weak var imagePreview: UIImageView!
+extension UIButton {
+    func pulsate(_ duration: TimeInterval) {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = duration
+        pulse.fromValue = 0.77
+        pulse.toValue = 1.0
+        pulse.autoreverses = false
+        pulse.repeatCount = 0
+        pulse.initialVelocity = 0.5
+        pulse.damping = 2.0
+        layer.add(pulse, forKey: "pulse")
+    }
+}
+
+class SoundQuestionViewController: UIViewController {
+
     @IBOutlet weak var popupReply: UILabel!
     @IBOutlet weak var popupAnswer: UILabel!
     @IBOutlet weak var popupLabel: UILabel!
     @IBOutlet var myPopup: UIView!
-    @IBOutlet weak var currentQuestion: UILabel!
-    @IBOutlet weak var questionImage: UIImageView!
     @IBOutlet weak var myView: UIView!
+    @IBOutlet weak var mySpeaker: UIButton!
+    @IBOutlet weak var currentQuestion: UILabel!
     @IBOutlet var myButtons: [UIButton]!
-    var questions: [ImageQuestion] = []
-    var bufferQuestions: [ImageQuestion] = []
     var buttonPlayer = AVAudioPlayer()
-    var popupPlayer = AVAudioPlayer()
-    var currentNumQuestion = 0
-    var currentAnswer: String = ""
+    var speakerPlayer = AVAudioPlayer()
+    var bufferQuestions: [SoundQuestion] = []
+    var questions: [SoundQuestion] = []
+    var currentAnswer = ""
     var correctQuestion = 0
+    var currentNumQuestion = 0
+
+    @IBAction func onSpeak(_ sender: UIButton) {
+        if !self.speakerPlayer.isPlaying {
+            self.mySpeaker.pulsate(speakerPlayer.duration)
+            self.speakerPlayer.play()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,51 +56,48 @@ class ImageQuestionViewController: UIViewController {
         }catch{
             print(error)
         }
-        do {
-            popupPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "popup", ofType: "mp3")!))
-            popupPlayer.prepareToPlay()
-        }catch{
-            print(error)
-        }
+        setCurrentQuestion()
         self.myPopup.bounds.size.width = self.view.bounds.width - 200
         self.myPopup.bounds.size.height = self.view.bounds.height / 2
-        self.preview.bounds.size.width = self.view.bounds.width - 20
-        self.preview.bounds.size.height = self.view.bounds.height - 20
-        setCurrentQuestion()
-        self.bufferQuestions = Datas.getImageQuestion()
-//        for i in self.bufferQuestions {
-//            if i.answers.count != 4 {
-//                print(i.answer)
-//                print("Error")
-//            }
-//            if UIImage(named: i.answer) == nil {
-//                      print("\(i.answer) Error image")
-//            }
-//        }
-        self.questions = chooseImageQuestion(10)
+        self.bufferQuestions = Datas.getSoundQuestions()
+//                for i in self.bufferQuestions {
+//                    if i.answers.count != 4 {
+//                        print(i.answer)
+//                        print("Error")
+//                    }
+//                    if Bundle.main.url(forResource: i.answer, withExtension: "mp3") == nil {
+//                              print("\(i.answer) Error image")
+//                    }
+//                }
+        self.questions = chooseSoundQuestion(10)
         setQuestion()
     }
     
-    func chooseImageQuestion(_ number: Int) -> [ImageQuestion] {
-        var imageQuestions: [ImageQuestion] = []
+    func chooseSoundQuestion(_ number: Int) -> [SoundQuestion] {
+        var soundQuestions: [SoundQuestion] = []
         var i = 1
         while i <= number {
             let random = Int(arc4random_uniform(UInt32(self.bufferQuestions.count)))
-            if (imageQuestions.index { (imageQuestion) -> Bool in
-                return imageQuestion.answer == self.bufferQuestions[random].answer
+            if (soundQuestions.index { (soundQuestion) -> Bool in
+                return soundQuestion.answer == self.bufferQuestions[random].answer
             }) == nil {
-                imageQuestions.append(self.bufferQuestions[random])
+                soundQuestions.append(self.bufferQuestions[random])
                 i += 1
             }
         }
-        return imageQuestions
+        return soundQuestions
     }
     
     func setQuestion() {
         let numOfQuestion = Int(arc4random_uniform(UInt32(self.questions.count)))
         let question = self.questions[numOfQuestion]
         self.currentAnswer = question.answer
-        self.questionImage.image = UIImage(named: question.answer)
+        do {
+            speakerPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: self.currentAnswer, ofType: "mp3")!))
+            speakerPlayer.prepareToPlay()
+        }catch{
+            print(error)
+        }
         for i in 0...3 {
             self.myButtons[i].setTitle(question.answers[i], for: .normal)
         }
@@ -98,18 +114,12 @@ class ImageQuestionViewController: UIViewController {
         self.buttonPlayer.play()
     }
     
-    func playPopup() {
-        self.popupPlayer.stop()
-        self.popupPlayer.currentTime = 0
-        self.popupPlayer.play()
-    }
-    
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
     @IBAction func touchedAnswer(_ sender: UIButtonX) {
-        playPopup()
+        playButton()
         if self.currentAnswer == sender.currentTitle {
             self.correctQuestion += 1
             setupCorrectPopup(sender.currentTitle!)
@@ -118,14 +128,17 @@ class ImageQuestionViewController: UIViewController {
             setupUnCorrectPopup(sender.currentTitle!)
         }
         disableAnswerButtons()
+        self.speakerPlayer.stop()
+        self.speakerPlayer.currentTime = 0
+        self.mySpeaker.isEnabled = false
         insidePopup()
     }
     
     func setupCorrectPopup(_ reply: String) {
         self.popupLabel.text = "ถูกต้องนะครับ"
-        self.popupLabel.textColor = UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
+        self.popupLabel.textColor =  UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
         self.popupReply.text = reply
-        self.popupReply.textColor = UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
+        self.popupReply.textColor =  UIColor(red: 109/255.0, green: 192/255.0, blue: 102/255.0, alpha: 1)
         self.popupAnswer.text = ""
     }
     
@@ -186,40 +199,20 @@ class ImageQuestionViewController: UIViewController {
                         self.myView.alpha = 1
                     }, completion: { (true) in
                         self.ableAnswerButtons()
+                        self.mySpeaker.isEnabled = true
                     })
                 })
             }
         }
     }
     
-    @IBAction func onPreviewImage(_ sender: UIButton) {
-        playButton()
-        self.imagePreview.image = self.questionImage.image
-        self.preview.alpha = 0.5
-        self.view.addSubview(self.preview)
-        self.preview.center = self.view.center
-        self.preview.transform = CGAffineTransform(scaleX: 0.8, y: 1.2)
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
-            self.preview.alpha = 1
-            self.preview.transform = CGAffineTransform.identity
-        })
-    }
-    
-    @IBAction func onClosePreview(_ sender: UIButtonX) {
-        playButton()
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
-            self.preview.alpha = 0
-            self.preview.transform = CGAffineTransform(scaleX: 0.5, y: 0.2)
-        })
-    }
-  
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToFinishQuestion" {
             let destination = segue.destination as! FinishGameTableViewController
             destination.getCorrectQuestion = self.correctQuestion
-            destination.getPreScene = "ImageQuestion"
+            destination.getPreScene = "SoundQuestion"
         }
     }
     
+
 }

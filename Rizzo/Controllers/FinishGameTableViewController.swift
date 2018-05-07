@@ -13,6 +13,7 @@ class FinishGameTableViewController: UITableViewController {
 
     var buttonPlayer = AVAudioPlayer()
     var getCorrectQuestion = 0
+    var getPreScene = ""
     @IBOutlet weak var numCorrect: UILabel!
     @IBOutlet weak var numUncorrect: UILabel!
     
@@ -42,13 +43,19 @@ class FinishGameTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     override var prefersStatusBarHidden: Bool {
         return true
     }
     @IBAction func onPlayAgain(_ sender: UIButtonX) {
         playButton()
+        if getPreScene == "ImageQuestion" {
+            performSegue(withIdentifier: "ToImgQuestionAgain", sender: self)
+        }
+        else if getPreScene == "SoundQuestion" {
+            performSegue(withIdentifier: "ToSoundQuestionAgain", sender: self)
+        }
     }
     
 
