@@ -15,4 +15,6 @@ class SoundQuestion {
         self.answer = answer
         self.answers = answers
     }
+    deinit {
+    }
 }

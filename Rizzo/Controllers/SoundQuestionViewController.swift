@@ -28,7 +28,7 @@ class SoundQuestionViewController: UIViewController {
     @IBOutlet weak var popupReply: UILabel!
     @IBOutlet weak var popupAnswer: UILabel!
     @IBOutlet weak var popupLabel: UILabel!
-    @IBOutlet var myPopup: UIView!
+    @IBOutlet weak var myPopup: UIView!
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var mySpeaker: UIButton!
     @IBOutlet weak var currentQuestion: UILabel!

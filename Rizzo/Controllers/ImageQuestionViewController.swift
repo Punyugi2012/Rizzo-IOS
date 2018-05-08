@@ -11,12 +11,12 @@ import AVFoundation
 
 class ImageQuestionViewController: UIViewController {
     
-    @IBOutlet var preview: UIView!
+    @IBOutlet weak var preview: UIView!
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var popupReply: UILabel!
     @IBOutlet weak var popupAnswer: UILabel!
     @IBOutlet weak var popupLabel: UILabel!
-    @IBOutlet var myPopup: UIView!
+    @IBOutlet weak var myPopup: UIView!
     @IBOutlet weak var currentQuestion: UILabel!
     @IBOutlet weak var questionImage: UIImageView!
     @IBOutlet weak var myView: UIView!
@@ -174,6 +174,7 @@ class ImageQuestionViewController: UIViewController {
             self.myPopup.removeFromSuperview()
             if self.questions.isEmpty {
                 print(self.correctQuestion)
+                
                 self.performSegue(withIdentifier: "ToFinishQuestion", sender: self)
             }
             else {

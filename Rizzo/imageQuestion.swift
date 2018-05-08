@@ -16,4 +16,6 @@ class ImageQuestion {
         self.answer = answer
         self.answers = answers
     }
+    deinit {
+    }
 }

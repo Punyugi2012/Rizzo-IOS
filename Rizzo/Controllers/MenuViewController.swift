@@ -37,6 +37,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
                 }
             }
             else {
+                UserDefaults.standard.set(TURNON_BGSOUND, forKey: "bgSoundConfig")
                 audioPlayer.play()
             }
         }catch{
