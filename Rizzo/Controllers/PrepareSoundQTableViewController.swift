@@ -11,17 +11,27 @@ import AVFoundation
 
 class PrepareSoundQTableViewController: UITableViewController {
 
-    var buttonPlayer = AVAudioPlayer()
+    var buttonPlayer: AVAudioPlayer?
+    let TURNON = 1
+    let TURNOFF = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.isScrollEnabled = false
-        do {
-            buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
-            buttonPlayer.prepareToPlay()
-        }catch{
-            print(error)
+        setButtonSound()
+    }
+    
+    func setButtonSound() {
+        if let data = UserDefaults.standard.value(forKey: "btnSoundConfig") as? Int {
+            if data == TURNON {
+                do {
+                    buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
+                    buttonPlayer?.prepareToPlay()
+                }catch{
+                    print(error)
+                }
+            }
         }
     }
 
@@ -34,9 +44,9 @@ class PrepareSoundQTableViewController: UITableViewController {
     }
     
     func playButton() {
-        self.buttonPlayer.stop()
-        self.buttonPlayer.currentTime = 0
-        self.buttonPlayer.play()
+        self.buttonPlayer?.stop()
+        self.buttonPlayer?.currentTime = 0
+        self.buttonPlayer?.play()
     }
     @IBAction func onPlay(_ sender: UIButton) {
         playButton()

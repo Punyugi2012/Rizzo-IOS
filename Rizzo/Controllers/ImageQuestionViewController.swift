@@ -23,26 +23,16 @@ class ImageQuestionViewController: UIViewController {
     @IBOutlet var myButtons: [UIButton]!
     var questions: [ImageQuestion] = []
     var bufferQuestions: [ImageQuestion] = []
-    var buttonPlayer = AVAudioPlayer()
-    var popupPlayer = AVAudioPlayer()
+    var buttonPlayer: AVAudioPlayer?
     var currentNumQuestion = 0
     var currentAnswer: String = ""
     var correctQuestion = 0
+    let TURNON = 1
+    let TURNOFF = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        do {
-            buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
-            buttonPlayer.prepareToPlay()
-        }catch{
-            print(error)
-        }
-        do {
-            popupPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "popup", ofType: "mp3")!))
-            popupPlayer.prepareToPlay()
-        }catch{
-            print(error)
-        }
+
         self.myPopup.bounds.size.width = self.view.bounds.width - 200
         self.myPopup.bounds.size.height = self.view.bounds.height / 2
         self.preview.bounds.size.width = self.view.bounds.width - 20
@@ -60,6 +50,21 @@ class ImageQuestionViewController: UIViewController {
 //        }
         self.questions = chooseImageQuestion(10)
         setQuestion()
+        setButtonSound()
+    }
+    
+    
+    func setButtonSound() {
+        if let data = UserDefaults.standard.value(forKey: "btnSoundConfig") as? Int {
+            if data == TURNON {
+                do {
+                    buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
+                    buttonPlayer?.prepareToPlay()
+                }catch{
+                    print(error)
+                }
+            }
+        }
     }
     
     func chooseImageQuestion(_ number: Int) -> [ImageQuestion] {
@@ -93,15 +98,9 @@ class ImageQuestionViewController: UIViewController {
     }
     
     func playButton() {
-        self.buttonPlayer.stop()
-        self.buttonPlayer.currentTime = 0
-        self.buttonPlayer.play()
-    }
-    
-    func playPopup() {
-        self.popupPlayer.stop()
-        self.popupPlayer.currentTime = 0
-        self.popupPlayer.play()
+        self.buttonPlayer?.stop()
+        self.buttonPlayer?.currentTime = 0
+        self.buttonPlayer?.play()
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -109,7 +108,7 @@ class ImageQuestionViewController: UIViewController {
     }
     
     @IBAction func touchedAnswer(_ sender: UIButtonX) {
-        playPopup()
+        playButton()
         if self.currentAnswer == sender.currentTitle {
             self.correctQuestion += 1
             setupCorrectPopup(sender.currentTitle!)

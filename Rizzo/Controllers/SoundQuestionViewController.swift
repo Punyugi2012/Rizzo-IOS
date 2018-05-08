@@ -33,13 +33,15 @@ class SoundQuestionViewController: UIViewController {
     @IBOutlet weak var mySpeaker: UIButton!
     @IBOutlet weak var currentQuestion: UILabel!
     @IBOutlet var myButtons: [UIButton]!
-    var buttonPlayer = AVAudioPlayer()
+    var buttonPlayer: AVAudioPlayer?
     var speakerPlayer = AVAudioPlayer()
     var bufferQuestions: [SoundQuestion] = []
     var questions: [SoundQuestion] = []
     var currentAnswer = ""
     var correctQuestion = 0
     var currentNumQuestion = 0
+    let TURNON = 1
+    let TURNOFF = 0
 
     @IBAction func onSpeak(_ sender: UIButton) {
         if !self.speakerPlayer.isPlaying {
@@ -50,12 +52,6 @@ class SoundQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        do {
-            buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
-            buttonPlayer.prepareToPlay()
-        }catch{
-            print(error)
-        }
         setCurrentQuestion()
         self.myPopup.bounds.size.width = self.view.bounds.width - 200
         self.myPopup.bounds.size.height = self.view.bounds.height / 2
@@ -71,7 +67,22 @@ class SoundQuestionViewController: UIViewController {
 //                }
         self.questions = chooseSoundQuestion(10)
         setQuestion()
+        setButtonSound()
     }
+    
+    func setButtonSound() {
+        if let data = UserDefaults.standard.value(forKey: "btnSoundConfig") as? Int {
+            if data == TURNON {
+                do {
+                    buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
+                    buttonPlayer?.prepareToPlay()
+                }catch{
+                    print(error)
+                }
+            }
+        }
+    }
+    
     
     func chooseSoundQuestion(_ number: Int) -> [SoundQuestion] {
         var soundQuestions: [SoundQuestion] = []
@@ -109,9 +120,9 @@ class SoundQuestionViewController: UIViewController {
     }
     
     func playButton() {
-        self.buttonPlayer.stop()
-        self.buttonPlayer.currentTime = 0
-        self.buttonPlayer.play()
+        self.buttonPlayer?.stop()
+        self.buttonPlayer?.currentTime = 0
+        self.buttonPlayer?.play()
     }
     
     override var prefersStatusBarHidden: Bool {
