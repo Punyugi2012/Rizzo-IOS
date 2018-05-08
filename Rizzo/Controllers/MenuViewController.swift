@@ -13,22 +13,27 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBOutlet weak var menuCollectionView: UICollectionView!
     var audioPlayer = AVAudioPlayer()
-    var buttonPlayer = AVAudioPlayer()
+    var buttonPlayer: AVAudioPlayer?
     let menus = ["ทายเสียง", "ทายรูปภาพ", "วาดภาพ", "ตั้งค่า"]
-    let TURNON_BGSOUND = 1
-    let TURNOFF_BGSOUND = 0
+    let TURNON = 1
+    let TURNOFF = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.menuCollectionView.dataSource = self
         self.menuCollectionView.delegate = self
+        setButtonSound()
+        setBackgroundSound()
+    }
+    
+    func setBackgroundSound() {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "soundtrack", ofType: "mp3")!))
             audioPlayer.prepareToPlay()
             audioPlayer.numberOfLoops = -1
             if let data = UserDefaults.standard.value(forKey: "bgSoundConfig") as? Int
             {
-                if data == TURNON_BGSOUND {
+                if data == TURNON {
                     audioPlayer.play()
                 }
                 else {
@@ -37,17 +42,36 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
                 }
             }
             else {
-                UserDefaults.standard.set(TURNON_BGSOUND, forKey: "bgSoundConfig")
+                UserDefaults.standard.set(TURNON, forKey: "bgSoundConfig")
                 audioPlayer.play()
             }
         }catch{
             print(error)
         }
-        do {
-            buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
-            buttonPlayer.prepareToPlay()
-        }catch{
-            print(error)
+    }
+    
+    func setButtonSound() {
+        if let data = UserDefaults.standard.value(forKey: "btnSoundConfig") as? Int {
+            if data == TURNON {
+                do {
+                    buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
+                    buttonPlayer?.prepareToPlay()
+                }catch{
+                    print(error)
+                }
+            }
+            else {
+                buttonPlayer = nil
+            }
+        }
+        else {
+            UserDefaults.standard.set(TURNON, forKey: "btnSoundConfig")
+            do {
+                buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
+                buttonPlayer?.prepareToPlay()
+            }catch{
+                print(error)
+            }
         }
     }
     
@@ -66,9 +90,9 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func playButton() {
-        self.buttonPlayer.stop()
-        self.buttonPlayer.currentTime = 0
-        self.buttonPlayer.play()
+        self.buttonPlayer?.stop()
+        self.buttonPlayer?.currentTime = 0
+        self.buttonPlayer?.play()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -92,7 +116,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
-        
+        setButtonSound()
     }
     
     override var prefersStatusBarHidden: Bool {

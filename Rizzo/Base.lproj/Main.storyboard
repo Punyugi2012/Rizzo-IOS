@@ -875,6 +875,69 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="tid-vs-zUC">
+                                        <rect key="frame" x="0.0" y="497" width="1024" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tid-vs-zUC" id="BDi-NS-1Qd">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v4H-t5-q7M">
+                                                    <rect key="frame" x="734" y="15" width="270" height="130"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-1j-5ge" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="YTf-ey-RQx"/>
+                                                                <constraint firstAttribute="height" constant="130" id="c7B-fJ-7ZO"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                                                            <state key="normal" title="เปิด"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="65"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="onPlaySoundBtn:" destination="5P5-GA-KzU" eventType="touchUpInside" id="KXH-rp-6RN"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lK-Vl-egS" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                                                            <rect key="frame" x="140" y="0.0" width="130" height="130"/>
+                                                            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="130" id="0En-iB-sjV"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="nSD-dO-AE2"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                                                            <state key="normal" title="ปิด"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="65"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="onStopSoundBtn:" destination="5P5-GA-KzU" eventType="touchUpInside" id="s9Z-ud-jmn"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="เสียงปุ่ม" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2b-25-7mS">
+                                                    <rect key="frame" x="20" y="45" width="158" height="71"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="v4H-t5-q7M" firstAttribute="centerY" secondItem="BDi-NS-1Qd" secondAttribute="centerY" id="28f-64-PtB"/>
+                                                <constraint firstAttribute="trailing" secondItem="v4H-t5-q7M" secondAttribute="trailing" constant="20" id="gro-K3-YHA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -884,8 +947,10 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="playSoundButton" destination="w97-M6-6YB" id="dWh-XD-fSv"/>
-                        <outlet property="stopSoundButton" destination="wvB-6x-y4t" id="gCU-9S-WLr"/>
+                        <outlet property="playSoundBg" destination="w97-M6-6YB" id="Kgx-HP-FGG"/>
+                        <outlet property="playSoundBtn" destination="mK9-1j-5ge" id="ate-N3-vUS"/>
+                        <outlet property="stopSoundBg" destination="wvB-6x-y4t" id="eL5-dU-Y1s"/>
+                        <outlet property="stopSoundBtn" destination="5lK-Vl-egS" id="kXp-jd-LeF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbh-T0-zzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
