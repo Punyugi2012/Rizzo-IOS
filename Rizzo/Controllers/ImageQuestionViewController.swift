@@ -11,6 +11,9 @@ import AVFoundation
 
 class ImageQuestionViewController: UIViewController {
     
+    @IBOutlet weak var myLoadView: UIView!
+    @IBOutlet weak var firstTextLoadView: UILabel!
+    @IBOutlet weak var secondTextLoadView: UILabel!
     @IBOutlet weak var preview: UIView!
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var popupReply: UILabel!
@@ -32,13 +35,24 @@ class ImageQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.myPopup.bounds.size.width = self.view.bounds.width - 200
         self.myPopup.bounds.size.height = self.view.bounds.height / 2
         self.preview.bounds.size.width = self.view.bounds.width - 20
         self.preview.bounds.size.height = self.view.bounds.height - 20
+        self.myLoadView.bounds.size.width = self.view.bounds.width
+        self.myLoadView.bounds.size.height = self.view.bounds.height
+        self.firstTextLoadView.text = "กำลังโหลด...."
+        self.secondTextLoadView.text = "กรุณารอสักครู่"
+        loadViewInside()
         setCurrentQuestion()
-        self.bufferQuestions = Datas.getImageQuestion()
+//        self.bufferQuestions = Datas.getImageQuestion()
+        Datas.getImageQuestion { (data) in
+            self.bufferQuestions = data
+            self.questions = self.chooseImageQuestion(10)
+            self.setQuestion()
+            self.setButtonSound()
+            self.loadViewOutside()
+        }
 //        for i in self.bufferQuestions {
 //            if i.answers.count != 4 {
 //                print(i.answer)
@@ -48,11 +62,26 @@ class ImageQuestionViewController: UIViewController {
 //                      print("\(i.answer) Error image")
 //            }
 //        }
-        self.questions = chooseImageQuestion(10)
-        setQuestion()
-        setButtonSound()
     }
     
+    func loadViewInside() {
+        self.view.addSubview(self.myLoadView)
+        self.myLoadView.center = self.view.center
+    }
+    
+    func loadViewOutside() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.firstTextLoadView.text = "เสร็จสิ้น"
+            self.secondTextLoadView.text = ""
+        }) { (true) in
+            sleep(1)
+            UIView.transition(with: self.myLoadView, duration: 0.4, options: [.transitionCrossDissolve], animations: {
+                self.myLoadView.alpha = 0
+            }) { (true) in
+                self.myLoadView.removeFromSuperview()
+            }
+        }
+    }
     
     func setButtonSound() {
         if let data = UserDefaults.standard.value(forKey: "btnSoundConfig") as? Int {
@@ -172,8 +201,6 @@ class ImageQuestionViewController: UIViewController {
         }) { (true) in
             self.myPopup.removeFromSuperview()
             if self.questions.isEmpty {
-                print(self.correctQuestion)
-                
                 self.performSegue(withIdentifier: "ToFinishQuestion", sender: self)
             }
             else {

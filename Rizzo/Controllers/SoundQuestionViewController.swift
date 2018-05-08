@@ -25,6 +25,9 @@ extension UIButton {
 
 class SoundQuestionViewController: UIViewController {
 
+    @IBOutlet weak var myLoadView: UIView!
+    @IBOutlet weak var firstTextLoadView: UILabel!
+    @IBOutlet weak var secondTextLoadView: UILabel!
     @IBOutlet weak var popupReply: UILabel!
     @IBOutlet weak var popupAnswer: UILabel!
     @IBOutlet weak var popupLabel: UILabel!
@@ -52,22 +55,40 @@ class SoundQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCurrentQuestion()
         self.myPopup.bounds.size.width = self.view.bounds.width - 200
         self.myPopup.bounds.size.height = self.view.bounds.height / 2
-        self.bufferQuestions = Datas.getSoundQuestions()
-//                for i in self.bufferQuestions {
-//                    if i.answers.count != 4 {
-//                        print(i.answer)
-//                        print("Error")
-//                    }
-//                    if Bundle.main.url(forResource: i.answer, withExtension: "mp3") == nil {
-//                              print("\(i.answer) Error image")
-//                    }
-//                }
-        self.questions = chooseSoundQuestion(10)
-        setQuestion()
-        setButtonSound()
+        self.myLoadView.bounds.size.width = self.view.bounds.width
+        self.myLoadView.bounds.size.height = self.view.bounds.height
+        self.firstTextLoadView.text = "กำลังโหลด...."
+        self.secondTextLoadView.text = "กรุณารอสักครู่"
+        loadViewInside()
+        setCurrentQuestion()
+        Datas.getSoundQuestions { (data) in
+            self.bufferQuestions = data
+            self.questions = self.chooseSoundQuestion(10)
+            self.setQuestion()
+            self.setButtonSound()
+            self.loadViewOutside()
+        }
+    }
+    
+    func loadViewInside() {
+        self.view.addSubview(self.myLoadView)
+        self.myLoadView.center = self.view.center
+    }
+    
+    func loadViewOutside() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.firstTextLoadView.text = "เสร็จสิ้น"
+            self.secondTextLoadView.text = ""
+        }) { (true) in
+            sleep(1)
+            UIView.transition(with: self.myLoadView, duration: 0.4, options: [.transitionCrossDissolve], animations: {
+                self.myLoadView.alpha = 0
+            }) { (true) in
+                self.myLoadView.removeFromSuperview()
+            }
+        }
     }
     
     func setButtonSound() {

@@ -403,7 +403,9 @@
                     </view>
                     <connections>
                         <outlet property="currentQuestion" destination="dOz-Ew-qOg" id="0Q3-Cv-VDX"/>
+                        <outlet property="firstTextLoadView" destination="JXN-R8-iiA" id="CKc-2F-5oe"/>
                         <outlet property="imagePreview" destination="DZ1-QB-nhK" id="qlI-4Q-OKS"/>
+                        <outlet property="myLoadView" destination="o1J-8u-3be" id="Vnl-C0-Kwx"/>
                         <outlet property="myPopup" destination="t4Z-Az-qa7" id="2V5-uO-b5j"/>
                         <outlet property="myView" destination="0i6-y4-Ns9" id="OR0-Pw-uMD"/>
                         <outlet property="popupAnswer" destination="YfS-Tg-bp7" id="BR1-hb-MUi"/>
@@ -411,6 +413,7 @@
                         <outlet property="popupReply" destination="hJW-Af-lPT" id="8TZ-6z-zYF"/>
                         <outlet property="preview" destination="gMQ-vl-eOZ" id="Ru0-iu-qf3"/>
                         <outlet property="questionImage" destination="6Le-Zx-Io9" id="hrk-iT-nx2"/>
+                        <outlet property="secondTextLoadView" destination="MMW-qH-nlm" id="38M-ai-CvN"/>
                         <outletCollection property="myButtons" destination="TEm-mm-8bs" collectionClass="NSMutableArray" id="2L6-ZA-LKn"/>
                         <outletCollection property="myButtons" destination="0yq-9L-yEi" collectionClass="NSMutableArray" id="eO1-U1-caH"/>
                         <outletCollection property="myButtons" destination="q31-XF-r3I" collectionClass="NSMutableArray" id="xDu-0p-PjJ"/>
@@ -472,6 +475,36 @@
                         <constraint firstItem="Av3-fk-6Iu" firstAttribute="trailing" secondItem="DZ1-QB-nhK" secondAttribute="trailing" id="zWA-9o-7Ee"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="Av3-fk-6Iu"/>
+                </view>
+                <view contentMode="scaleToFill" id="o1J-8u-3be">
+                    <rect key="frame" x="0.0" y="0.0" width="909" height="582"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1dl-3w-aoT">
+                            <rect key="frame" x="20" y="221" width="869" height="140"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กำลังโหลด.... " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXN-R8-iiA">
+                                    <rect key="frame" x="0.0" y="0.0" width="869" height="90"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="90"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณารอสักครู่" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMW-qH-nlm">
+                                    <rect key="frame" x="0.0" y="90" width="869" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="1dl-3w-aoT" firstAttribute="centerY" secondItem="o1J-8u-3be" secondAttribute="centerY" id="8Xn-qc-EjH"/>
+                        <constraint firstItem="1dl-3w-aoT" firstAttribute="leading" secondItem="ZDS-Eg-wXt" secondAttribute="leading" constant="20" id="PdX-Rc-nDF"/>
+                        <constraint firstItem="ZDS-Eg-wXt" firstAttribute="trailing" secondItem="1dl-3w-aoT" secondAttribute="trailing" constant="20" id="UdD-Mt-TSa"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="ZDS-Eg-wXt"/>
                 </view>
                 <view contentMode="scaleToFill" id="t4Z-Az-qa7" customClass="UIViewX" customModule="Rizzo" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="862" height="587"/>
@@ -1390,12 +1423,15 @@
                     </view>
                     <connections>
                         <outlet property="currentQuestion" destination="iVh-li-5Kr" id="NZF-J3-DBL"/>
+                        <outlet property="firstTextLoadView" destination="tEr-cK-EjE" id="EhI-71-xva"/>
+                        <outlet property="myLoadView" destination="2XK-ft-Ewn" id="926-XS-OxD"/>
                         <outlet property="myPopup" destination="JNt-9A-LWM" id="hjX-CL-omS"/>
                         <outlet property="mySpeaker" destination="Or6-Aa-IiY" id="cDT-iL-Z98"/>
                         <outlet property="myView" destination="cGi-nk-6pz" id="FZL-cu-MGy"/>
                         <outlet property="popupAnswer" destination="LFO-Z8-dc8" id="bQM-9X-czC"/>
                         <outlet property="popupLabel" destination="E8q-Xz-vIn" id="RVI-sU-aiQ"/>
                         <outlet property="popupReply" destination="fcU-gs-xtv" id="wJG-Gx-C2W"/>
+                        <outlet property="secondTextLoadView" destination="Qrj-ME-bc2" id="fHc-pT-RQo"/>
                         <outletCollection property="myButtons" destination="pjD-gC-led" collectionClass="NSMutableArray" id="5gj-yH-10c"/>
                         <outletCollection property="myButtons" destination="j6L-mj-t06" collectionClass="NSMutableArray" id="m5b-tv-iVr"/>
                         <outletCollection property="myButtons" destination="szr-1L-Ku5" collectionClass="NSMutableArray" id="wTY-P8-fiF"/>
@@ -1403,6 +1439,36 @@
                         <segue destination="SDI-fN-md0" kind="show" identifier="ToFinishQuestion" id="79z-9Y-f12"/>
                     </connections>
                 </viewController>
+                <view contentMode="scaleToFill" id="2XK-ft-Ewn">
+                    <rect key="frame" x="0.0" y="0.0" width="909" height="582"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SWO-ti-tK8">
+                            <rect key="frame" x="20" y="221" width="869" height="140"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กำลังโหลด.... " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEr-cK-EjE">
+                                    <rect key="frame" x="0.0" y="0.0" width="869" height="90"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="90"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณารอสักครู่" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrj-ME-bc2">
+                                    <rect key="frame" x="0.0" y="90" width="869" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.8980392157" green="0.70980392160000005" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="SWO-ti-tK8" firstAttribute="centerY" secondItem="2XK-ft-Ewn" secondAttribute="centerY" id="Ba9-P8-RkM"/>
+                        <constraint firstItem="d2z-Go-cdj" firstAttribute="trailing" secondItem="SWO-ti-tK8" secondAttribute="trailing" constant="20" id="M9T-Zx-fcq"/>
+                        <constraint firstItem="SWO-ti-tK8" firstAttribute="leading" secondItem="d2z-Go-cdj" secondAttribute="leading" constant="20" id="O9W-5n-Xej"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="d2z-Go-cdj"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="REt-B7-Uq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="JNt-9A-LWM" customClass="UIViewX" customModule="Rizzo" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="862" height="587"/>
@@ -1494,7 +1560,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TGi-xt-WBh"/>
-        <segue reference="0PL-ei-8cF"/>
-        <segue reference="nbI-Bw-i4b"/>
+        <segue reference="79z-9Y-f12"/>
+        <segue reference="jV3-wE-bfb"/>
     </inferredMetricsTieBreakers>
 </document>
