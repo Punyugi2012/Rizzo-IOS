@@ -218,7 +218,6 @@ class SoundQuestionViewController: UIViewController {
         }) { (true) in
             self.myPopup.removeFromSuperview()
             if self.questions.isEmpty {
-                print(self.correctQuestion)
                 self.performSegue(withIdentifier: "ToFinishQuestion", sender: self)
             }
             else {
