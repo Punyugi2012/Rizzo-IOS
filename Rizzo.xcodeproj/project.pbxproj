@@ -36,6 +36,9 @@
 		B81F712B20A0674D0076A033 /* วัว.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B81F711420A0674D0076A033 /* วัว.mp3 */; };
 		B81F713020A068540076A033 /* PrepareSoundQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F712F20A068540076A033 /* PrepareSoundQTableViewController.swift */; };
 		B81F713220A06B910076A033 /* SoundQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F713120A06B910076A033 /* SoundQuestionViewController.swift */; };
+		B85B204C20A301470049384B /* DrawQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85B204B20A301470049384B /* DrawQuestion.swift */; };
+		B85B204E20A3029F0049384B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85B204D20A3029F0049384B /* Reachability.swift */; };
+		B85B205020A306A80049384B /* PrepareDrawQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85B204F20A306A80049384B /* PrepareDrawQuestionTableViewController.swift */; };
 		B85E00F6209EE0F40098482A /* WRTishSmile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F5209EE0F40098482A /* WRTishSmile.ttf */; };
 		B85E00FA209EE2A60098482A /* rtemehua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85E00F9209EE2A60098482A /* rtemehua.ttf */; };
 		B85E00FC209EF87A0098482A /* PrepareImgQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */; };
@@ -94,6 +97,9 @@
 		B81F711420A0674D0076A033 /* วัว.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "วัว.mp3"; sourceTree = "<group>"; };
 		B81F712F20A068540076A033 /* PrepareSoundQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareSoundQTableViewController.swift; sourceTree = "<group>"; };
 		B81F713120A06B910076A033 /* SoundQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundQuestionViewController.swift; sourceTree = "<group>"; };
+		B85B204B20A301470049384B /* DrawQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawQuestion.swift; sourceTree = "<group>"; };
+		B85B204D20A3029F0049384B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B85B204F20A306A80049384B /* PrepareDrawQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareDrawQuestionTableViewController.swift; sourceTree = "<group>"; };
 		B85E00F5209EE0F40098482A /* WRTishSmile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WRTishSmile.ttf; sourceTree = "<group>"; };
 		B85E00F9209EE2A60098482A /* rtemehua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rtemehua.ttf; sourceTree = "<group>"; };
 		B85E00FB209EF87A0098482A /* PrepareImgQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareImgQuestionTableViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				B81F70FA20A04C290076A033 /* FinishGameTableViewController.swift */,
 				B81F712F20A068540076A033 /* PrepareSoundQTableViewController.swift */,
 				B81F713120A06B910076A033 /* SoundQuestionViewController.swift */,
+				B85B204F20A306A80049384B /* PrepareDrawQuestionTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +199,8 @@
 				B85FA12B209DC616002ED3AA /* Datas.swift */,
 				B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */,
 				B81F70FC20A065D80076A033 /* SoundQuestion.swift */,
+				B85B204B20A301470049384B /* DrawQuestion.swift */,
+				B85B204D20A3029F0049384B /* Reachability.swift */,
 			);
 			path = Rizzo;
 			sourceTree = "<group>";
@@ -356,15 +365,18 @@
 				B85FA13C209DC84A002ED3AA /* UIViewAnchorPoint.swift in Sources */,
 				B85FA141209DC84A002ED3AA /* UISliderX.swift in Sources */,
 				B85FA13A209DC84A002ED3AA /* UIButtonX.swift in Sources */,
+				B85B204C20A301470049384B /* DrawQuestion.swift in Sources */,
 				B85FA13F209DC84A002ED3AA /* UIViewX.swift in Sources */,
 				B85FA13D209DC84A002ED3AA /* UIViewControllerX.swift in Sources */,
 				B81308C8209F0CE7001DEB0B /* ImageQuestionViewController.swift in Sources */,
 				B85FA118209DC3D7002ED3AA /* AppDelegate.swift in Sources */,
+				B85B204E20A3029F0049384B /* Reachability.swift in Sources */,
 				B85FA138209DC84A002ED3AA /* UIViewXRadialGradient.swift in Sources */,
 				B81F713220A06B910076A033 /* SoundQuestionViewController.swift in Sources */,
 				B85FA12C209DC616002ED3AA /* Datas.swift in Sources */,
 				B85FA13B209DC84A002ED3AA /* UILabelX.swift in Sources */,
 				B81F70FD20A065D80076A033 /* SoundQuestion.swift in Sources */,
+				B85B205020A306A80049384B /* PrepareDrawQuestionTableViewController.swift in Sources */,
 				B85FA13E209DC84A002ED3AA /* UIImageViewX.swift in Sources */,
 				B85FA14C209DCC3F002ED3AA /* MenuCollectionViewCell.swift in Sources */,
 				B81F70FB20A04C290076A033 /* FinishGameTableViewController.swift in Sources */,

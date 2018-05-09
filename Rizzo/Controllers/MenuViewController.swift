@@ -106,6 +106,9 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         if self.menus[indexPath.row] == "ทายเสียง" {
             performSegue(withIdentifier: "ToPrePareSoundQuestion", sender: self)
         }
+        if self.menus[indexPath.row] == "วาดภาพ" {
+            performSegue(withIdentifier: "ToPrepareDrawQuestion", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

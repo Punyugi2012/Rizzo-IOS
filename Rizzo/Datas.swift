@@ -79,6 +79,7 @@ class Datas {
             }
         }
     }
+    
     class func getSoundQuestions(complete: @escaping (_ result: [SoundQuestion]) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async {
             let data = [
@@ -112,4 +113,28 @@ class Datas {
             }
         }
     }
+    
+    class func getDrawQuestion(complete: @escaping (_ result: [DrawQuestion]) -> Void) {
+        DispatchQueue.global(qos: .userInteractive).async {
+//            animals = [
+//                {nameEng: "octopus", nameTH: "???????"},
+//                {nameEng: "panda", nameTH: "??????"},
+//                {nameEng: "cat", nameTH: "???"},
+//                {nameEng: "fish", nameTH: "???"},
+//                {nameEng: "rabbit", nameTH: "???????"}
+//            ]
+            let data = [
+                DrawQuestion("octopus", "หมึก"),
+                DrawQuestion("panda", "หมีแพนด้า"),
+                DrawQuestion("cat", "แมว"),
+                DrawQuestion("fish", "ปลา"),
+                DrawQuestion("rabbit", "กระต่าย"),
+            ]
+            sleep(2)
+            DispatchQueue.main.sync {
+                complete(data)
+            }
+        }
+    }
+    
 }
