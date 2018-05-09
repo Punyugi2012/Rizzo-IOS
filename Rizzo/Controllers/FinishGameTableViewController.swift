@@ -18,6 +18,7 @@ class FinishGameTableViewController: UITableViewController {
     let TURNOFF = 0
     @IBOutlet weak var numCorrect: UILabel!
     @IBOutlet weak var numUncorrect: UILabel!
+    @IBOutlet weak var skillLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -25,6 +26,18 @@ class FinishGameTableViewController: UITableViewController {
         self.tableView.isScrollEnabled = false
         self.numCorrect.text = "\(getCorrectQuestion) ข้อ"
         self.numUncorrect.text = "\(10 - getCorrectQuestion) ข้อ"
+        if self.getCorrectQuestion == 10 {
+            self.skillLabel.text = "ว๊าวได้เต็ม เก่งมาก!"
+        }
+        else if self.getCorrectQuestion >= 7 {
+            self.skillLabel.text = "ว๊าวเกือบได้เต็ม!"
+        }
+        else if self.getCorrectQuestion >= 1 {
+            self.skillLabel.text = "เล่นเรื่อยๆ เดี๋ยวก็ได้เต็ม"
+        }
+        else {
+            self.skillLabel.text = "ว๊า..แย่จัง ครั้งหน้าลองพยายามอีกนิด"
+        }
         setButtonSound()
     }
     
@@ -52,7 +65,7 @@ class FinishGameTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
     override var prefersStatusBarHidden: Bool {
         return true
