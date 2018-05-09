@@ -113,10 +113,20 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
             let destination = segue.destination as! SettingTableViewController
             destination.getAudioPlayer = self.audioPlayer
         }
+        if segue.identifier == "ToPrePareSoundQuestion" {
+            let destination = segue.destination as! PrepareSoundQTableViewController
+            destination.bgSoundPlayer = self.audioPlayer
+        }
     }
     
     @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
         setButtonSound()
+        if let data = UserDefaults.standard.value(forKey: "bgSoundConfig") as? Int {
+            if data == TURNON {
+                self.audioPlayer.play()
+            }
+        }
+        
     }
     
     override var prefersStatusBarHidden: Bool {

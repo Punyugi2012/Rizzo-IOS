@@ -11,9 +11,11 @@ import AVFoundation
 
 class PrepareSoundQTableViewController: UITableViewController {
 
+    var bgSoundPlayer: AVAudioPlayer!
     var buttonPlayer: AVAudioPlayer?
     let TURNON = 1
     let TURNOFF = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,7 @@ class PrepareSoundQTableViewController: UITableViewController {
     }
     @IBAction func onPlay(_ sender: UIButton) {
         playButton()
+        bgSoundPlayer.pause()
     }
     @IBAction func onClose(_ sender: UIButton) {
         playButton()
