@@ -68,6 +68,7 @@
 		B85FA14C209DCC3F002ED3AA /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */; };
 		B85FA14E209DD40C002ED3AA /* SanamDeklen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85FA14D209DD40B002ED3AA /* SanamDeklen.ttf */; };
 		B85FA150209DE2ED002ED3AA /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */; };
+		B8C5BC9E20A4446C003EB996 /* FinishDrawQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C5BC9D20A4446C003EB996 /* FinishDrawQuestionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,7 @@
 		B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		B85FA14D209DD40B002ED3AA /* SanamDeklen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SanamDeklen.ttf; sourceTree = "<group>"; };
 		B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		B8C5BC9D20A4446C003EB996 /* FinishDrawQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishDrawQuestionTableViewController.swift; sourceTree = "<group>"; };
 		D23E4A72791B7A442CD22C3A /* Pods_Rizzo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rizzo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -171,6 +173,7 @@
 				B81F713120A06B910076A033 /* SoundQuestionViewController.swift */,
 				B85B204F20A306A80049384B /* PrepareDrawQuestionTableViewController.swift */,
 				B85B205120A4291F0049384B /* DrawQuestionViewController.swift */,
+				B8C5BC9D20A4446C003EB996 /* FinishDrawQuestionTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				B81308C8209F0CE7001DEB0B /* ImageQuestionViewController.swift in Sources */,
 				B85B205420A429540049384B /* DrawView.swift in Sources */,
 				B85FA118209DC3D7002ED3AA /* AppDelegate.swift in Sources */,
+				B8C5BC9E20A4446C003EB996 /* FinishDrawQuestionTableViewController.swift in Sources */,
 				B85B204E20A3029F0049384B /* Reachability.swift in Sources */,
 				B85FA138209DC84A002ED3AA /* UIViewXRadialGradient.swift in Sources */,
 				B81F713220A06B910076A033 /* SoundQuestionViewController.swift in Sources */,
@@ -600,7 +604,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Rizzo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = max.Rizzo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -615,7 +622,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Rizzo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = max.Rizzo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

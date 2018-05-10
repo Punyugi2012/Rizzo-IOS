@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Alamofire
 
 class DrawQuestionViewController: UIViewController {
 
@@ -40,6 +41,36 @@ class DrawQuestionViewController: UIViewController {
             self.myDrawView.currentWidth = 2
             self.setColorButtons()
             self.loadViewOutside()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToFinishDrawQuestion" {
+            var points = Array(repeating: [Float](), count: 2)
+            for stroke in self.myDrawView.strokes {
+                points[0].append(Float(stroke.lastPoint.x))
+                points[1].append(Float(stroke.lastPoint.y))
+            }
+            let parameters: Parameters = [
+                "input_type": 0,
+                "requests": [
+                    [
+                        "language": "quickdraw",
+                        "writing_guide": [
+                            "width": self.myDrawView.bounds.width,
+                            "height": self.myDrawView.bounds.height
+                        ],
+                        "ink": [
+                            points
+                        ]
+                    ]
+                ]
+            ]
+            let destination = segue.destination as! FinishDrawQuestionTableViewController
+            destination.params = parameters
+            destination.question = self.question
+            let image = UIImage(view: self.myDrawView)
+            destination.imageDraw = image
         }
     }
     
@@ -142,6 +173,10 @@ class DrawQuestionViewController: UIViewController {
                 self.myLoadView.removeFromSuperview()
             }
         }
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
 

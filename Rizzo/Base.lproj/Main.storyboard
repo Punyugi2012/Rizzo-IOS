@@ -1347,7 +1347,7 @@
                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                         <state key="normal" title="ออก"/>
                                         <connections>
-                                            <segue destination="FTr-08-43M" kind="unwind" unwindAction="unwindSegue:" id="cMv-bs-tin"/>
+                                            <segue destination="FTr-08-43M" kind="unwind" unwindAction="unwindSegue:" id="Rta-Z5-83A"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIf-1c-dcZ" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
@@ -1572,6 +1572,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="F6M-4E-s6e" kind="show" identifier="ToFinishDrawQuestion" id="dGZ-e3-6X2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1707,6 +1710,8 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="pwn-RR-B3C"/>
                 </view>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hac-TZ-7B5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FTr-08-43M" userLabel="Exit" sceneMemberID="exit"/>
                 <view contentMode="scaleToFill" id="hIr-B0-DQ9">
                     <rect key="frame" x="0.0" y="0.0" width="909" height="617"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1737,8 +1742,6 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="HmD-z3-2fA"/>
                 </view>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hac-TZ-7B5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="FTr-08-43M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1964" y="260"/>
         </scene>
@@ -2026,8 +2029,217 @@
             </objects>
             <point key="canvasLocation" x="1980" y="1216"/>
         </scene>
+        <!--Finish Draw Question Table View Controller-->
+        <scene sceneID="ndA-DQ-EQe">
+            <objects>
+                <tableViewController id="F6M-4E-s6e" customClass="FinishDrawQuestionTableViewController" customModule="Rizzo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oZY-hZ-CaF">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.70980392160000005" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection id="5Eh-OS-Lgg">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="PYi-Ly-bpa">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PYi-Ly-bpa" id="70P-Sf-EfG">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h1-il-7u3">
+                                                    <rect key="frame" x="20" y="8" width="86" height="82"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                                                    <state key="normal" title="ออก"/>
+                                                    <connections>
+                                                        <segue destination="cri-tY-hNp" kind="unwind" unwindAction="unwindSegue:" id="M0k-1Z-o8u"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="D8P-sg-Ieo">
+                                        <rect key="frame" x="0.0" y="70" width="768" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D8P-sg-Ieo" id="FWQ-19-fai">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="วิเคราะห์สำเร็จ!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2e-7N-bq1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="80"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="l2e-7N-bq1" firstAttribute="leading" secondItem="FWQ-19-fai" secondAttribute="leading" id="3b9-ja-JPC"/>
+                                                <constraint firstAttribute="trailing" secondItem="l2e-7N-bq1" secondAttribute="trailing" id="74K-HY-Eye"/>
+                                                <constraint firstAttribute="bottom" secondItem="l2e-7N-bq1" secondAttribute="bottom" id="Nid-1l-HHF"/>
+                                                <constraint firstItem="l2e-7N-bq1" firstAttribute="top" secondItem="FWQ-19-fai" secondAttribute="top" id="TIO-aa-YiJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="Mqk-j7-wIA">
+                                        <rect key="frame" x="0.0" y="190" width="768" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mqk-j7-wIA" id="lfp-vo-ch7">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โจทย์ จงวาดหมา" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GQ-ee-zNJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8GQ-ee-zNJ" secondAttribute="trailing" id="0hw-Fa-x7d"/>
+                                                <constraint firstItem="8GQ-ee-zNJ" firstAttribute="top" secondItem="lfp-vo-ch7" secondAttribute="top" id="bdA-t0-uCo"/>
+                                                <constraint firstItem="8GQ-ee-zNJ" firstAttribute="leading" secondItem="lfp-vo-ch7" secondAttribute="leading" id="lrK-Oz-Xs6"/>
+                                                <constraint firstAttribute="bottom" secondItem="8GQ-ee-zNJ" secondAttribute="bottom" id="sK0-Ys-YGZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="423" id="tB9-IU-JQI">
+                                        <rect key="frame" x="0.0" y="310" width="768" height="423"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tB9-IU-JQI" id="A1b-0H-H98">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="423"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="Ph3-yF-FJE">
+                                                    <rect key="frame" x="156.5" y="41" width="455" height="341"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="455" id="Qhn-2j-Oby"/>
+                                                        <constraint firstAttribute="height" constant="341" id="vg5-jm-hzF"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ph3-yF-FJE" firstAttribute="centerX" secondItem="A1b-0H-H98" secondAttribute="centerX" id="0Sx-N2-pGR"/>
+                                                <constraint firstItem="Ph3-yF-FJE" firstAttribute="centerY" secondItem="A1b-0H-H98" secondAttribute="centerY" id="zMM-49-AtX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="VLN-lT-9cH">
+                                        <rect key="frame" x="0.0" y="733" width="768" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VLN-lT-9cH" id="HbY-Ie-csb">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ถูกต้อง มันคือหมา!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aje-Aj-IXr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Aje-Aj-IXr" secondAttribute="trailing" id="0WO-yw-ogd"/>
+                                                <constraint firstAttribute="bottom" secondItem="Aje-Aj-IXr" secondAttribute="bottom" id="LBx-bl-Ezi"/>
+                                                <constraint firstItem="Aje-Aj-IXr" firstAttribute="leading" secondItem="HbY-Ie-csb" secondAttribute="leading" id="c5t-uw-p6g"/>
+                                                <constraint firstItem="Aje-Aj-IXr" firstAttribute="top" secondItem="HbY-Ie-csb" secondAttribute="top" id="gFn-VU-G08"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="143" id="lnI-nn-KkM">
+                                        <rect key="frame" x="0.0" y="853" width="768" height="143"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lnI-nn-KkM" id="KSz-PV-Oe5">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEz-2P-FPf" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                                                    <rect key="frame" x="334" y="21" width="100" height="100"/>
+                                                    <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="C0Q-qu-6X1"/>
+                                                        <constraint firstAttribute="width" constant="100" id="Fg1-67-qrS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="30"/>
+                                                    <state key="normal" title="เล่นอีกครั้ง"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="popIn" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="popInDelay">
+                                                            <real key="value" value="0.45000000000000001"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <segue destination="rmO-tV-hbD" kind="showDetail" id="dvL-1A-qjS"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="dEz-2P-FPf" firstAttribute="centerY" secondItem="KSz-PV-Oe5" secondAttribute="centerY" id="6EN-Xm-DQF"/>
+                                                <constraint firstItem="dEz-2P-FPf" firstAttribute="centerX" secondItem="KSz-PV-Oe5" secondAttribute="centerX" id="br7-63-lj4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <connections>
+                        <outlet property="firstTextRecogView" destination="Izt-PT-SyA" id="Utd-YT-3XF"/>
+                        <outlet property="imageDrawed" destination="Ph3-yF-FJE" id="q4H-aS-ade"/>
+                        <outlet property="myRecogView" destination="lWr-uD-8z0" id="3yD-aq-26D"/>
+                        <outlet property="questionLabel" destination="8GQ-ee-zNJ" id="VMm-ZM-3p5"/>
+                        <outlet property="resultLabel" destination="Aje-Aj-IXr" id="H4U-hK-cqA"/>
+                        <outlet property="secondTextRecogView" destination="4zF-5y-HBa" id="E6t-XF-l7b"/>
+                    </connections>
+                </tableViewController>
+                <view contentMode="scaleToFill" id="lWr-uD-8z0">
+                    <rect key="frame" x="0.0" y="0.0" width="909" height="617"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JyS-i4-6Bv">
+                            <rect key="frame" x="20" y="238.5" width="869" height="140"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กำลังวิเคราะห์" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izt-PT-SyA">
+                                    <rect key="frame" x="0.0" y="0.0" width="869" height="90"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="90"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณารอสักครู่" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zF-5y-HBa">
+                                    <rect key="frame" x="0.0" y="90" width="869" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.8980392157" green="0.70980392160000005" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="JyS-i4-6Bv" firstAttribute="leading" secondItem="dgq-Bb-fQc" secondAttribute="leading" constant="20" id="425-tV-6ON"/>
+                        <constraint firstItem="JyS-i4-6Bv" firstAttribute="centerY" secondItem="lWr-uD-8z0" secondAttribute="centerY" id="BzL-Gy-wul"/>
+                        <constraint firstItem="dgq-Bb-fQc" firstAttribute="trailing" secondItem="JyS-i4-6Bv" secondAttribute="trailing" constant="20" id="DT2-Nz-rlb"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="dgq-Bb-fQc"/>
+                </view>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wEC-7q-sOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cri-tY-hNp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-3005" y="260"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="cat" width="700" height="700"/>
         <image name="pencil" width="170" height="170"/>
         <image name="กล้วย" width="700" height="700"/>
         <image name="ทายรูปภาพ" width="819" height="736"/>
@@ -2036,8 +2248,9 @@
         <image name="วาดภาพ" width="819" height="737"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sza-g7-Eyg"/>
-        <segue reference="79z-9Y-f12"/>
-        <segue reference="jV3-wE-bfb"/>
+        <segue reference="TGi-xt-WBh"/>
+        <segue reference="p2T-xW-ZVx"/>
+        <segue reference="0PL-ei-8cF"/>
+        <segue reference="nbI-Bw-i4b"/>
     </inferredMetricsTieBreakers>
 </document>
