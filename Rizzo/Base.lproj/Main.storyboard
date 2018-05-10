@@ -71,6 +71,7 @@
                         <viewLayoutGuide key="safeArea" id="0fj-jP-Qlz"/>
                     </view>
                     <connections>
+                        <outlet property="alertConnectionView" destination="K9u-Fr-5Kn" id="mCE-qB-wLB"/>
                         <outlet property="menuCollectionView" destination="UX8-4N-nT3" id="3zb-mK-4Bs"/>
                         <segue destination="5P5-GA-KzU" kind="show" identifier="ToSetting" id="Lca-6Z-dlX"/>
                         <segue destination="zDW-J2-6QL" kind="show" identifier="ToPrePareImgQuestion" id="e1s-ie-iMd"/>
@@ -78,6 +79,36 @@
                         <segue destination="gQc-VK-aEc" kind="show" identifier="ToPrepareDrawQuestion" id="fHV-4l-kSk"/>
                     </connections>
                 </viewController>
+                <view contentMode="scaleToFill" id="K9u-Fr-5Kn">
+                    <rect key="frame" x="0.0" y="0.0" width="558" height="289"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zqz-zt-cPS">
+                            <rect key="frame" x="20" y="102.5" width="518" height="85"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="คุณยังไม่ได้เชื่อมต่ออินเทอร์เน็ต!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opx-Wu-XrF">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="40"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEr-AG-Gyr">
+                                    <rect key="frame" x="0.0" y="45" width="518" height="40"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Zqz-zt-cPS" firstAttribute="centerY" secondItem="K9u-Fr-5Kn" secondAttribute="centerY" id="DrM-Yh-sjk"/>
+                        <constraint firstItem="79j-FL-dAh" firstAttribute="trailing" secondItem="Zqz-zt-cPS" secondAttribute="trailing" constant="20" id="QE4-ab-aBI"/>
+                        <constraint firstItem="Zqz-zt-cPS" firstAttribute="leading" secondItem="79j-FL-dAh" secondAttribute="leading" constant="20" id="s91-1A-Vui"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="79j-FL-dAh"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="35.251798561151084" y="48.561151079136692"/>
@@ -1272,7 +1303,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="onPlay:" destination="gQc-VK-aEc" eventType="touchUpInside" id="uWB-RT-Ewe"/>
-                                                        <segue destination="rmO-tV-hbD" kind="show" identifier="" id="svG-hh-FwP"/>
+                                                        <segue destination="rmO-tV-hbD" kind="show" id="p2T-xW-ZVx"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1295,7 +1326,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kf2-Wd-sEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cJq-mF-Cft" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-912" y="48"/>
+            <point key="canvasLocation" x="-846" y="260"/>
         </scene>
         <!--Draw Question View Controller-->
         <scene sceneID="RFQ-qh-dpM">
@@ -1709,7 +1740,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hac-TZ-7B5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FTr-08-43M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1810" y="47"/>
+            <point key="canvasLocation" x="-1964" y="260"/>
         </scene>
         <!--Sound Question View Controller-->
         <scene sceneID="UeT-n6-EkU">

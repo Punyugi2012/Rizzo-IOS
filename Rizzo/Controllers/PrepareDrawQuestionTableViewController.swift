@@ -14,12 +14,10 @@ class PrepareDrawQuestionTableViewController: UITableViewController {
     let TURNON = 1
     let TURNOFF = 0
     var buttonPlayer: AVAudioPlayer?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.isScrollEnabled = false
         setButtonSound()
-        
     }
     
     func setButtonSound() {
