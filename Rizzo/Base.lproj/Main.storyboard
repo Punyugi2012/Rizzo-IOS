@@ -1181,6 +1181,7 @@
                                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                                     <state key="normal" title="ออก"/>
                                                     <connections>
+                                                        <action selector="onClose:" destination="gQc-VK-aEc" eventType="touchUpInside" id="363-93-Wzr"/>
                                                         <segue destination="cJq-mF-Cft" kind="unwind" unwindAction="unwindSegue:" id="n0D-gR-Clg"/>
                                                     </connections>
                                                 </button>
@@ -1269,6 +1270,10 @@
                                                             <real key="value" value="0.45000000000000001"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="onPlay:" destination="gQc-VK-aEc" eventType="touchUpInside" id="uWB-RT-Ewe"/>
+                                                        <segue destination="rmO-tV-hbD" kind="show" identifier="" id="svG-hh-FwP"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1292,10 +1297,10 @@
             </objects>
             <point key="canvasLocation" x="-912" y="48"/>
         </scene>
-        <!--View Controller-->
+        <!--Draw Question View Controller-->
         <scene sceneID="RFQ-qh-dpM">
             <objects>
-                <viewController id="rmO-tV-hbD" sceneMemberID="viewController">
+                <viewController id="rmO-tV-hbD" customClass="DrawQuestionViewController" customModule="Rizzo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cJ8-dG-cFN">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1310,6 +1315,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                         <state key="normal" title="ออก"/>
+                                        <connections>
+                                            <segue destination="FTr-08-43M" kind="unwind" unwindAction="unwindSegue:" id="cMv-bs-tin"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIf-1c-dcZ" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
                                         <rect key="frame" x="528" y="0.0" width="200" height="62"/>
@@ -1329,7 +1337,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkS-FI-RWc">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkS-FI-RWc" customClass="DrawView" customModule="Rizzo" customModuleProvider="target">
                                 <rect key="frame" x="20" y="164" width="728" height="607"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1450,6 +1458,9 @@
                                                 <real key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onUndo" destination="rmO-tV-hbD" eventType="touchUpInside" id="hcU-Yu-zfb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5d0-gd-DWI" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130" width="100" height="100"/>
@@ -1460,13 +1471,16 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="30"/>
                                         <state key="normal" title="ลบทั้งหมด">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onClear" destination="rmO-tV-hbD" eventType="touchUpInside" id="I6M-YK-aah"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1549,6 +1563,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mbi-Dv-LD9"/>
                     </view>
+                    <connections>
+                        <outlet property="currentQuestion" destination="v6b-Zu-uSU" id="Vok-p9-I7n"/>
+                        <outlet property="firstTextLoadView" destination="qQ1-Xy-4XK" id="GgQ-lC-6mi"/>
+                        <outlet property="myDrawView" destination="RkS-FI-RWc" id="RtZ-ZZ-cAM"/>
+                        <outlet property="myLoadView" destination="hIr-B0-DQ9" id="Elh-I0-Q5B"/>
+                        <outlet property="secondTextLoadView" destination="TuI-Eo-Sqd" id="EpG-DS-KSc"/>
+                    </connections>
                 </viewController>
                 <view contentMode="scaleToFill" id="qGo-R7-V5k">
                     <rect key="frame" x="0.0" y="0.0" width="655" height="582"/>
@@ -1635,36 +1656,9 @@
                     <viewLayoutGuide key="safeArea" id="HmD-z3-2fA"/>
                 </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hac-TZ-7B5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FTr-08-43M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2007" y="2555"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="KjE-Lv-fyX">
-            <objects>
-                <tableViewController id="dxf-Em-AJ0" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gKN-Dh-DMN">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dK4-r1-oTg">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dK4-r1-oTg" id="Oah-QT-fw4">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="dxf-Em-AJ0" id="P4n-Mr-59b"/>
-                            <outlet property="delegate" destination="dxf-Em-AJ0" id="1db-lt-Hlz"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hs1-Rk-eE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2691" y="2000"/>
+            <point key="canvasLocation" x="-1810" y="47"/>
         </scene>
         <!--Sound Question View Controller-->
         <scene sceneID="UeT-n6-EkU">

@@ -124,11 +124,11 @@ class Datas {
 //                {nameEng: "rabbit", nameTH: "???????"}
 //            ]
             let data = [
-                DrawQuestion("octopus", "หมึก"),
-                DrawQuestion("panda", "หมีแพนด้า"),
-                DrawQuestion("cat", "แมว"),
-                DrawQuestion("fish", "ปลา"),
-                DrawQuestion("rabbit", "กระต่าย"),
+                DrawQuestion("หมึก", "octopus"),
+                DrawQuestion("แพนด้า", "หมีpanda"),
+                DrawQuestion("แมว", "cat"),
+                DrawQuestion("ปลา", "fish"),
+                DrawQuestion("กระต่าย", "rabbit"),
             ]
             sleep(2)
             DispatchQueue.main.sync {
