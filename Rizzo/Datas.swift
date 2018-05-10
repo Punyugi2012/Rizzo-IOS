@@ -116,16 +116,9 @@ class Datas {
     
     class func getDrawQuestion(complete: @escaping (_ result: [DrawQuestion]) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async {
-//            animals = [
-//                {nameEng: "octopus", nameTH: "???????"},
-//                {nameEng: "panda", nameTH: "??????"},
-//                {nameEng: "cat", nameTH: "???"},
-//                {nameEng: "fish", nameTH: "???"},
-//                {nameEng: "rabbit", nameTH: "???????"}
-//            ]
             let data = [
                 DrawQuestion("หมึก", "octopus"),
-                DrawQuestion("แพนด้า", "หมีpanda"),
+                DrawQuestion("แพนด้า", "panda"),
                 DrawQuestion("แมว", "cat"),
                 DrawQuestion("ปลา", "fish"),
                 DrawQuestion("กระต่าย", "rabbit"),

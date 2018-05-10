@@ -1334,6 +1334,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onPreviewImage:" destination="rmO-tV-hbD" eventType="touchUpInside" id="CkJ-RR-dMF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1357,6 +1360,9 @@
                                                     <constraint firstAttribute="width" constant="60" id="0bq-7b-BCh"/>
                                                     <constraint firstAttribute="height" constant="60" id="tjY-Kk-yxD"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="rmO-tV-hbD" eventType="touchUpInside" id="070-NE-c5e"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzw-Bc-8HY">
                                                 <rect key="frame" x="65" y="0.0" width="60" height="60"/>
@@ -1365,6 +1371,9 @@
                                                     <constraint firstAttribute="height" constant="60" id="MMy-im-o6V"/>
                                                     <constraint firstAttribute="width" constant="60" id="rJp-nI-8GD"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="rmO-tV-hbD" eventType="touchUpInside" id="ihl-qF-a7z"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b3-Zs-dzm">
                                                 <rect key="frame" x="130" y="0.0" width="60" height="60"/>
@@ -1373,6 +1382,9 @@
                                                     <constraint firstAttribute="width" constant="60" id="054-8k-LmB"/>
                                                     <constraint firstAttribute="height" constant="60" id="WBH-90-0wg"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="rmO-tV-hbD" eventType="touchUpInside" id="3ky-Bu-l5I"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1386,6 +1398,9 @@
                                                     <constraint firstAttribute="width" constant="60" id="aTS-PN-y2t"/>
                                                     <constraint firstAttribute="height" constant="60" id="tUO-2T-ZvT"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="rmO-tV-hbD" eventType="touchUpInside" id="LID-pF-4Tq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrp-Qy-65m">
                                                 <rect key="frame" x="65" y="0.0" width="60" height="60"/>
@@ -1394,6 +1409,9 @@
                                                     <constraint firstAttribute="width" constant="60" id="Qn8-PE-YeJ"/>
                                                     <constraint firstAttribute="height" constant="60" id="oVS-io-8fd"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="rmO-tV-hbD" eventType="touchUpInside" id="l7p-ES-aqU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1p-og-IvA">
                                                 <rect key="frame" x="130" y="0.0" width="60" height="60"/>
@@ -1402,6 +1420,9 @@
                                                     <constraint firstAttribute="width" constant="60" id="Crf-kf-xBP"/>
                                                     <constraint firstAttribute="height" constant="60" id="fBv-0I-5gE"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="rmO-tV-hbD" eventType="touchUpInside" id="nnn-Ac-W60"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1415,6 +1436,9 @@
                                                     <constraint firstAttribute="height" constant="60" id="BBu-pc-aLd"/>
                                                     <constraint firstAttribute="width" constant="60" id="Pwz-RK-c1K"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="rmO-tV-hbD" eventType="touchUpInside" id="Bp1-DS-TJb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lz-9F-HCc">
                                                 <rect key="frame" x="65" y="0.0" width="60" height="60"/>
@@ -1423,6 +1447,9 @@
                                                     <constraint firstAttribute="width" constant="60" id="BM5-DL-FDL"/>
                                                     <constraint firstAttribute="height" constant="60" id="ePJ-B7-tk0"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="rmO-tV-hbD" eventType="touchUpInside" id="wcW-NF-ngj"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqV-ng-hk2">
                                                 <rect key="frame" x="130" y="0.0" width="60" height="60"/>
@@ -1431,6 +1458,9 @@
                                                     <constraint firstAttribute="height" constant="60" id="HyE-JL-DdJ"/>
                                                     <constraint firstAttribute="width" constant="60" id="QfW-Wx-zmT"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="rmO-tV-hbD" eventType="touchUpInside" id="Nq5-kj-Zmg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1524,6 +1554,9 @@
                                             <constraint firstAttribute="width" constant="100" id="qFG-DJ-fez"/>
                                         </constraints>
                                         <state key="normal" title="เล็ก" image="pencil"/>
+                                        <connections>
+                                            <action selector="changeRowPen:" destination="rmO-tV-hbD" eventType="touchUpInside" id="9ZA-eL-7M6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWT-Vw-ecv">
                                         <rect key="frame" x="100" y="20" width="100" height="150"/>
@@ -1532,6 +1565,9 @@
                                             <constraint firstAttribute="height" constant="150" id="vEm-EZ-Ln5"/>
                                         </constraints>
                                         <state key="normal" title="กลาง" image="pencil"/>
+                                        <connections>
+                                            <action selector="changeMediumPen:" destination="rmO-tV-hbD" eventType="touchUpInside" id="EiM-uS-0SH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4O-B9-FAy">
                                         <rect key="frame" x="200" y="0.0" width="120" height="170"/>
@@ -1539,6 +1575,9 @@
                                             <constraint firstAttribute="width" constant="120" id="lIC-hi-fnD"/>
                                         </constraints>
                                         <state key="normal" title="ใหญ่" image="pencil"/>
+                                        <connections>
+                                            <action selector="changeHighPen:" destination="rmO-tV-hbD" eventType="touchUpInside" id="w2Z-wV-kFQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1566,9 +1605,20 @@
                     <connections>
                         <outlet property="currentQuestion" destination="v6b-Zu-uSU" id="Vok-p9-I7n"/>
                         <outlet property="firstTextLoadView" destination="qQ1-Xy-4XK" id="GgQ-lC-6mi"/>
+                        <outlet property="imagePreview" destination="V4S-yh-aGR" id="eQH-f4-Bb9"/>
                         <outlet property="myDrawView" destination="RkS-FI-RWc" id="RtZ-ZZ-cAM"/>
                         <outlet property="myLoadView" destination="hIr-B0-DQ9" id="Elh-I0-Q5B"/>
+                        <outlet property="preview" destination="qGo-R7-V5k" id="9Ir-tB-wYE"/>
                         <outlet property="secondTextLoadView" destination="TuI-Eo-Sqd" id="EpG-DS-KSc"/>
+                        <outletCollection property="colorButtons" destination="4bm-si-SEf" collectionClass="NSMutableArray" id="ODF-qF-ZPv"/>
+                        <outletCollection property="colorButtons" destination="gzw-Bc-8HY" collectionClass="NSMutableArray" id="Tny-k2-OQl"/>
+                        <outletCollection property="colorButtons" destination="8b3-Zs-dzm" collectionClass="NSMutableArray" id="p2T-fS-yxj"/>
+                        <outletCollection property="colorButtons" destination="adk-11-NiX" collectionClass="NSMutableArray" id="9E0-K7-eFp"/>
+                        <outletCollection property="colorButtons" destination="zrp-Qy-65m" collectionClass="NSMutableArray" id="t5a-Zt-qZd"/>
+                        <outletCollection property="colorButtons" destination="b1p-og-IvA" collectionClass="NSMutableArray" id="FUD-0c-kdI"/>
+                        <outletCollection property="colorButtons" destination="Ovv-CP-aNh" collectionClass="NSMutableArray" id="yA0-jo-hzD"/>
+                        <outletCollection property="colorButtons" destination="3lz-9F-HCc" collectionClass="NSMutableArray" id="vs2-FB-uEo"/>
+                        <outletCollection property="colorButtons" destination="wqV-ng-hk2" collectionClass="NSMutableArray" id="1oY-Qq-pKR"/>
                     </connections>
                 </viewController>
                 <view contentMode="scaleToFill" id="qGo-R7-V5k">
@@ -1610,6 +1660,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
+                                <action selector="onClosePreview:" destination="rmO-tV-hbD" eventType="touchUpInside" id="Xaa-3C-niH"/>
                                 <action selector="onClosePreview:" destination="PZX-wn-psz" eventType="touchUpInside" id="y8K-SK-C4O"/>
                             </connections>
                         </button>
