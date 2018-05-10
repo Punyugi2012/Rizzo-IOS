@@ -33,19 +33,24 @@ class FinishDrawQuestionTableViewController: UITableViewController {
             case .failure:
                 print(response.error!)
             case .success:
-                var result = ""
+//                var result = ""
+                var isCorrect = false
+//                print(response.result.value)
                 if let data = response.result.value as? [Any],
                 let data2 = data[1] as? [Any],
                 let data3 = data2[0] as? [Any],
                 let data4 = data3[1] as? [String] {
-                    if !data4.isEmpty {
-                        result = data4[0]
+                    for element in data4 {
+                        if element.contains(self.question.answer) {
+                            isCorrect = true
+                            break
+                        }
                     }
                 }
-                print(result)
+//                print(result)
                 self.questionLabel.text = "โจทย์ จงวาด\(self.question.question)"
                 self.imageDrawed.image = self.imageDraw
-                if result.contains(self.question.answer) {
+                if isCorrect {
                     self.resultLabel.text = "ถูกต้องมันคือ \(self.question.question)"
                 }
                 else {
