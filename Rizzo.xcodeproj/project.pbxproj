@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C79477206169E85A96F4E36 /* Pods_Rizzo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23E4A72791B7A442CD22C3A /* Pods_Rizzo.framework */; };
 		B81308C8209F0CE7001DEB0B /* ImageQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */; };
 		B81F70F720A044A80076A033 /* KaniGa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B81F70F620A044A80076A033 /* KaniGa.ttf */; };
 		B81F70FB20A04C290076A033 /* FinishGameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F70FA20A04C290076A033 /* FinishGameTableViewController.swift */; };
@@ -70,6 +71,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B66E38E0F492F5FD29C1F07 /* Pods-Rizzo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rizzo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rizzo/Pods-Rizzo.debug.xcconfig"; sourceTree = "<group>"; };
+		45011ABFB94900464A877F7C /* Pods-Rizzo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rizzo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rizzo/Pods-Rizzo.release.xcconfig"; sourceTree = "<group>"; };
 		B81308C7209F0CE7001DEB0B /* ImageQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageQuestionViewController.swift; sourceTree = "<group>"; };
 		B81F70F620A044A80076A033 /* KaniGa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KaniGa.ttf; sourceTree = "<group>"; };
 		B81F70FA20A04C290076A033 /* FinishGameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGameTableViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 		B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		B85FA14D209DD40B002ED3AA /* SanamDeklen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SanamDeklen.ttf; sourceTree = "<group>"; };
 		B85FA14F209DE2ED002ED3AA /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		D23E4A72791B7A442CD22C3A /* Pods_Rizzo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rizzo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,12 +143,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C79477206169E85A96F4E36 /* Pods_Rizzo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34B955F85E2E4F31949FC5F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B66E38E0F492F5FD29C1F07 /* Pods-Rizzo.debug.xcconfig */,
+				45011ABFB94900464A877F7C /* Pods-Rizzo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B81F712C20A0679D0076A033 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +191,8 @@
 			children = (
 				B85FA116209DC3D7002ED3AA /* Rizzo */,
 				B85FA115209DC3D7002ED3AA /* Products */,
+				34B955F85E2E4F31949FC5F5 /* Pods */,
+				C5D2C6DCEBF2E71DFB04104F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -261,6 +277,14 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		C5D2C6DCEBF2E71DFB04104F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D23E4A72791B7A442CD22C3A /* Pods_Rizzo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B85FA126209DC3DA002ED3AA /* Build configuration list for PBXNativeTarget "Rizzo" */;
 			buildPhases = (
+				35CAFBAFD13AC8E9014122F7 /* [CP] Check Pods Manifest.lock */,
 				B85FA110209DC3D7002ED3AA /* Sources */,
 				B85FA111209DC3D7002ED3AA /* Frameworks */,
 				B85FA112209DC3D7002ED3AA /* Resources */,
+				4D2FCF36CFAAA1E1D2F7DDFA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,6 +382,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35CAFBAFD13AC8E9014122F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rizzo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D2FCF36CFAAA1E1D2F7DDFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rizzo/Pods-Rizzo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rizzo/Pods-Rizzo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B85FA110209DC3D7002ED3AA /* Sources */ = {
@@ -530,14 +595,12 @@
 		};
 		B85FA127209DC3DA002ED3AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B66E38E0F492F5FD29C1F07 /* Pods-Rizzo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Rizzo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = max.Rizzo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -547,14 +610,12 @@
 		};
 		B85FA128209DC3DA002ED3AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45011ABFB94900464A877F7C /* Pods-Rizzo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Rizzo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = max.Rizzo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
