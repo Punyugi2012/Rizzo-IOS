@@ -2177,6 +2177,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
+                                                        <action selector="onPlayAgain:" destination="F6M-4E-s6e" eventType="touchUpInside" id="XxV-gg-GgV"/>
                                                         <segue destination="rmO-tV-hbD" kind="showDetail" id="dvL-1A-qjS"/>
                                                     </connections>
                                                 </button>

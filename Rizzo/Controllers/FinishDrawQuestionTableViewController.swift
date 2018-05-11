@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AVFoundation
 
 class FinishDrawQuestionTableViewController: UITableViewController {
 
@@ -17,9 +18,12 @@ class FinishDrawQuestionTableViewController: UITableViewController {
     @IBOutlet weak var imageDrawed: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    var buttonPlayer: AVAudioPlayer?
     var params: Parameters!
     var question: DrawQuestion!
     var imageDraw: UIImage!
+    let TURNON = 1
+    let TURNOFF = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +61,7 @@ class FinishDrawQuestionTableViewController: UITableViewController {
                     self.resultLabel.text = "ไม่ถูกต้องมันยังไม่ใช่ \(self.question.question)"
                 }
                 sleep(1)
+                self.setButtonSound()
                 self.recogViewOutside()
             }
         }
@@ -68,17 +73,38 @@ class FinishDrawQuestionTableViewController: UITableViewController {
     }
     
     func recogViewOutside() {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.firstTextRecogView.text = "เสร็จสิ้น"
-            self.secondTextRecogView.text = ""
-        }) { (true) in
-            sleep(1)
-            UIView.transition(with: self.myRecogView, duration: 0.4, options: [.transitionCrossDissolve], animations: {
+        self.firstTextRecogView.text = "เสร็จสิ้น"
+        self.secondTextRecogView.text = ""
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            UIView.transition(with: self.myRecogView, duration: 0.5, options: [.transitionCrossDissolve], animations: {
                 self.myRecogView.alpha = 0
             }) { (true) in
                 self.myRecogView.removeFromSuperview()
             }
         }
+    }
+    
+    func playButton() {
+        self.buttonPlayer?.stop()
+        self.buttonPlayer?.currentTime = 0
+        self.buttonPlayer?.play()
+    }
+    
+    func setButtonSound() {
+        if let data = UserDefaults.standard.value(forKey: "btnSoundConfig") as? Int {
+            if data == TURNON {
+                do {
+                    buttonPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "touch", ofType: "mp3")!))
+                    buttonPlayer?.prepareToPlay()
+                }catch{
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    @IBAction func onPlayAgain(_ sender: UIButton) {
+        playButton()
     }
     
 

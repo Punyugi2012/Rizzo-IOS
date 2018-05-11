@@ -45,6 +45,7 @@ class DrawQuestionViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        playButton()
         if segue.identifier == "ToFinishDrawQuestion" {
             var points = Array(repeating: [Float](), count: 2)
             for stroke in self.myDrawView.strokes {
