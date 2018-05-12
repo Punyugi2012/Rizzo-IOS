@@ -1832,7 +1832,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="F6M-4E-s6e" kind="show" identifier="ToFinishDrawQuestion" id="dGZ-e3-6X2"/>
+                                            <action selector="onSent:" destination="rmO-tV-hbD" eventType="touchUpInside" id="OXq-0l-1i9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1896,6 +1896,7 @@
                         <viewLayoutGuide key="safeArea" id="mbi-Dv-LD9"/>
                     </view>
                     <connections>
+                        <outlet property="alertConnectionView" destination="CWJ-u4-8Hs" id="9eR-mX-yl5"/>
                         <outlet property="currentQuestion" destination="v6b-Zu-uSU" id="Vok-p9-I7n"/>
                         <outlet property="firstTextLoadView" destination="qQ1-Xy-4XK" id="GgQ-lC-6mi"/>
                         <outlet property="imagePreview" destination="V4S-yh-aGR" id="eQH-f4-Bb9"/>
@@ -1903,6 +1904,7 @@
                         <outlet property="myLoadView" destination="hIr-B0-DQ9" id="Elh-I0-Q5B"/>
                         <outlet property="preview" destination="qGo-R7-V5k" id="9Ir-tB-wYE"/>
                         <outlet property="secondTextLoadView" destination="TuI-Eo-Sqd" id="EpG-DS-KSc"/>
+                        <outlet property="sentBtn" destination="vUG-ew-YRu" id="sO9-gV-C7q"/>
                         <outletCollection property="colorButtons" destination="4bm-si-SEf" collectionClass="NSMutableArray" id="ODF-qF-ZPv"/>
                         <outletCollection property="colorButtons" destination="gzw-Bc-8HY" collectionClass="NSMutableArray" id="Tny-k2-OQl"/>
                         <outletCollection property="colorButtons" destination="8b3-Zs-dzm" collectionClass="NSMutableArray" id="p2T-fS-yxj"/>
@@ -1912,6 +1914,7 @@
                         <outletCollection property="colorButtons" destination="Ovv-CP-aNh" collectionClass="NSMutableArray" id="yA0-jo-hzD"/>
                         <outletCollection property="colorButtons" destination="3lz-9F-HCc" collectionClass="NSMutableArray" id="vs2-FB-uEo"/>
                         <outletCollection property="colorButtons" destination="wqV-ng-hk2" collectionClass="NSMutableArray" id="1oY-Qq-pKR"/>
+                        <segue destination="F6M-4E-s6e" kind="show" identifier="ToFinishDrawQuestion" id="thR-cc-F68"/>
                     </connections>
                 </viewController>
                 <view contentMode="scaleToFill" id="CWJ-u4-8Hs">
@@ -1954,6 +1957,9 @@
                                     <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="rmO-tV-hbD" eventType="touchUpInside" id="3FU-a0-aDz"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2612,8 +2618,9 @@
         <image name="วาดภาพ" width="819" height="737"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="thR-cc-F68"/>
         <segue reference="C0B-wv-Nn9"/>
-        <segue reference="XPc-BX-bEO"/>
+        <segue reference="dvL-1A-qjS"/>
         <segue reference="0PL-ei-8cF"/>
         <segue reference="lCk-0E-asl"/>
     </inferredMetricsTieBreakers>
