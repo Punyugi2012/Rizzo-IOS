@@ -25,6 +25,9 @@ class DrawQuestionViewController: UIViewController {
     @IBOutlet weak var preview: UIView!
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet var colorButtons: [UIButton]!
+    @IBOutlet weak var alertConnectionView: UIView!
+    var reachablity: Reachability!
+    @IBOutlet weak var sentBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,8 @@ class DrawQuestionViewController: UIViewController {
         self.myLoadView.bounds.size.height = self.view.bounds.height
         self.preview.bounds.size.width = self.view.bounds.width - 20
         self.preview.bounds.size.height = self.view.bounds.height - 20
+        setAlertView()
+        self.reachablity = Reachability()
         loadViewInside()
         Datas.getDrawQuestion { (result) in
             self.bufferQuestions = result
@@ -41,6 +46,56 @@ class DrawQuestionViewController: UIViewController {
             self.myDrawView.currentWidth = 2
             self.setColorButtons()
             self.loadViewOutside()
+        }
+    }
+    
+    @IBAction func closeAlert(_ sender: UIButtonX) {
+        playButton()
+        alertOutside()
+        self.sentBtn.isEnabled = true
+    }
+    
+    func setAlertView() {
+        self.alertConnectionView.bounds.size.width = self.view.bounds.width - 200
+        self.alertConnectionView.bounds.size.height = self.view.bounds.height / 2
+        self.alertConnectionView.layer.cornerRadius = 20
+        self.alertConnectionView.clipsToBounds = true
+    }
+    
+    func alertInside() {
+        self.alertConnectionView.alpha = 0.5
+        self.view.addSubview(self.alertConnectionView)
+        self.alertConnectionView.center = self.view.center
+        self.alertConnectionView.transform = CGAffineTransform(scaleX: 0.8, y: 1.2)
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+            self.alertConnectionView.alpha = 1
+            self.alertConnectionView.transform = CGAffineTransform.identity
+        })
+    }
+    
+    func alertOutside() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+            self.alertConnectionView.alpha = 0
+            self.alertConnectionView.transform = CGAffineTransform(scaleX: 0.5, y: 0.2)
+        })
+    }
+    
+    func isConnection() -> Bool {
+        if self.reachablity.connection == .none {
+            return false
+        }
+        return true
+    }
+    
+    
+    @IBAction func onSent(_ sender: UIButtonX) {
+        playButton()
+        if isConnection() {
+            performSegue(withIdentifier: "ToFinishDrawQuestion", sender: self)
+        }
+        else {
+            alertInside()
+            self.sentBtn.isEnabled = false
         }
     }
     

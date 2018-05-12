@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class MenuViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class MenuViewController: UIViewController {
     
     @IBOutlet weak var alertConnectionView: UIView!
     @IBOutlet weak var menuCollectionView: UICollectionView!
@@ -19,40 +19,31 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     let TURNON = 1
     let TURNOFF = 0
     var reachablity: Reachability!
-    var timer: Timer?
-    var isPopup = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.alertConnectionView.bounds.size.width = self.view.bounds.width - 200
-        self.alertConnectionView.bounds.size.height = self.view.bounds.height / 2
-        self.alertConnectionView.layer.cornerRadius = 20
-        self.alertConnectionView.clipsToBounds = true
-        self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.timerElapsed), userInfo: nil, repeats: true)
-        RunLoop.main.add(timer!, forMode: .commonModes)
+        setAlertView()
         self.menuCollectionView.dataSource = self
         self.menuCollectionView.delegate = self
         reachablity = Reachability()
         setButtonSound()
         setBackgroundSound()
     }
-    @objc func timerElapsed() {
-        if reachablity.connection == .none {
-            if !self.isPopup {
-                alertInside()
-                self.isPopup = true
-            }
-            self.menuCollectionView.allowsSelection = false
-        }
-        else {
-            alertOutside()
-            self.isPopup = false
-            self.menuCollectionView.allowsSelection = true
-        }
+    
+    @IBAction func closeAlert(_ sender: UIButtonX) {
+        playButton()
+        alertOutside()
+        self.menuCollectionView.allowsSelection = true
+    }
+    
+    func setAlertView() {
+        self.alertConnectionView.bounds.size.width = self.view.bounds.width - 200
+        self.alertConnectionView.bounds.size.height = self.view.bounds.height / 2
+        self.alertConnectionView.layer.cornerRadius = 20
+        self.alertConnectionView.clipsToBounds = true
     }
     
     func alertInside() {
-        self.menuCollectionView.allowsSelection = false
         self.alertConnectionView.alpha = 0.5
         self.view.addSubview(self.alertConnectionView)
         self.alertConnectionView.center = self.view.center
@@ -68,6 +59,13 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
             self.alertConnectionView.alpha = 0
             self.alertConnectionView.transform = CGAffineTransform(scaleX: 0.5, y: 0.2)
         })
+    }
+    
+    func isConnection() -> Bool {
+        if self.reachablity.connection == .none {
+            return false
+        }
+        return true
     }
     
     
@@ -120,40 +118,10 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.menus.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as! MenuCollectionViewCell
-        cell.setUp(UIImage(named: self.menus[indexPath.row])!)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width / 2) - 100 , height: (view.frame.height / 2) - 80)
-    }
-    
     func playButton() {
         self.buttonPlayer?.stop()
         self.buttonPlayer?.currentTime = 0
         self.buttonPlayer?.play()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        playButton()
-        if self.menus[indexPath.row] == "ตั้งค่า" {
-            performSegue(withIdentifier: "ToSetting", sender: self)
-        }
-        if self.menus[indexPath.row] == "ทายรูปภาพ" {
-            performSegue(withIdentifier: "ToPrePareImgQuestion", sender: self)
-        }
-        if self.menus[indexPath.row] == "ทายเสียง" {
-            performSegue(withIdentifier: "ToPrePareSoundQuestion", sender: self)
-        }
-        if self.menus[indexPath.row] == "วาดภาพ" {
-            performSegue(withIdentifier: "ToPrepareDrawQuestion", sender: self)
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -181,4 +149,44 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         return true
     }
     
+}
+
+extension MenuViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.menus.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as! MenuCollectionViewCell
+        cell.setUp(UIImage(named: self.menus[indexPath.row])!)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (view.frame.width / 2) - 100 , height: (view.frame.height / 2) - 80)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        playButton()
+        if self.menus[indexPath.row] == "ตั้งค่า" {
+            performSegue(withIdentifier: "ToSetting", sender: self)
+        }
+        else {
+            if isConnection() {
+                if self.menus[indexPath.row] == "ทายรูปภาพ" {
+                    performSegue(withIdentifier: "ToPrePareImgQuestion", sender: self)
+                }
+                if self.menus[indexPath.row] == "ทายเสียง" {
+                    performSegue(withIdentifier: "ToPrePareSoundQuestion", sender: self)
+                }
+                if self.menus[indexPath.row] == "วาดภาพ" {
+                    performSegue(withIdentifier: "ToPrepareDrawQuestion", sender: self)
+                }
+            }
+            else {
+                self.menuCollectionView.allowsSelection = false
+                alertInside()
+            }
+        }
+    }
 }

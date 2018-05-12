@@ -84,28 +84,53 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zqz-zt-cPS">
-                            <rect key="frame" x="20" y="102.5" width="518" height="85"/>
+                            <rect key="frame" x="20" y="97" width="518" height="95"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="คุณยังไม่ได้เชื่อมต่ออินเทอร์เน็ต!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opx-Wu-XrF">
-                                    <rect key="frame" x="0.0" y="0.0" width="518" height="40"/>
-                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opx-Wu-XrF">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEr-AG-Gyr">
-                                    <rect key="frame" x="0.0" y="45" width="518" height="40"/>
+                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPb-9T-Gl7" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="204" y="218" width="150" height="66"/>
+                            <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="lUO-gl-14k"/>
+                                <constraint firstAttribute="width" constant="150" id="pgV-BD-eCf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                            <state key="normal" title="ออก">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gd0-wb-gcd"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="79j-FL-dAh" firstAttribute="bottom" secondItem="oPb-9T-Gl7" secondAttribute="bottom" constant="5" id="3Ky-fu-Sqp"/>
                         <constraint firstItem="Zqz-zt-cPS" firstAttribute="centerY" secondItem="K9u-Fr-5Kn" secondAttribute="centerY" id="DrM-Yh-sjk"/>
                         <constraint firstItem="79j-FL-dAh" firstAttribute="trailing" secondItem="Zqz-zt-cPS" secondAttribute="trailing" constant="20" id="QE4-ab-aBI"/>
                         <constraint firstItem="Zqz-zt-cPS" firstAttribute="leading" secondItem="79j-FL-dAh" secondAttribute="leading" constant="20" id="s91-1A-Vui"/>
+                        <constraint firstItem="oPb-9T-Gl7" firstAttribute="centerX" secondItem="K9u-Fr-5Kn" secondAttribute="centerX" id="vcz-7U-cqf"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="79j-FL-dAh"/>
                 </view>
@@ -237,7 +262,6 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="onPlay:" destination="zDW-J2-6QL" eventType="touchUpInside" id="ChT-JK-pmZ"/>
-                                                        <segue destination="PZX-wn-psz" kind="show" id="jV3-wE-bfb"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -256,7 +280,67 @@
                             <outlet property="delegate" destination="zDW-J2-6QL" id="Tp0-hG-SKK"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="alertConnectionView" destination="4YN-gp-mNi" id="DE4-kN-1H5"/>
+                        <outlet property="playBtn" destination="kCt-La-CW6" id="Lmh-Ni-2wS"/>
+                        <segue destination="PZX-wn-psz" kind="show" identifier="ToImageQuestion" id="lCk-0E-asl"/>
+                    </connections>
                 </tableViewController>
+                <view contentMode="scaleToFill" id="4YN-gp-mNi">
+                    <rect key="frame" x="0.0" y="0.0" width="558" height="289"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="837-OZ-5Tq">
+                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMn-9s-qnt">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i29-XA-eH2">
+                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppo-6E-MqV" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="204" y="218" width="150" height="66"/>
+                            <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="2IW-db-Lj3"/>
+                                <constraint firstAttribute="width" constant="150" id="4Z2-vZ-egw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                            <state key="normal" title="ออก">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="zDW-J2-6QL" eventType="touchUpInside" id="Czh-W1-b8x"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="bzs-Sm-g8c" firstAttribute="trailing" secondItem="837-OZ-5Tq" secondAttribute="trailing" constant="20" id="BHm-Hk-AyE"/>
+                        <constraint firstItem="837-OZ-5Tq" firstAttribute="leading" secondItem="bzs-Sm-g8c" secondAttribute="leading" constant="20" id="TpA-eC-yJ3"/>
+                        <constraint firstItem="bzs-Sm-g8c" firstAttribute="bottom" secondItem="ppo-6E-MqV" secondAttribute="bottom" constant="5" id="ZxH-me-dN9"/>
+                        <constraint firstItem="ppo-6E-MqV" firstAttribute="centerX" secondItem="4YN-gp-mNi" secondAttribute="centerX" id="avI-De-aB9"/>
+                        <constraint firstItem="837-OZ-5Tq" firstAttribute="centerY" secondItem="4YN-gp-mNi" secondAttribute="centerY" id="wQ5-yp-Zfp"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="bzs-Sm-g8c"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAT-T5-2rB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5iR-fm-dFi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
@@ -833,13 +917,70 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="alertConnectionView" destination="Cx0-RR-JdD" id="vrk-1r-dKo"/>
                         <outlet property="numCorrect" destination="TQV-0C-czo" id="4Bc-9t-kt8"/>
                         <outlet property="numUncorrect" destination="8uB-gx-XeQ" id="0kz-ST-l8a"/>
+                        <outlet property="playAgainBtn" destination="TYh-0O-ZAq" id="gVW-aa-nmx"/>
                         <outlet property="skillLabel" destination="zjh-jb-Gte" id="AN9-fN-UfM"/>
                         <segue destination="PZX-wn-psz" kind="showDetail" identifier="ToImgQuestionAgain" id="nbI-Bw-i4b"/>
                         <segue destination="NeK-nD-UfP" kind="showDetail" identifier="ToSoundQuestionAgain" id="TGi-xt-WBh"/>
                     </connections>
                 </tableViewController>
+                <view contentMode="scaleToFill" id="Cx0-RR-JdD">
+                    <rect key="frame" x="0.0" y="0.0" width="558" height="289"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kr2-oO-D66">
+                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4L-SR-16D">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rz-YN-Qo6">
+                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydb-tS-TNo" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="204" y="218" width="150" height="66"/>
+                            <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="dXY-Gi-rzX"/>
+                                <constraint firstAttribute="width" constant="150" id="ebK-Os-H9U"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                            <state key="normal" title="ออก">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="SDI-fN-md0" eventType="touchUpInside" id="drz-8D-RRr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="kr2-oO-D66" firstAttribute="centerY" secondItem="Cx0-RR-JdD" secondAttribute="centerY" id="0db-hq-u4n"/>
+                        <constraint firstItem="yTX-jb-hAn" firstAttribute="bottom" secondItem="Ydb-tS-TNo" secondAttribute="bottom" constant="5" id="60e-em-azr"/>
+                        <constraint firstItem="kr2-oO-D66" firstAttribute="leading" secondItem="yTX-jb-hAn" secondAttribute="leading" constant="20" id="71I-hI-IOB"/>
+                        <constraint firstItem="yTX-jb-hAn" firstAttribute="trailing" secondItem="kr2-oO-D66" secondAttribute="trailing" constant="20" id="Zug-PZ-0TC"/>
+                        <constraint firstItem="Ydb-tS-TNo" firstAttribute="centerX" secondItem="Cx0-RR-JdD" secondAttribute="centerX" id="wZf-bo-aqN"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="yTX-jb-hAn"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6D-u9-1Ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jtI-Gr-mwS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
@@ -1163,7 +1304,6 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="onPlay:" destination="Wp8-BW-TDe" eventType="touchUpInside" id="tBR-pi-fjD"/>
-                                                        <segue destination="NeK-nD-UfP" kind="show" id="sza-g7-Eyg"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1182,7 +1322,67 @@
                             <outlet property="delegate" destination="Wp8-BW-TDe" id="pto-Bw-HQZ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="alertConnectionView" destination="2j0-NF-2dO" id="vbX-Aj-i47"/>
+                        <outlet property="playBtn" destination="3f2-pN-L9P" id="whe-BK-4vF"/>
+                        <segue destination="NeK-nD-UfP" kind="show" identifier="ToSoundQuestion" id="C0B-wv-Nn9"/>
+                    </connections>
                 </tableViewController>
+                <view contentMode="scaleToFill" id="2j0-NF-2dO">
+                    <rect key="frame" x="0.0" y="0.0" width="558" height="289"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Uh-Hl-BEm">
+                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHz-3b-yLa">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uC-lg-9Hk">
+                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xco-Ik-eML" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="204" y="218" width="150" height="66"/>
+                            <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="7VU-rY-mOv"/>
+                                <constraint firstAttribute="width" constant="150" id="c7Y-ys-OSM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                            <state key="normal" title="ออก">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="Wp8-BW-TDe" eventType="touchUpInside" id="OQ3-uq-8X5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="6Uh-Hl-BEm" firstAttribute="centerY" secondItem="2j0-NF-2dO" secondAttribute="centerY" id="6iB-7p-l2g"/>
+                        <constraint firstItem="Fz6-km-rTD" firstAttribute="trailing" secondItem="6Uh-Hl-BEm" secondAttribute="trailing" constant="20" id="El7-ci-7NJ"/>
+                        <constraint firstItem="6Uh-Hl-BEm" firstAttribute="leading" secondItem="Fz6-km-rTD" secondAttribute="leading" constant="20" id="cIn-Rj-UEV"/>
+                        <constraint firstItem="xco-Ik-eML" firstAttribute="centerX" secondItem="2j0-NF-2dO" secondAttribute="centerX" id="eNX-7T-hys"/>
+                        <constraint firstItem="Fz6-km-rTD" firstAttribute="bottom" secondItem="xco-Ik-eML" secondAttribute="bottom" constant="5" id="usU-s4-vWh"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Fz6-km-rTD"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnH-IY-O4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ycQ-fh-IJd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
@@ -1303,7 +1503,6 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="onPlay:" destination="gQc-VK-aEc" eventType="touchUpInside" id="uWB-RT-Ewe"/>
-                                                        <segue destination="rmO-tV-hbD" kind="show" id="p2T-xW-ZVx"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1322,7 +1521,67 @@
                             <outlet property="delegate" destination="gQc-VK-aEc" id="ciP-F9-RtO"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="alertConnectionView" destination="6T2-A2-Msl" id="KC9-3c-sYs"/>
+                        <outlet property="playBtn" destination="zll-me-zk6" id="zzK-g0-KUX"/>
+                        <segue destination="rmO-tV-hbD" kind="show" identifier="ToDrawQuestion" id="XPc-BX-bEO"/>
+                    </connections>
                 </tableViewController>
+                <view contentMode="scaleToFill" id="6T2-A2-Msl">
+                    <rect key="frame" x="0.0" y="0.0" width="558" height="289"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vmf-Hg-z49">
+                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om6-AF-Fgk">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-3y-ZkI">
+                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F47-DB-Swy" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="204" y="218" width="150" height="66"/>
+                            <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="EHd-1E-VTm"/>
+                                <constraint firstAttribute="width" constant="150" id="SnH-dx-cqf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                            <state key="normal" title="ออก">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="gQc-VK-aEc" eventType="touchUpInside" id="eub-2j-HzI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="dIa-UA-IBG" firstAttribute="trailing" secondItem="Vmf-Hg-z49" secondAttribute="trailing" constant="20" id="4HR-3b-S5R"/>
+                        <constraint firstItem="dIa-UA-IBG" firstAttribute="bottom" secondItem="F47-DB-Swy" secondAttribute="bottom" constant="5" id="RI8-sr-XnD"/>
+                        <constraint firstItem="Vmf-Hg-z49" firstAttribute="leading" secondItem="dIa-UA-IBG" secondAttribute="leading" constant="20" id="RIL-x7-2e9"/>
+                        <constraint firstItem="F47-DB-Swy" firstAttribute="centerX" secondItem="6T2-A2-Msl" secondAttribute="centerX" id="Z6m-H7-6hZ"/>
+                        <constraint firstItem="Vmf-Hg-z49" firstAttribute="centerY" secondItem="6T2-A2-Msl" secondAttribute="centerY" id="m6r-qe-acj"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="dIa-UA-IBG"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kf2-Wd-sEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cJq-mF-Cft" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
@@ -1573,7 +1832,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="F6M-4E-s6e" kind="show" identifier="ToFinishDrawQuestion" id="dGZ-e3-6X2"/>
+                                            <action selector="onSent:" destination="rmO-tV-hbD" eventType="touchUpInside" id="OXq-0l-1i9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1637,6 +1896,7 @@
                         <viewLayoutGuide key="safeArea" id="mbi-Dv-LD9"/>
                     </view>
                     <connections>
+                        <outlet property="alertConnectionView" destination="CWJ-u4-8Hs" id="9eR-mX-yl5"/>
                         <outlet property="currentQuestion" destination="v6b-Zu-uSU" id="Vok-p9-I7n"/>
                         <outlet property="firstTextLoadView" destination="qQ1-Xy-4XK" id="GgQ-lC-6mi"/>
                         <outlet property="imagePreview" destination="V4S-yh-aGR" id="eQH-f4-Bb9"/>
@@ -1644,6 +1904,7 @@
                         <outlet property="myLoadView" destination="hIr-B0-DQ9" id="Elh-I0-Q5B"/>
                         <outlet property="preview" destination="qGo-R7-V5k" id="9Ir-tB-wYE"/>
                         <outlet property="secondTextLoadView" destination="TuI-Eo-Sqd" id="EpG-DS-KSc"/>
+                        <outlet property="sentBtn" destination="vUG-ew-YRu" id="sO9-gV-C7q"/>
                         <outletCollection property="colorButtons" destination="4bm-si-SEf" collectionClass="NSMutableArray" id="ODF-qF-ZPv"/>
                         <outletCollection property="colorButtons" destination="gzw-Bc-8HY" collectionClass="NSMutableArray" id="Tny-k2-OQl"/>
                         <outletCollection property="colorButtons" destination="8b3-Zs-dzm" collectionClass="NSMutableArray" id="p2T-fS-yxj"/>
@@ -1653,8 +1914,64 @@
                         <outletCollection property="colorButtons" destination="Ovv-CP-aNh" collectionClass="NSMutableArray" id="yA0-jo-hzD"/>
                         <outletCollection property="colorButtons" destination="3lz-9F-HCc" collectionClass="NSMutableArray" id="vs2-FB-uEo"/>
                         <outletCollection property="colorButtons" destination="wqV-ng-hk2" collectionClass="NSMutableArray" id="1oY-Qq-pKR"/>
+                        <segue destination="F6M-4E-s6e" kind="show" identifier="ToFinishDrawQuestion" id="thR-cc-F68"/>
                     </connections>
                 </viewController>
+                <view contentMode="scaleToFill" id="CWJ-u4-8Hs">
+                    <rect key="frame" x="0.0" y="0.0" width="558" height="289"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IKK-GB-BSL">
+                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถส่งได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-MJ-ejt">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZi-2a-BOG">
+                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ny4-PR-LVL" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="204" y="218" width="150" height="66"/>
+                            <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="lQd-iH-cEo"/>
+                                <constraint firstAttribute="height" constant="66" id="pot-rV-CxO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                            <state key="normal" title="ออก">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="rmO-tV-hbD" eventType="touchUpInside" id="3FU-a0-aDz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="4XM-ED-aNH" firstAttribute="trailing" secondItem="IKK-GB-BSL" secondAttribute="trailing" constant="20" id="5XY-HD-1FF"/>
+                        <constraint firstItem="4XM-ED-aNH" firstAttribute="bottom" secondItem="Ny4-PR-LVL" secondAttribute="bottom" constant="5" id="5uH-em-LNX"/>
+                        <constraint firstItem="IKK-GB-BSL" firstAttribute="leading" secondItem="4XM-ED-aNH" secondAttribute="leading" constant="20" id="9aH-OF-Bou"/>
+                        <constraint firstItem="IKK-GB-BSL" firstAttribute="centerY" secondItem="CWJ-u4-8Hs" secondAttribute="centerY" id="dSy-oc-6NB"/>
+                        <constraint firstItem="Ny4-PR-LVL" firstAttribute="centerX" secondItem="CWJ-u4-8Hs" secondAttribute="centerX" id="r3x-bv-tgO"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="4XM-ED-aNH"/>
+                </view>
                 <view contentMode="scaleToFill" id="qGo-R7-V5k">
                     <rect key="frame" x="0.0" y="0.0" width="655" height="582"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2178,7 +2495,6 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="onPlayAgain:" destination="F6M-4E-s6e" eventType="touchUpInside" id="XxV-gg-GgV"/>
-                                                        <segue destination="rmO-tV-hbD" kind="showDetail" id="dvL-1A-qjS"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -2195,14 +2511,72 @@
                         </sections>
                     </tableView>
                     <connections>
+                        <outlet property="alertConnectionView" destination="e14-O1-sGe" id="Xk9-Wc-tDE"/>
                         <outlet property="firstTextRecogView" destination="Izt-PT-SyA" id="Utd-YT-3XF"/>
                         <outlet property="imageDrawed" destination="Ph3-yF-FJE" id="q4H-aS-ade"/>
                         <outlet property="myRecogView" destination="lWr-uD-8z0" id="3yD-aq-26D"/>
+                        <outlet property="playAgainBtn" destination="dEz-2P-FPf" id="Gtb-3x-hww"/>
                         <outlet property="questionLabel" destination="8GQ-ee-zNJ" id="VMm-ZM-3p5"/>
                         <outlet property="resultLabel" destination="Aje-Aj-IXr" id="H4U-hK-cqA"/>
                         <outlet property="secondTextRecogView" destination="4zF-5y-HBa" id="E6t-XF-l7b"/>
+                        <segue destination="rmO-tV-hbD" kind="showDetail" identifier="ToDrawQuestionAgain" id="QkT-9w-0Cy"/>
                     </connections>
                 </tableViewController>
+                <view contentMode="scaleToFill" id="e14-O1-sGe">
+                    <rect key="frame" x="0.0" y="0.0" width="558" height="289"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rsd-is-iru">
+                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhc-vr-Ekr">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pn9-E6-Qut">
+                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R53-Nw-pRW" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="204" y="218" width="150" height="66"/>
+                            <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="CTe-be-luf"/>
+                                <constraint firstAttribute="width" constant="150" id="hbo-Lf-N5e"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                            <state key="normal" title="ออก">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="F6M-4E-s6e" eventType="touchUpInside" id="OSQ-NP-oWk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="R53-Nw-pRW" firstAttribute="centerX" secondItem="e14-O1-sGe" secondAttribute="centerX" id="533-xF-DSV"/>
+                        <constraint firstItem="xNJ-37-5AH" firstAttribute="bottom" secondItem="R53-Nw-pRW" secondAttribute="bottom" constant="5" id="NBH-UU-fS9"/>
+                        <constraint firstItem="xNJ-37-5AH" firstAttribute="trailing" secondItem="rsd-is-iru" secondAttribute="trailing" constant="20" id="dpa-Nc-6x2"/>
+                        <constraint firstItem="rsd-is-iru" firstAttribute="centerY" secondItem="e14-O1-sGe" secondAttribute="centerY" id="e7K-TG-VGH"/>
+                        <constraint firstItem="rsd-is-iru" firstAttribute="leading" secondItem="xNJ-37-5AH" secondAttribute="leading" constant="20" id="nEV-sP-pxA"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="xNJ-37-5AH"/>
+                </view>
                 <view contentMode="scaleToFill" id="lWr-uD-8z0">
                     <rect key="frame" x="0.0" y="0.0" width="909" height="617"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2249,9 +2623,9 @@
         <image name="วาดภาพ" width="819" height="737"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TGi-xt-WBh"/>
-        <segue reference="dvL-1A-qjS"/>
+        <segue reference="C0B-wv-Nn9"/>
+        <segue reference="QkT-9w-0Cy"/>
         <segue reference="0PL-ei-8cF"/>
-        <segue reference="nbI-Bw-i4b"/>
+        <segue reference="lCk-0E-asl"/>
     </inferredMetricsTieBreakers>
 </document>

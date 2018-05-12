@@ -14,11 +14,56 @@ class PrepareDrawQuestionTableViewController: UITableViewController {
     let TURNON = 1
     let TURNOFF = 0
     var buttonPlayer: AVAudioPlayer?
+    var reachablity: Reachability!
+    @IBOutlet weak var alertConnectionView: UIView!
+    @IBOutlet weak var playBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.isScrollEnabled = false
         setButtonSound()
+        setAlertView()
+        self.reachablity = Reachability()
     }
+    
+    @IBAction func closeAlert(_ sender: UIButtonX) {
+        playButton()
+        alertOutside()
+        self.playBtn.isEnabled = true
+    }
+    
+    func setAlertView() {
+        self.alertConnectionView.bounds.size.width = self.view.bounds.width - 200
+        self.alertConnectionView.bounds.size.height = self.view.bounds.height / 2
+        self.alertConnectionView.layer.cornerRadius = 20
+        self.alertConnectionView.clipsToBounds = true
+    }
+    
+    func alertInside() {
+        self.alertConnectionView.alpha = 0.5
+        self.view.addSubview(self.alertConnectionView)
+        self.alertConnectionView.center = self.view.center
+        self.alertConnectionView.transform = CGAffineTransform(scaleX: 0.8, y: 1.2)
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+            self.alertConnectionView.alpha = 1
+            self.alertConnectionView.transform = CGAffineTransform.identity
+        })
+    }
+    
+    func alertOutside() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+            self.alertConnectionView.alpha = 0
+            self.alertConnectionView.transform = CGAffineTransform(scaleX: 0.5, y: 0.2)
+        })
+    }
+    
+    func isConnection() -> Bool {
+        if self.reachablity.connection == .none {
+            return false
+        }
+        return true
+    }
+    
     
     func setButtonSound() {
         if let data = UserDefaults.standard.value(forKey: "btnSoundConfig") as? Int {
@@ -41,6 +86,13 @@ class PrepareDrawQuestionTableViewController: UITableViewController {
     
     @IBAction func onPlay(_ sender: UIButton) {
         playButton()
+        if isConnection() {
+            performSegue(withIdentifier: "ToDrawQuestion", sender: self)
+        }
+        else {
+            alertInside()
+            self.playBtn.isEnabled = false
+        }
     }
     
     @IBAction func onClose(_ sender: UIButton) {
