@@ -19,7 +19,6 @@ class MenuViewController: UIViewController {
     let TURNON = 1
     let TURNOFF = 0
     var reachablity: Reachability!
-    var isPopup = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
