@@ -2495,7 +2495,6 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="onPlayAgain:" destination="F6M-4E-s6e" eventType="touchUpInside" id="XxV-gg-GgV"/>
-                                                        <segue destination="rmO-tV-hbD" kind="showDetail" id="dvL-1A-qjS"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -2512,12 +2511,15 @@
                         </sections>
                     </tableView>
                     <connections>
+                        <outlet property="alertConnectionView" destination="e14-O1-sGe" id="Xk9-Wc-tDE"/>
                         <outlet property="firstTextRecogView" destination="Izt-PT-SyA" id="Utd-YT-3XF"/>
                         <outlet property="imageDrawed" destination="Ph3-yF-FJE" id="q4H-aS-ade"/>
                         <outlet property="myRecogView" destination="lWr-uD-8z0" id="3yD-aq-26D"/>
+                        <outlet property="playAgainBtn" destination="dEz-2P-FPf" id="Gtb-3x-hww"/>
                         <outlet property="questionLabel" destination="8GQ-ee-zNJ" id="VMm-ZM-3p5"/>
                         <outlet property="resultLabel" destination="Aje-Aj-IXr" id="H4U-hK-cqA"/>
                         <outlet property="secondTextRecogView" destination="4zF-5y-HBa" id="E6t-XF-l7b"/>
+                        <segue destination="rmO-tV-hbD" kind="showDetail" identifier="ToDrawQuestionAgain" id="QkT-9w-0Cy"/>
                     </connections>
                 </tableViewController>
                 <view contentMode="scaleToFill" id="e14-O1-sGe">
@@ -2560,6 +2562,9 @@
                                     <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="F6M-4E-s6e" eventType="touchUpInside" id="OSQ-NP-oWk"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2618,9 +2623,8 @@
         <image name="วาดภาพ" width="819" height="737"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="thR-cc-F68"/>
         <segue reference="C0B-wv-Nn9"/>
-        <segue reference="dvL-1A-qjS"/>
+        <segue reference="QkT-9w-0Cy"/>
         <segue reference="0PL-ei-8cF"/>
         <segue reference="lCk-0E-asl"/>
     </inferredMetricsTieBreakers>
