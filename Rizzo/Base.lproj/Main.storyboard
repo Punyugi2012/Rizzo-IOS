@@ -328,7 +328,6 @@
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="closeAlert:" destination="zDW-J2-6QL" eventType="touchUpInside" id="Czh-W1-b8x"/>
-                                <action selector="closeAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g97-fy-uVd"/>
                             </connections>
                         </button>
                     </subviews>
@@ -918,13 +917,70 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="alertConnectionView" destination="Cx0-RR-JdD" id="vrk-1r-dKo"/>
                         <outlet property="numCorrect" destination="TQV-0C-czo" id="4Bc-9t-kt8"/>
                         <outlet property="numUncorrect" destination="8uB-gx-XeQ" id="0kz-ST-l8a"/>
+                        <outlet property="playAgainBtn" destination="TYh-0O-ZAq" id="gVW-aa-nmx"/>
                         <outlet property="skillLabel" destination="zjh-jb-Gte" id="AN9-fN-UfM"/>
                         <segue destination="PZX-wn-psz" kind="showDetail" identifier="ToImgQuestionAgain" id="nbI-Bw-i4b"/>
                         <segue destination="NeK-nD-UfP" kind="showDetail" identifier="ToSoundQuestionAgain" id="TGi-xt-WBh"/>
                     </connections>
                 </tableViewController>
+                <view contentMode="scaleToFill" id="Cx0-RR-JdD">
+                    <rect key="frame" x="0.0" y="0.0" width="558" height="289"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kr2-oO-D66">
+                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4L-SR-16D">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rz-YN-Qo6">
+                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydb-tS-TNo" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="204" y="218" width="150" height="66"/>
+                            <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="dXY-Gi-rzX"/>
+                                <constraint firstAttribute="width" constant="150" id="ebK-Os-H9U"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                            <state key="normal" title="ออก">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="SDI-fN-md0" eventType="touchUpInside" id="drz-8D-RRr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="kr2-oO-D66" firstAttribute="centerY" secondItem="Cx0-RR-JdD" secondAttribute="centerY" id="0db-hq-u4n"/>
+                        <constraint firstItem="yTX-jb-hAn" firstAttribute="bottom" secondItem="Ydb-tS-TNo" secondAttribute="bottom" constant="5" id="60e-em-azr"/>
+                        <constraint firstItem="kr2-oO-D66" firstAttribute="leading" secondItem="yTX-jb-hAn" secondAttribute="leading" constant="20" id="71I-hI-IOB"/>
+                        <constraint firstItem="yTX-jb-hAn" firstAttribute="trailing" secondItem="kr2-oO-D66" secondAttribute="trailing" constant="20" id="Zug-PZ-0TC"/>
+                        <constraint firstItem="Ydb-tS-TNo" firstAttribute="centerX" secondItem="Cx0-RR-JdD" secondAttribute="centerX" id="wZf-bo-aqN"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="yTX-jb-hAn"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6D-u9-1Ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="jtI-Gr-mwS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
@@ -2337,6 +2393,6 @@
         <segue reference="TGi-xt-WBh"/>
         <segue reference="p2T-xW-ZVx"/>
         <segue reference="0PL-ei-8cF"/>
-        <segue reference="lCk-0E-asl"/>
+        <segue reference="nbI-Bw-i4b"/>
     </inferredMetricsTieBreakers>
 </document>
