@@ -1304,7 +1304,6 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="onPlay:" destination="Wp8-BW-TDe" eventType="touchUpInside" id="tBR-pi-fjD"/>
-                                                        <segue destination="NeK-nD-UfP" kind="show" id="sza-g7-Eyg"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1323,7 +1322,67 @@
                             <outlet property="delegate" destination="Wp8-BW-TDe" id="pto-Bw-HQZ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="alertConnectionView" destination="2j0-NF-2dO" id="vbX-Aj-i47"/>
+                        <outlet property="playBtn" destination="3f2-pN-L9P" id="whe-BK-4vF"/>
+                        <segue destination="NeK-nD-UfP" kind="show" identifier="ToSoundQuestion" id="C0B-wv-Nn9"/>
+                    </connections>
                 </tableViewController>
+                <view contentMode="scaleToFill" id="2j0-NF-2dO">
+                    <rect key="frame" x="0.0" y="0.0" width="558" height="289"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Uh-Hl-BEm">
+                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHz-3b-yLa">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uC-lg-9Hk">
+                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xco-Ik-eML" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="204" y="218" width="150" height="66"/>
+                            <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="7VU-rY-mOv"/>
+                                <constraint firstAttribute="width" constant="150" id="c7Y-ys-OSM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                            <state key="normal" title="ออก">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="Wp8-BW-TDe" eventType="touchUpInside" id="OQ3-uq-8X5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="6Uh-Hl-BEm" firstAttribute="centerY" secondItem="2j0-NF-2dO" secondAttribute="centerY" id="6iB-7p-l2g"/>
+                        <constraint firstItem="Fz6-km-rTD" firstAttribute="trailing" secondItem="6Uh-Hl-BEm" secondAttribute="trailing" constant="20" id="El7-ci-7NJ"/>
+                        <constraint firstItem="6Uh-Hl-BEm" firstAttribute="leading" secondItem="Fz6-km-rTD" secondAttribute="leading" constant="20" id="cIn-Rj-UEV"/>
+                        <constraint firstItem="xco-Ik-eML" firstAttribute="centerX" secondItem="2j0-NF-2dO" secondAttribute="centerX" id="eNX-7T-hys"/>
+                        <constraint firstItem="Fz6-km-rTD" firstAttribute="bottom" secondItem="xco-Ik-eML" secondAttribute="bottom" constant="5" id="usU-s4-vWh"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Fz6-km-rTD"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnH-IY-O4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ycQ-fh-IJd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
@@ -2390,9 +2449,9 @@
         <image name="วาดภาพ" width="819" height="737"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TGi-xt-WBh"/>
+        <segue reference="C0B-wv-Nn9"/>
         <segue reference="p2T-xW-ZVx"/>
         <segue reference="0PL-ei-8cF"/>
-        <segue reference="nbI-Bw-i4b"/>
+        <segue reference="lCk-0E-asl"/>
     </inferredMetricsTieBreakers>
 </document>
