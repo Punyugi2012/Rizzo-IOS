@@ -84,28 +84,53 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zqz-zt-cPS">
-                            <rect key="frame" x="20" y="102.5" width="518" height="85"/>
+                            <rect key="frame" x="20" y="97.5" width="518" height="95"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="คุณยังไม่ได้เชื่อมต่ออินเทอร์เน็ต!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opx-Wu-XrF">
-                                    <rect key="frame" x="0.0" y="0.0" width="518" height="40"/>
-                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opx-Wu-XrF">
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEr-AG-Gyr">
-                                    <rect key="frame" x="0.0" y="45" width="518" height="40"/>
+                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPb-9T-Gl7" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
+                            <rect key="frame" x="204" y="218" width="150" height="66"/>
+                            <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="lUO-gl-14k"/>
+                                <constraint firstAttribute="width" constant="150" id="pgV-BD-eCf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
+                            <state key="normal" title="ออก">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closeAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gd0-wb-gcd"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="79j-FL-dAh" firstAttribute="bottom" secondItem="oPb-9T-Gl7" secondAttribute="bottom" constant="5" id="3Ky-fu-Sqp"/>
                         <constraint firstItem="Zqz-zt-cPS" firstAttribute="centerY" secondItem="K9u-Fr-5Kn" secondAttribute="centerY" id="DrM-Yh-sjk"/>
                         <constraint firstItem="79j-FL-dAh" firstAttribute="trailing" secondItem="Zqz-zt-cPS" secondAttribute="trailing" constant="20" id="QE4-ab-aBI"/>
                         <constraint firstItem="Zqz-zt-cPS" firstAttribute="leading" secondItem="79j-FL-dAh" secondAttribute="leading" constant="20" id="s91-1A-Vui"/>
+                        <constraint firstItem="oPb-9T-Gl7" firstAttribute="centerX" secondItem="K9u-Fr-5Kn" secondAttribute="centerX" id="vcz-7U-cqf"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="79j-FL-dAh"/>
                 </view>
@@ -2250,7 +2275,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TGi-xt-WBh"/>
-        <segue reference="dvL-1A-qjS"/>
+        <segue reference="p2T-xW-ZVx"/>
         <segue reference="0PL-ei-8cF"/>
         <segue reference="nbI-Bw-i4b"/>
     </inferredMetricsTieBreakers>
