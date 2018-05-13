@@ -614,12 +614,26 @@
                                 </label>
                             </subviews>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvx-vJ-qKj">
+                            <rect key="frame" x="20" y="20" width="86" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="VpB-Zj-nRs"/>
+                                <constraint firstAttribute="width" constant="86" id="gUp-YF-e4t"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                            <state key="normal" title="ออก"/>
+                            <connections>
+                                <action selector="dissmiss:" destination="PZX-wn-psz" eventType="touchUpInside" id="kuL-yB-x7X"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="1dl-3w-aoT" firstAttribute="centerY" secondItem="o1J-8u-3be" secondAttribute="centerY" id="8Xn-qc-EjH"/>
                         <constraint firstItem="1dl-3w-aoT" firstAttribute="leading" secondItem="ZDS-Eg-wXt" secondAttribute="leading" constant="20" id="PdX-Rc-nDF"/>
                         <constraint firstItem="ZDS-Eg-wXt" firstAttribute="trailing" secondItem="1dl-3w-aoT" secondAttribute="trailing" constant="20" id="UdD-Mt-TSa"/>
+                        <constraint firstItem="Nvx-vJ-qKj" firstAttribute="top" secondItem="ZDS-Eg-wXt" secondAttribute="top" id="cV7-Io-HNH"/>
+                        <constraint firstItem="Nvx-vJ-qKj" firstAttribute="leading" secondItem="ZDS-Eg-wXt" secondAttribute="leading" constant="20" id="xAH-qf-53q"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="ZDS-Eg-wXt"/>
                 </view>
@@ -2050,12 +2064,26 @@
                                 </label>
                             </subviews>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im8-wN-WxB">
+                            <rect key="frame" x="20" y="20" width="86" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="86" id="PLg-By-2V6"/>
+                                <constraint firstAttribute="height" constant="70" id="rg0-Fb-p4E"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                            <state key="normal" title="ออก"/>
+                            <connections>
+                                <action selector="dissmiss:" destination="rmO-tV-hbD" eventType="touchUpInside" id="Tz7-1T-BmV"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.8980392157" green="0.70980392160000005" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="HmD-z3-2fA" firstAttribute="trailing" secondItem="SQz-gc-nQt" secondAttribute="trailing" constant="20" id="DgC-ys-ZhD"/>
                         <constraint firstItem="SQz-gc-nQt" firstAttribute="leading" secondItem="HmD-z3-2fA" secondAttribute="leading" constant="20" id="YeL-ZN-wDi"/>
+                        <constraint firstItem="Im8-wN-WxB" firstAttribute="leading" secondItem="HmD-z3-2fA" secondAttribute="leading" constant="20" id="Ze9-Vu-V5w"/>
                         <constraint firstItem="SQz-gc-nQt" firstAttribute="centerY" secondItem="hIr-B0-DQ9" secondAttribute="centerY" id="hVt-yC-XWL"/>
+                        <constraint firstItem="Im8-wN-WxB" firstAttribute="top" secondItem="HmD-z3-2fA" secondAttribute="top" id="iv0-3I-XtN"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="HmD-z3-2fA"/>
                 </view>
@@ -2256,12 +2284,26 @@
                                 </label>
                             </subviews>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsm-Eh-1wo">
+                            <rect key="frame" x="20" y="20" width="86" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="86" id="2lg-AO-wHS"/>
+                                <constraint firstAttribute="height" constant="70" id="bMX-JB-Asj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                            <state key="normal" title="ออก"/>
+                            <connections>
+                                <action selector="dissmiss:" destination="NeK-nD-UfP" eventType="touchUpInside" id="fCW-Pq-rWF"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.8980392157" green="0.70980392160000005" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="SWO-ti-tK8" firstAttribute="centerY" secondItem="2XK-ft-Ewn" secondAttribute="centerY" id="Ba9-P8-RkM"/>
                         <constraint firstItem="d2z-Go-cdj" firstAttribute="trailing" secondItem="SWO-ti-tK8" secondAttribute="trailing" constant="20" id="M9T-Zx-fcq"/>
                         <constraint firstItem="SWO-ti-tK8" firstAttribute="leading" secondItem="d2z-Go-cdj" secondAttribute="leading" constant="20" id="O9W-5n-Xej"/>
+                        <constraint firstItem="dsm-Eh-1wo" firstAttribute="top" secondItem="d2z-Go-cdj" secondAttribute="top" id="Y35-CN-EFb"/>
+                        <constraint firstItem="dsm-Eh-1wo" firstAttribute="leading" secondItem="d2z-Go-cdj" secondAttribute="leading" constant="20" id="t9s-08-BFk"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="d2z-Go-cdj"/>
                 </view>
@@ -2598,12 +2640,26 @@
                                 </label>
                             </subviews>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx1-Lw-SA6">
+                            <rect key="frame" x="20" y="20" width="86" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="86" id="HZR-Cp-leE"/>
+                                <constraint firstAttribute="height" constant="70" id="QfE-av-4DE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
+                            <state key="normal" title="ออก"/>
+                            <connections>
+                                <action selector="dissmiss:" destination="F6M-4E-s6e" eventType="touchUpInside" id="hIW-xm-XMk"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.8980392157" green="0.70980392160000005" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="fx1-Lw-SA6" firstAttribute="top" secondItem="dgq-Bb-fQc" secondAttribute="top" id="2nh-ne-5IE"/>
                         <constraint firstItem="JyS-i4-6Bv" firstAttribute="leading" secondItem="dgq-Bb-fQc" secondAttribute="leading" constant="20" id="425-tV-6ON"/>
                         <constraint firstItem="JyS-i4-6Bv" firstAttribute="centerY" secondItem="lWr-uD-8z0" secondAttribute="centerY" id="BzL-Gy-wul"/>
                         <constraint firstItem="dgq-Bb-fQc" firstAttribute="trailing" secondItem="JyS-i4-6Bv" secondAttribute="trailing" constant="20" id="DT2-Nz-rlb"/>
+                        <constraint firstItem="fx1-Lw-SA6" firstAttribute="leading" secondItem="dgq-Bb-fQc" secondAttribute="leading" constant="20" id="SPD-Qo-v1Z"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="dgq-Bb-fQc"/>
                 </view>
@@ -2625,7 +2681,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="C0B-wv-Nn9"/>
         <segue reference="QkT-9w-0Cy"/>
-        <segue reference="0PL-ei-8cF"/>
+        <segue reference="79z-9Y-f12"/>
         <segue reference="lCk-0E-asl"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -210,22 +210,15 @@
 		B85FA116209DC3D7002ED3AA /* Rizzo */ = {
 			isa = PBXGroup;
 			children = (
+				B87BF4AD20A7FD4C00E8E119 /* Resources */,
+				B87BF4AC20A7FD1400E8E119 /* Views */,
+				B87BF4AB20A7FCE900E8E119 /* Models */,
 				B81F712C20A0679D0076A033 /* Controllers */,
 				B85E00F4209EE0DF0098482A /* Font */,
 				B85FA142209DC89D002ED3AA /* Sounds */,
-				B85FA12D209DC84A002ED3AA /* DesignableX */,
 				B85FA117209DC3D7002ED3AA /* AppDelegate.swift */,
-				B85FA11B209DC3D7002ED3AA /* Main.storyboard */,
 				B85FA11E209DC3DA002ED3AA /* Assets.xcassets */,
-				B85FA120209DC3DA002ED3AA /* LaunchScreen.storyboard */,
 				B85FA123209DC3DA002ED3AA /* Info.plist */,
-				B85FA129209DC5BA002ED3AA /* imageQuestion.swift */,
-				B85FA12B209DC616002ED3AA /* Datas.swift */,
-				B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */,
-				B81F70FC20A065D80076A033 /* SoundQuestion.swift */,
-				B85B204B20A301470049384B /* DrawQuestion.swift */,
-				B85B204D20A3029F0049384B /* Reachability.swift */,
-				B85B205320A429540049384B /* DrawView.swift */,
 			);
 			path = Rizzo;
 			sourceTree = "<group>";
@@ -278,6 +271,37 @@
 				B85FA147209DC8E2002ED3AA /* soundtrack.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		B87BF4AB20A7FCE900E8E119 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B85B204B20A301470049384B /* DrawQuestion.swift */,
+				B85FA12B209DC616002ED3AA /* Datas.swift */,
+				B85FA129209DC5BA002ED3AA /* imageQuestion.swift */,
+				B81F70FC20A065D80076A033 /* SoundQuestion.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B87BF4AC20A7FD1400E8E119 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B85FA14B209DCC3F002ED3AA /* MenuCollectionViewCell.swift */,
+				B85B205320A429540049384B /* DrawView.swift */,
+				B85FA11B209DC3D7002ED3AA /* Main.storyboard */,
+				B85FA120209DC3DA002ED3AA /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B87BF4AD20A7FD4C00E8E119 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B85FA12D209DC84A002ED3AA /* DesignableX */,
+				B85B204D20A3029F0049384B /* Reachability.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C5D2C6DCEBF2E71DFB04104F /* Frameworks */ = {
