@@ -84,16 +84,16 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zqz-zt-cPS">
-                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <rect key="frame" x="20" y="89.5" width="518" height="110.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opx-Wu-XrF">
-                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="58.5"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEr-AG-Gyr">
-                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <rect key="frame" x="0.0" y="63.5" width="518" height="47"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -291,16 +291,16 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="837-OZ-5Tq">
-                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <rect key="frame" x="20" y="89.5" width="518" height="110.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMn-9s-qnt">
-                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="58.5"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i29-XA-eH2">
-                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <rect key="frame" x="0.0" y="63.5" width="518" height="47"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -358,7 +358,7 @@
                                 <rect key="frame" x="0.0" y="10" width="1024" height="1366"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUl-Kb-Ca2">
-                                        <rect key="frame" x="20" y="18" width="86" height="70"/>
+                                        <rect key="frame" x="20" y="18" width="123" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="Kci-Hn-XAk"/>
                                             <constraint firstAttribute="height" constant="70" id="YvX-0p-lnY"/>
@@ -371,10 +371,10 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6hQ-hJ-B3P">
-                                        <rect key="frame" x="0.0" y="88" width="1024" height="1048"/>
+                                        <rect key="frame" x="0.0" y="88" width="1024" height="1088"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รูปนี้คือรูปอะไรเอ่ย?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XM9-nb-ZBV">
-                                                <rect key="frame" x="319" y="0.0" width="386" height="70"/>
+                                                <rect key="frame" x="229.5" y="0.0" width="565.5" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="DWU-Uh-cgB"/>
                                                 </constraints>
@@ -409,10 +409,10 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mzk-tH-8h8">
-                                                <rect key="frame" x="50" y="700" width="924" height="348"/>
+                                                <rect key="frame" x="50" y="700" width="924" height="388"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-mm-8bs" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="924" height="72"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="924" height="82"/>
                                                         <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
@@ -428,7 +428,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yq-9L-yEi" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="92" width="924" height="72"/>
+                                                        <rect key="frame" x="0.0" y="102" width="924" height="82"/>
                                                         <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
@@ -444,7 +444,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q31-XF-r3I" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="184" width="924" height="72"/>
+                                                        <rect key="frame" x="0.0" y="204" width="924" height="82"/>
                                                         <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
@@ -460,7 +460,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD2-iD-IAX" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="276" width="924" height="72"/>
+                                                        <rect key="frame" x="0.0" y="306" width="924" height="82"/>
                                                         <color key="backgroundColor" red="0.89803921568627454" green="0.70980392156862748" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
@@ -628,22 +628,22 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rr2-y5-6iA">
-                            <rect key="frame" x="20" y="60" width="822" height="290"/>
+                            <rect key="frame" x="20" y="60" width="822" height="335"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่ถูกต้องนะครับ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yd-2t-8aL">
-                                    <rect key="frame" x="0.0" y="0.0" width="822" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="822" height="105"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="90"/>
                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ช่างตัดผม" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJW-Af-lPT">
-                                    <rect key="frame" x="0.0" y="100" width="822" height="90"/>
+                                    <rect key="frame" x="0.0" y="115" width="822" height="105"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="คำตอบคือ ช่างประปา" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfS-Tg-bp7">
-                                    <rect key="frame" x="0.0" y="200" width="822" height="90"/>
+                                    <rect key="frame" x="0.0" y="230" width="822" height="105"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                     <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -931,16 +931,16 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kr2-oO-D66">
-                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <rect key="frame" x="20" y="89.5" width="518" height="110.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4L-SR-16D">
-                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="58.5"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rz-YN-Qo6">
-                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <rect key="frame" x="0.0" y="63.5" width="518" height="47"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -1333,16 +1333,16 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Uh-Hl-BEm">
-                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <rect key="frame" x="20" y="89.5" width="518" height="110.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHz-3b-yLa">
-                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="58.5"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uC-lg-9Hk">
-                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <rect key="frame" x="0.0" y="63.5" width="518" height="47"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -1532,16 +1532,16 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vmf-Hg-z49">
-                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <rect key="frame" x="20" y="89.5" width="518" height="110.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om6-AF-Fgk">
-                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="58.5"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-3y-ZkI">
-                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <rect key="frame" x="0.0" y="63.5" width="518" height="47"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -1596,10 +1596,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-BR-9Jm">
-                                <rect key="frame" x="20" y="30" width="984" height="62"/>
+                                <rect key="frame" x="20" y="30" width="984" height="71"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adc-Us-W0I">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="62"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="71"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="u4y-rf-OWZ"/>
                                         </constraints>
@@ -1610,7 +1610,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIf-1c-dcZ" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
-                                        <rect key="frame" x="784" y="0.0" width="200" height="62"/>
+                                        <rect key="frame" x="784" y="0.0" width="200" height="71"/>
                                         <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="GGW-bS-Als"/>
@@ -1631,7 +1631,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkS-FI-RWc" customClass="DrawView" customModule="Rizzo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="174" width="984" height="820.5"/>
+                                <rect key="frame" x="20" y="192" width="984" height="820.5"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RkS-FI-RWc" secondAttribute="height" multiplier="728:607" id="EQs-nK-Sof"/>
@@ -1805,10 +1805,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="MbX-dI-adX">
-                                <rect key="frame" x="20" y="97" width="984" height="62"/>
+                                <rect key="frame" x="20" y="106" width="984" height="71"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จงวาด &quot;ดอกไม้&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6b-Zu-uSU">
-                                        <rect key="frame" x="0.0" y="0.0" width="270" height="62"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="71"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="270" id="guv-YP-gvd"/>
                                         </constraints>
@@ -1817,7 +1817,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUG-ew-YRu" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
-                                        <rect key="frame" x="924" y="0.0" width="60" height="62"/>
+                                        <rect key="frame" x="924" y="0.0" width="60" height="71"/>
                                         <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="J6p-TC-Rsh"/>
@@ -1922,16 +1922,16 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IKK-GB-BSL">
-                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <rect key="frame" x="20" y="89.5" width="518" height="110.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถส่งได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-MJ-ejt">
-                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="58.5"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZi-2a-BOG">
-                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <rect key="frame" x="0.0" y="63.5" width="518" height="47"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -2074,7 +2074,7 @@
                                 <rect key="frame" x="0.0" y="10" width="1024" height="1366"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQT-Ug-38U">
-                                        <rect key="frame" x="20" y="18" width="86" height="70"/>
+                                        <rect key="frame" x="20" y="18" width="123" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="665-FZ-gCs"/>
                                             <constraint firstAttribute="height" constant="70" id="ejk-kg-6ut"/>
@@ -2087,10 +2087,10 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WuQ-y7-Aen">
-                                        <rect key="frame" x="0.0" y="88" width="1024" height="858"/>
+                                        <rect key="frame" x="0.0" y="88" width="1024" height="898"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เสียงนี้คือเสียงอะไรเอ่ย" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGw-56-fOg">
-                                                <rect key="frame" x="292.5" y="0.0" width="439.5" height="70"/>
+                                                <rect key="frame" x="188" y="0.0" width="648" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="lUg-E3-Q59"/>
                                                 </constraints>
@@ -2110,10 +2110,10 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uWm-fG-P1R">
-                                                <rect key="frame" x="50" y="510" width="924" height="348"/>
+                                                <rect key="frame" x="50" y="510" width="924" height="388"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjD-gC-led" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="924" height="72"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="924" height="82"/>
                                                         <color key="backgroundColor" red="0.8980392157" green="0.70980392160000005" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
@@ -2129,7 +2129,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6L-mj-t06" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="92" width="924" height="72"/>
+                                                        <rect key="frame" x="0.0" y="102" width="924" height="82"/>
                                                         <color key="backgroundColor" red="0.8980392157" green="0.70980392160000005" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
@@ -2145,7 +2145,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szr-1L-Ku5" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="184" width="924" height="72"/>
+                                                        <rect key="frame" x="0.0" y="204" width="924" height="82"/>
                                                         <color key="backgroundColor" red="0.8980392157" green="0.70980392160000005" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
@@ -2161,7 +2161,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ya-NL-c6B" customClass="UIButtonX" customModule="Rizzo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="276" width="924" height="72"/>
+                                                        <rect key="frame" x="0.0" y="306" width="924" height="82"/>
                                                         <color key="backgroundColor" red="0.8980392157" green="0.70980392160000005" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                                         <state key="normal" title="ทดสอบ">
@@ -2271,22 +2271,22 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LQd-ui-TVK">
-                            <rect key="frame" x="20" y="60" width="822" height="290"/>
+                            <rect key="frame" x="20" y="60" width="822" height="335"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่ถูกต้องนะครับ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8q-Xz-vIn">
-                                    <rect key="frame" x="0.0" y="0.0" width="822" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="822" height="105"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="90"/>
                                     <color key="textColor" red="0.96470588235294119" green="0.32941176470588235" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ช่างตัดผม" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcU-gs-xtv">
-                                    <rect key="frame" x="0.0" y="100" width="822" height="90"/>
+                                    <rect key="frame" x="0.0" y="115" width="822" height="105"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="70"/>
                                     <color key="textColor" red="0.96470588235294119" green="0.32941176470588235" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="คำตอบคือ ช่างประปา" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFO-Z8-dc8">
-                                    <rect key="frame" x="0.0" y="200" width="822" height="90"/>
+                                    <rect key="frame" x="0.0" y="230" width="822" height="105"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="60"/>
                                     <color key="textColor" red="0.42745098039215684" green="0.75294117647058822" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2527,16 +2527,16 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rsd-is-iru">
-                            <rect key="frame" x="20" y="97" width="518" height="95"/>
+                            <rect key="frame" x="20" y="89.5" width="518" height="110.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่สามารถเล่นได้!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhc-vr-Ekr">
-                                    <rect key="frame" x="0.0" y="0.0" width="518" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="518" height="58.5"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="50"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่ออินเทอร์เน็ต" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pn9-E6-Qut">
-                                    <rect key="frame" x="0.0" y="55" width="518" height="40"/>
+                                    <rect key="frame" x="0.0" y="63.5" width="518" height="47"/>
                                     <fontDescription key="fontDescription" name="KaniGa" family="KaniGa" pointSize="40"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
