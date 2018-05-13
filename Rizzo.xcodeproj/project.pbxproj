@@ -216,7 +216,6 @@
 				B81F712C20A0679D0076A033 /* Controllers */,
 				B85E00F4209EE0DF0098482A /* Font */,
 				B85FA142209DC89D002ED3AA /* Sounds */,
-				B85FA12D209DC84A002ED3AA /* DesignableX */,
 				B85FA117209DC3D7002ED3AA /* AppDelegate.swift */,
 				B85FA11E209DC3DA002ED3AA /* Assets.xcassets */,
 				B85FA123209DC3DA002ED3AA /* Info.plist */,
@@ -299,6 +298,7 @@
 		B87BF4AD20A7FD4C00E8E119 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B85FA12D209DC84A002ED3AA /* DesignableX */,
 				B85B204D20A3029F0049384B /* Reachability.swift */,
 			);
 			path = Resources;

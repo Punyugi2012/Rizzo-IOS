@@ -244,6 +244,8 @@ class SoundQuestionViewController: UIViewController {
             destination.getPreScene = "SoundQuestion"
         }
     }
-    
+    @IBAction func dissmiss(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

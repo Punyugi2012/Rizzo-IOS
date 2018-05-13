@@ -249,4 +249,8 @@ class ImageQuestionViewController: UIViewController {
         }
     }
     
+    @IBAction func dissmiss(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
